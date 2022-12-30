@@ -1,4 +1,4 @@
-name: Node CI
+name: CI
 
 on:
   push:
@@ -7,6 +7,16 @@ on:
     branches: [master]
 
 jobs:
+  lint_markdown:
+    name: Lint Markdown Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: avto-dev/markdown-lint@v1.4.0
+        with:
+          config: '.markdownlint.json'
+          args: '**/*.md'
+
   prettier:
     name: Prettier
     runs-on: ubuntu-latest
