@@ -10,6 +10,7 @@ field_inclusion_requirements:
 content_types:
   - id: numeric
   - id: alphameric
+  - id: uppercase_alphameric
   - id: blank
   - id: hhmm
   - id: yymmdd
@@ -87,7 +88,7 @@ records:
         id: file_id_modifier
         field_inclusion_requirements:
           - mandatory
-        content_type: UPPER CASE A-Z NUMERIC 0-9
+        content_type: uppercase_alphameric
         length: 1
         position:
           start: 34
@@ -726,7 +727,7 @@ records:
         id: file_id_modifier
         field_inclusion_requirements:
           - mandatory
-        content_type: UPPER CASE A-Z NUMERIC 0-9
+        content_type: uppercase_alphameric
         length: 1
         position:
           start: 34
