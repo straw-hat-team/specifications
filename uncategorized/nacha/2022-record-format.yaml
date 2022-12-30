@@ -1,0 +1,3893 @@
+version: 2022
+
+content_types:
+  - id: numeric
+  - id: alphameric
+  - id: blank
+  - id: hhmm
+  - id: yymmdd
+  - id: bttttaaaac
+  - id: dollar_amount
+  - id: ttttaaaa
+  - id: constant
+
+records:
+  - name: FILE HEADER RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘1’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: PRIORITY CODE
+        field_inclusion_requirement: required
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: IMMEDIATE DESTINATION
+        field_inclusion_requirement: mandatory
+        contents: bttttaaaac
+        length: 10
+        position:
+          start: 04
+          end: 13
+      - order: 4
+        element_name: IMMEDIATE ORIGIN
+        field_inclusion_requirement: mandatory
+        contents: bttttaaaac
+        length: 10
+        position:
+          start: 14
+          end: 23
+      - order: 5
+        element_name: FILE CREATION DATE
+        field_inclusion_requirement: mandatory
+        contents: yymmdd
+        length: 6
+        position:
+          start: 24
+          end: 29
+      - order: 6
+        element_name: FILE CREATION TIME
+        field_inclusion_requirement: optional
+        contents: hhmm
+        length: 4
+        position:
+          start: 30
+          end: 33
+      - order: 7
+        element_name: FILE ID MODIFIER
+        field_inclusion_requirement: mandatory
+        contents: UPPER CASE A-Z NUMERIC 0-9
+        length: 1
+        position:
+          start: 34
+          end: 34
+      - order: 8
+        element_name: RECORD SIZE
+        field_inclusion_requirement: mandatory
+        contents: ‘094’
+        length: 3
+        position:
+          start: 35
+          end: 37
+      - order: 9
+        element_name: BLOCKING FACTOR
+        field_inclusion_requirement: mandatory
+        contents: ‘10’
+        length: 2
+        position:
+          start: 38
+          end: 39
+      - order: 10
+        element_name: FORMAT CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘1’
+        length: 1
+        position:
+          start: 40
+          end: 40
+      - order: 11
+        element_name: IMMEDIATE DESTINATION NAME
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 23
+        position:
+          start: 41
+          end: 63
+      - order: 12
+        element_name: IMMEDIATE ORIGIN NAME
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 23
+        position:
+          start: 64
+          end: 86
+      - order: 13
+        element_name: REFERENCE CODE
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 8
+        position:
+          start: 87
+          end: 94
+
+  - name: FILE CONTROL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘9’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: BATCH COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 6
+        position:
+          start: 02
+          end: 07
+      - order: 3
+        element_name: BLOCK COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 6
+        position:
+          start: 08
+          end: 13
+      - order: 4
+        element_name: ENTRY/ADDENDA COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 8
+        position:
+          start: 14
+          end: 21
+      - order: 5
+        element_name: ENTRY HASH
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 10
+        position:
+          start: 22
+          end: 31
+      - order: 6
+        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT IN FILE
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 12
+        position:
+          start: 32
+          end: 43
+      - order: 7
+        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT IN FILE
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 12
+        position:
+          start: 44
+          end: 55
+      - order: 8
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 39
+        position:
+          start: 56
+          end: 94
+
+  - name: COMPANY/BATCH HEADER RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘5’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: SERVICE CLASS CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 3
+        position:
+          start: 02
+          end: 04
+      - order: 3
+        element_name: COMPANY NAME
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 16
+        position:
+          start: 05
+          end: 20
+      - order: 4
+        element_name: COMPANY DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 20
+        position:
+          start: 21
+          end: 40
+      - order: 5
+        element_name: COMPANY IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 10
+        position:
+          start: 41
+          end: 50
+      - order: 6
+        element_name: STANDARD ENTRY CLASS CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 3
+        position:
+          start: 51
+          end: 53
+      - order: 7
+        element_name: COMPANY ENTRY DESCRIPTION
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 10
+        position:
+          start: 54
+          end: 63
+      - order: 8
+        element_name: COMPANY DESCRIPTIVE DATE
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 6
+        position:
+          start: 64
+          end: 69
+      - order: 9
+        element_name: EFFECTIVE ENTRY DATE
+        field_inclusion_requirement: required
+        contents: yymmdd
+        length: 6
+        position:
+          start: 70
+          end: 75
+      - order: 10
+        element_name: SETTLEMENT DATE
+        field_inclusion_requirement: Inserted by ACH Operator
+        contents: numeric
+        length: 3
+        position:
+          start: 76
+          end: 78
+      - order: 11
+        element_name: ORIGINATOR STATUS CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 12
+        element_name: ORIGINATING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 80
+          end: 87
+      - order: 13
+        element_name: BATCH NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 7
+        position:
+          start: 88
+          end: 94
+
+  - name: COMPANY/BATCH CONTROL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘8’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: SERVICE CLASS CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 3
+        position:
+          start: 02
+          end: 04
+      - order: 3
+        element_name: ENTRY/ ADDENDA COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 6
+        position:
+          start: 05
+          end: 10
+      - order: 4
+        element_name: ENTRY HASH
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 10
+        position:
+          start: 11
+          end: 20
+      - order: 5
+        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 12
+        position:
+          start: 21
+          end: 32
+      - order: 6
+        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 12
+        position:
+          start: 33
+          end: 44
+      - order: 7
+        element_name: COMPANY IDENTIFICATION
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 10
+        position:
+          start: 45
+          end: 54
+      - order: 8
+        element_name: MESSAGE AUTHENTICATION CODE
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 19
+        position:
+          start: 55
+          end: 73
+      - order: 9
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 6
+        position:
+          start: 74
+          end: 79
+      - order: 10
+        element_name: ORIGINATING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 80
+          end: 87
+      - order: 11
+        element_name: BATCH NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 7
+        position:
+          start: 88
+          end: 94
+
+  - name: IAT COMPANY/BATCH HEADER RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘5’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: SERVICE CLASS CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 3
+        position:
+          start: 02
+          end: 04
+      - order: 3
+        element_name: IAT INDICATOR
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 16
+        position:
+          start: 05
+          end: 20
+      - order: 4
+        element_name: FOREIGN EXCHANGE INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 2
+        position:
+          start: 21
+          end: 22
+      - order: 5
+        element_name: FOREIGN EXCHANGE REFERENCE INDICATOR
+        field_inclusion_requirement: required
+        contents: numeric
+        length: 1
+        position:
+          start: 23
+          end: 23
+      - order: 6
+        element_name: FOREIGN EXCHANGE REFERENCE
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 15
+        position:
+          start: 24
+          end: 38
+      - order: 7
+        element_name: ISO DESTINATION COUNTRY CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 2
+        position:
+          start: 39
+          end: 40
+      - order: 8
+        element_name: ORIGINATOR IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 10
+        position:
+          start: 41
+          end: 50
+      - order: 9
+        element_name: STANDARD ENTRY CLASS CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 3
+        position:
+          start: 51
+          end: 53
+      - order: 10
+        element_name: COMPANY ENTRY DESCRIPTION
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 10
+        position:
+          start: 54
+          end: 63
+      - order: 11
+        element_name: ISO ORIGINATING CURRENCY CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 3
+        position:
+          start: 64
+          end: 66
+      - order: 12
+        element_name: ISO DESTINATION CURRENCY CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 3
+        position:
+          start: 67
+          end: 69
+      - order: 13
+        element_name: EFFECTIVE ENTRY DATE
+        field_inclusion_requirement: required
+        contents: yymmdd
+        length: 6
+        position:
+          start: 70
+          end: 75
+      - order: 14
+        element_name: SETTLEMENT DATE
+        field_inclusion_requirement: Inserted by ACH Operator
+        contents: numeric
+        length: 3
+        position:
+          start: 76
+          end: 78
+      - order: 15
+        element_name: ORIGINATOR STATUS CODE
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 16
+        element_name: GO IDENTIFICATION/ ORIGINATING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 80
+          end: 87
+      - order: 17
+        element_name: BATCH NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 7
+        position:
+          start: 88
+          end: 94
+
+  - name: ADV FILE HEADER RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘1’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: PRIORITY CODE
+        field_inclusion_requirement: required
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: IMMEDIATE DESTINATION
+        field_inclusion_requirement: mandatory
+        contents: bttttaaaac
+        length: 10
+        position:
+          start: 04
+          end: 13
+      - order: 4
+        element_name: IMMEDIATE ORIGIN
+        field_inclusion_requirement: mandatory
+        contents: bttttaaaac
+        length: 10
+        position:
+          start: 14
+          end: 23
+      - order: 5
+        element_name: FILE CREATION DATE
+        field_inclusion_requirement: mandatory
+        contents: yymmdd
+        length: 6
+        position:
+          start: 24
+          end: 29
+      - order: 6
+        element_name: FILE CREATION TIME
+        field_inclusion_requirement: optional
+        contents: hhmm
+        length: 4
+        position:
+          start: 30
+          end: 33
+      - order: 7
+        element_name: FILE ID MODIFIER
+        field_inclusion_requirement: mandatory
+        contents: UPPER CASE A-Z NUMERIC 0-9
+        length: 1
+        position:
+          start: 34
+          end: 34
+      - order: 8
+        element_name: RECORD SIZE
+        field_inclusion_requirement: mandatory
+        contents: ‘094’
+        length: 3
+        position:
+          start: 35
+          end: 37
+      - order: 9
+        element_name: BLOCKING FACTOR
+        field_inclusion_requirement: mandatory
+        contents: ‘10’
+        length: 2
+        position:
+          start: 38
+          end: 39
+      - order: 10
+        element_name: FORMAT CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘1’
+        length: 1
+        position:
+          start: 40
+          end: 40
+      - order: 11
+        element_name: IMMEDIATE DESTINATION NAME
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 23
+        position:
+          start: 41
+          end: 63
+      - order: 12
+        element_name: IMMEDIATE ORIGIN NAME
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 23
+        position:
+          start: 64
+          end: 86
+      - order: 13
+        element_name: REFERENCE CODE
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 8
+        position:
+          start: 87
+          end: 94
+
+  - name: ADV FILE CONTROL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘9’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: BATCH COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 6
+        position:
+          start: 02
+          end: 07
+      - order: 3
+        element_name: BLOCK COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 6
+        position:
+          start: 08
+          end: 13
+      - order: 4
+        element_name: ENTRY/ADDENDA COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 8
+        position:
+          start: 14
+          end: 21
+      - order: 5
+        element_name: ENTRY HASH
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 10
+        position:
+          start: 22
+          end: 31
+      - order: 6
+        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT IN FILE
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 20
+        position:
+          start: 32
+          end: 51
+      - order: 7
+        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT IN FILE
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 20
+        position:
+          start: 52
+          end: 71
+      - order: 8
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 23
+        position:
+          start: 72
+          end: 94
+
+  - name: ADV COMPANY/BATCH CONTROL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘8’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: SERVICE CLASS CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 3
+        position:
+          start: 02
+          end: 04
+      - order: 3
+        element_name: ENTRY/ADDENDA COUNT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 6
+        position:
+          start: 05
+          end: 10
+      - order: 4
+        element_name: ENTRY HASH
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 10
+        position:
+          start: 11
+          end: 20
+      - order: 5
+        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 20
+        position:
+          start: 21
+          end: 40
+      - order: 6
+        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 20
+        position:
+          start: 41
+          end: 60
+      - order: 7
+        element_name: ACH OPERATOR DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 19
+        position:
+          start: 61
+          end: 79
+      - order: 8
+        element_name: ORIGINATING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 80
+          end: 87
+      - order: 9
+        element_name: BATCH NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 7
+        position:
+          start: 88
+          end: 94
+
+  - name: ADV ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 15
+        position:
+          start: 13
+          end: 27
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 12
+        position:
+          start: 28
+          end: 39
+      - order: 7
+        element_name: ADVICE ROUTING NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 9
+        position:
+          start: 40
+          end: 48
+      - order: 8
+        element_name: FILE IDENTIFICATION
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 5
+        position:
+          start: 49
+          end: 53
+      - order: 9
+        element_name: ACH OPERATOR DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 1
+        position:
+          start: 54
+          end: 54
+      - order: 10
+        element_name: INDIVIDUAL NAME
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 22
+        position:
+          start: 55
+          end: 76
+      - order: 11
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 12
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 13
+        element_name: ROUTING NUMBER OF ACH OPERATOR
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 80
+          end: 87
+      - order: 14
+        element_name: JULIAN DATE ON WHICH THIS ADVICE IS CREATED
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 3
+        position:
+          start: 88
+          end: 90
+      - order: 15
+        element_name: SEQUENCE NUMBER WITHIN BATCH
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 4
+        position:
+          start: 91
+          end: 94
+
+  - name: ARC ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: CHECK SERIAL NUMBER
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 22
+        position:
+          start: 55
+          end: 76
+      - order: 9
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 10
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 11
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+
+  - name: BOC ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: CHECK SERIAL NUMBER
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 22
+        position:
+          start: 55
+          end: 76
+      - order: 9
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 10
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 11
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+
+  - name: CCD ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: IDENTIFICATION NUMBER
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: RECEIVING COMPANY NAME
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 22
+        position:
+          start: 55
+          end: 76
+      - order: 9
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 10
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 11
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+    addenda_records:
+      - name: CCD ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘05’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: PAYMENT RELATED INFORMATION
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 80
+            position:
+              start: 04
+              end: 83
+          - order: 4
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 5
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+  - name: CIE ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: INDIVIDUAL NAME
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: INDIVIDUAL IDENTIFICATION NUMBER
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 22
+        position:
+          start: 55
+          end: 76
+      - order: 9
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 10
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 11
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+    addenda_records:
+      - name: CIE ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘05’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: PAYMENT RELATED INFORMATION
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 80
+            position:
+              start: 04
+              end: 83
+          - order: 4
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 5
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+  - name: CTX CORPORATE ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: TOTAL AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: IDENTIFICATION NUMBER
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: NUMBER OF ADDENDA RECORDS
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 4
+        position:
+          start: 55
+          end: 58
+      - order: 9
+        element_name: RECEIVING COMPANY NAME/ID NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 16
+        position:
+          start: 59
+          end: 74
+      - order: 10
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 2
+        position:
+          start: 75
+          end: 76
+      - order: 11
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 12
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 13
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+    addenda_records:
+      - name: CTX ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘05’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: PAYMENT RELATED INFORMATION
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 80
+            position:
+              start: 04
+              end: 83
+          - order: 4
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 5
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+  - name: DNE ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: INDIVIDUAL IDENTIFICATION NUMBER
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: INDIVIDUAL NAME
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 22
+        position:
+          start: 55
+          end: 76
+      - order: 9
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 10
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 11
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+    addenda_records:
+      - name: DNE ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘05’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: PAYMENT RELATED INFORMATION
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 80
+            position:
+              start: 04
+              end: 83
+          - order: 4
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 5
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+  - name: ENR ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: DFI ACCOUNT NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 17
+        position:
+          start: 13
+          end: 29
+      - order: 6
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: 0000000000
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 7
+        element_name: IDENTIFICATION NUMBER
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 15
+        position:
+          start: 40
+          end: 54
+      - order: 8
+        element_name: NUMBER OF ADDENDA RECORDS
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 4
+        position:
+          start: 55
+          end: 58
+      - order: 9
+        element_name: RECEIVING COMPANY NAME/ID NUMBER
+        field_inclusion_requirement: required
+        contents: alphameric
+        length: 16
+        position:
+          start: 59
+          end: 74
+      - order: 10
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 2
+        position:
+          start: 75
+          end: 76
+      - order: 11
+        element_name: DISCRETIONARY DATA
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 2
+        position:
+          start: 77
+          end: 78
+      - order: 12
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 13
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+    addenda_records:
+      - name: ENR ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘05’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: PAYMENT RELATED INFORMATION
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 80
+            position:
+              start: 04
+              end: 83
+          - order: 4
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 5
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+  - name: IAT ENTRY DETAIL RECORD
+    fields:
+      - order: 1
+        element_name: RECORD TYPE CODE
+        field_inclusion_requirement: mandatory
+        contents: ‘6’
+        length: 1
+        position:
+          start: 01
+          end: 01
+      - order: 2
+        element_name: TRANSACTION CODE
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 2
+        position:
+          start: 02
+          end: 03
+      - order: 3
+        element_name: GO IDENTIFICATION/ RECEIVING DFI IDENTIFICATION
+        field_inclusion_requirement: mandatory
+        contents: ttttaaaa
+        length: 8
+        position:
+          start: 04
+          end: 11
+      - order: 4
+        element_name: CHECK DIGIT
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 12
+          end: 12
+      - order: 5
+        element_name: NUMBER OF ADDENDA RECORDS
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 4
+        position:
+          start: 13
+          end: 16
+      - order: 6
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 13
+        position:
+          start: 17
+          end: 29
+      - order: 7
+        element_name: AMOUNT
+        field_inclusion_requirement: mandatory
+        contents: dollar_amount
+        length: 10
+        position:
+          start: 30
+          end: 39
+      - order: 8
+        element_name: FOREIGN RECEIVER’S ACCOUNT NUMBER/ DFI ACCOUNT NUMBER
+        field_inclusion_requirement: mandatory
+        contents: alphameric
+        length: 35
+        position:
+          start: 40
+          end: 74
+      - order: 9
+        element_name: RESERVED
+        field_inclusion_requirement: N/A
+        contents: blank
+        length: 2
+        position:
+          start: 75
+          end: 76
+      - order: 10
+        element_name: GATEWAY OPERATOR OFAC SCREENING INDICATOR
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 1
+        position:
+          start: 77
+          end: 77
+      - order: 11
+        element_name: SECONDARY OFAC SCREENING INDICATOR
+        field_inclusion_requirement: optional
+        contents: alphameric
+        length: 1
+        position:
+          start: 78
+          end: 78
+      - order: 12
+        element_name: ADDENDA RECORD INDICATOR
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 1
+        position:
+          start: 79
+          end: 79
+      - order: 13
+        element_name: TRACE NUMBER
+        field_inclusion_requirement: mandatory
+        contents: numeric
+        length: 15
+        position:
+          start: 80
+          end: 94
+    addenda_records:
+      - name: FIRST IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘10’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: TRANSACTION TYPE CODE
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 3
+            position:
+              start: 04
+              end: 06
+          - order: 4
+            element_name: FOREIGN PAYMENT AMOUNT
+            field_inclusion_requirement: required
+            contents: dollar_amount
+            length: 18
+            position:
+              start: 07
+              end: 24
+          - order: 5
+            element_name: FOREIGN TRACE NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 22
+            position:
+              start: 25
+              end: 46
+          - order: 6
+            element_name: RECEIVING COMPANY NAME/INDIVIDUAL NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 47
+              end: 81
+          - order: 7
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 6
+            position:
+              start: 82
+              end: 87
+          - order: 8
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: SECOND IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘11’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: ORIGINATOR NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 04
+              end: 38
+          - order: 4
+            element_name: ORIGINATOR STREET ADDRESS
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 39
+              end: 73
+          - order: 5
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 14
+            position:
+              start: 74
+              end: 87
+          - order: 6
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: THIRD IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘12’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: ORIGINATOR CITY &amp; STATE/PROVINCE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 04
+              end: 38
+          - order: 4
+            element_name: ORIGINATOR COUNTRY &amp; POSTAL CODE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 39
+              end: 73
+          - order: 5
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 14
+            position:
+              start: 74
+              end: 87
+          - order: 6
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: FOURTH IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘13’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: ORIGINATING DFI NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 04
+              end: 38
+          - order: 4
+            element_name: ORIGINATING DFI IDENTIFICATION NUMBER QUALIFIER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 2
+            position:
+              start: 39
+              end: 40
+          - order: 5
+            element_name: ORIGINATING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 34
+            position:
+              start: 41
+              end: 74
+          - order: 6
+            element_name: ORIGINATING DFI BRANCH COUNTRY CODE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 3
+            position:
+              start: 75
+              end: 77
+          - order: 7
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 10
+            position:
+              start: 78
+              end: 87
+          - order: 8
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: FIFTH IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘14’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 04
+              end: 38
+          - order: 4
+            element_name: RECEIVING DFI IDENTIFICATION NUMBER QUALIFIER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 2
+            position:
+              start: 39
+              end: 40
+          - order: 5
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 34
+            position:
+              start: 41
+              end: 74
+          - order: 6
+            element_name: RECEIVING DFI BRANCH COUNTRY CODE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 3
+            position:
+              start: 75
+              end: 77
+          - order: 7
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 10
+            position:
+              start: 78
+              end: 87
+          - order: 8
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: SIXTH IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘15’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVER IDENTIFICATION NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 15
+            position:
+              start: 04
+              end: 18
+          - order: 4
+            element_name: RECEIVER STREET ADDRESS
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 19
+              end: 53
+          - order: 5
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 34
+            position:
+              start: 54
+              end: 87
+          - order: 6
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: SEVENTH IAT ADDENDA RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘16’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVER CITY &amp; STATE/PROVINCE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 04
+              end: 38
+          - order: 4
+            element_name: RECEIVER COUNTRY &amp; POSTAL CODE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 39
+              end: 73
+          - order: 5
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 14
+            position:
+              start: 74
+              end: 87
+          - order: 6
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: IAT ADDENDA RECORD FOR REMITTANCE INFORMATION
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘17’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: PAYMENT RELATED INFORMATION
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 80
+            position:
+              start: 04
+              end: 83
+          - order: 4
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 5
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: IAT ADDENDA RECORD FOR FOREIGN CORRESPONDENT BANK INFORMATION
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘7’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: ADDENDA TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘18’
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: FOREIGN CORRESPONDENT BANK NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 35
+            position:
+              start: 04
+              end: 38
+          - order: 4
+            element_name: FOREIGN CORRESPONDENT BANK IDENTIFICATION NUMBER QUALIFIER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 2
+            position:
+              start: 39
+              end: 40
+          - order: 5
+            element_name: FOREIGN CORRESPONDENT BANK IDENTIFICATION NUMBER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 34
+            position:
+              start: 41
+              end: 74
+          - order: 6
+            element_name: FOREIGN CORRESPONDENT BANK BRANCH COUNTRY CODE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 3
+            position:
+              start: 75
+              end: 77
+          - order: 7
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 6
+            position:
+              start: 78
+              end: 83
+          - order: 8
+            element_name: ADDENDA SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 84
+              end: 87
+          - order: 9
+            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 7
+            position:
+              start: 88
+              end: 94
+
+      - name: MTE ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: INDIVIDUAL NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 9
+            element_name: DISCRETIONARY DATA
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 10
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 11
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+        addenda_records:
+          - name: MTE ADDENDA RECORD
+            fields:
+              - order: 1
+                element_name: RECORD TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘7’
+                length: 1
+                position:
+                  start: 01
+                  end: 01
+              - order: 2
+                element_name: ADDENDA TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘02’
+                length: 2
+                position:
+                  start: 02
+                  end: 03
+              - order: 3
+                element_name: TRANSACTION DESCRIPTION
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 7
+                position:
+                  start: 04
+                  end: 10
+              - order: 4
+                element_name: NETWORK IDENTIFICATION CODE
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 3
+                position:
+                  start: 11
+                  end: 13
+              - order: 5
+                element_name: TERMINAL IDENTIFICATION CODE
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 6
+                position:
+                  start: 14
+                  end: 19
+              - order: 6
+                element_name: TRANSACTION SERIAL NUMBER
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 6
+                position:
+                  start: 20
+                  end: 25
+              - order: 7
+                element_name: TRANSACTION DATE
+                field_inclusion_requirement: required
+                contents: MMDD
+                length: 4
+                position:
+                  start: 26
+                  end: 29
+              - order: 8
+                element_name: TRANSACTION TIME
+                field_inclusion_requirement: required
+                contents: hhmmSS
+                length: 6
+                position:
+                  start: 30
+                  end: 35
+              - order: 9
+                element_name: TERMINAL LOCATION
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 27
+                position:
+                  start: 36
+                  end: 62
+              - order: 10
+                element_name: TERMINAL CITY
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 15
+                position:
+                  start: 63
+                  end: 77
+              - order: 11
+                element_name: TERMINAL STATE
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 2
+                position:
+                  start: 78
+                  end: 79
+              - order: 12
+                element_name: TRACE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 15
+                position:
+                  start: 80
+                  end: 94
+
+      - name: POP ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: CHECK SERIAL NUMBER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 9
+            position:
+              start: 40
+              end: 48
+          - order: 8
+            element_name: TERMINAL CITY
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 4
+            position:
+              start: 49
+              end: 52
+          - order: 9
+            element_name: TERMINAL STATE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 2
+            position:
+              start: 53
+              end: 54
+          - order: 10
+            element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 11
+            element_name: DISCRETIONARY DATA
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 12
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 13
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+
+      - name: POS ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: INDIVIDUAL NAME
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 9
+            element_name: CARD TRANSACTION TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 10
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 11
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+        addenda_records:
+          - name: POS ADDENDA RECORD
+            fields:
+              - order: 1
+                element_name: RECORD TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘7’
+                length: 1
+                position:
+                  start: 01
+                  end: 01
+              - order: 2
+                element_name: ADDENDA TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘02’
+                length: 2
+                position:
+                  start: 02
+                  end: 03
+              - order: 3
+                element_name: REFERENCE INFORMATION #1
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 7
+                position:
+                  start: 04
+                  end: 10
+              - order: 4
+                element_name: REFERENCE INFORMATION #2
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 3
+                position:
+                  start: 11
+                  end: 13
+              - order: 5
+                element_name: TERMINAL IDENTIFICATION CODE
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 6
+                position:
+                  start: 14
+                  end: 19
+              - order: 6
+                element_name: TRANSACTION SERIAL NUMBER
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 6
+                position:
+                  start: 20
+                  end: 25
+              - order: 7
+                element_name: TRANSACTION DATE
+                field_inclusion_requirement: required
+                contents: MMDD
+                length: 4
+                position:
+                  start: 26
+                  end: 29
+              - order: 8
+                element_name: AUTHORIZATION CODE OR CARD EXPIRATION DATE
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 6
+                position:
+                  start: 30
+                  end: 35
+              - order: 9
+                element_name: TERMINAL LOCATION
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 27
+                position:
+                  start: 36
+                  end: 62
+              - order: 10
+                element_name: TERMINAL CITY
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 15
+                position:
+                  start: 63
+                  end: 77
+              - order: 11
+                element_name: TERMINAL STATE
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 2
+                position:
+                  start: 78
+                  end: 79
+              - order: 12
+                element_name: TRACE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 15
+                position:
+                  start: 80
+                  end: 94
+
+      - name: PPD ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: INDIVIDUAL NAME
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 9
+            element_name: DISCRETIONARY DATA
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 10
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 11
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+        addenda_records:
+          - name: PPD ADDENDA RECORD
+            fields:
+              - order: 1
+                element_name: RECORD TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘7’
+                length: 1
+                position:
+                  start: 01
+                  end: 01
+              - order: 2
+                element_name: ADDENDA TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘05’
+                length: 2
+                position:
+                  start: 02
+                  end: 03
+              - order: 3
+                element_name: PAYMENT RELATED INFORMATION
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 80
+                position:
+                  start: 04
+                  end: 83
+              - order: 4
+                element_name: ADDENDA SEQUENCE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 4
+                position:
+                  start: 84
+                  end: 87
+              - order: 5
+                element_name: ENTRY DETAIL SEQUENCE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 7
+                position:
+                  start: 88
+                  end: 94
+
+      - name: RCK ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: CHECK SERIAL NUMBER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: INDIVIDUAL NAME
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 9
+            element_name: DISCRETIONARY DATA
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 10
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 11
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+
+      - name: SHR ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: CARD EXPIRATION DATE
+            field_inclusion_requirement: required
+            contents: MMYY
+            length: 4
+            position:
+              start: 40
+              end: 43
+          - order: 8
+            element_name: DOCUMENT REFERENCE NUMBER
+            field_inclusion_requirement: required
+            contents: numeric
+            length: 11
+            position:
+              start: 44
+              end: 54
+          - order: 9
+            element_name: INDIVIDUAL CARD ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: numeric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 10
+            element_name: CARD TRANSACTION TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 11
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 12
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+        addenda_records:
+          - name: SHR ADDENDA RECORD
+            fields:
+              - order: 1
+                element_name: RECORD TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘7’
+                length: 1
+                position:
+                  start: 01
+                  end: 01
+              - order: 2
+                element_name: ADDENDA TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘02’
+                length: 2
+                position:
+                  start: 02
+                  end: 03
+              - order: 3
+                element_name: REFERENCE INFORMATION #1
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 7
+                position:
+                  start: 04
+                  end: 10
+              - order: 4
+                element_name: REFERENCE INFORMATION #2
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 3
+                position:
+                  start: 11
+                  end: 13
+              - order: 5
+                element_name: TERMINAL IDENTIFICATION CODE
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 6
+                position:
+                  start: 14
+                  end: 19
+              - order: 6
+                element_name: TRANSACTION SERIAL NUMBER
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 6
+                position:
+                  start: 20
+                  end: 25
+              - order: 7
+                element_name: TRANSACTION DATE
+                field_inclusion_requirement: required
+                contents: MMDD
+                length: 4
+                position:
+                  start: 26
+                  end: 29
+              - order: 8
+                element_name: AUTHORIZATION CODE OR CARD EXPIRATION DATE
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 6
+                position:
+                  start: 30
+                  end: 35
+              - order: 9
+                element_name: TERMINAL LOCATION
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 27
+                position:
+                  start: 36
+                  end: 62
+              - order: 10
+                element_name: TERMINAL CITY
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 15
+                position:
+                  start: 63
+                  end: 77
+              - order: 11
+                element_name: TERMINAL STATE
+                field_inclusion_requirement: required
+                contents: alphameric
+                length: 2
+                position:
+                  start: 78
+                  end: 79
+              - order: 12
+                element_name: TRACE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 15
+                position:
+                  start: 80
+                  end: 94
+
+      - name: TEL ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: INDIVIDUAL NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 9
+            element_name: PAYMENT TYPE CODE
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 10
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 11
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+
+      - name: TRC ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: CHECK SERIAL NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: PROCESS CONTROL FIELD
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 6
+            position:
+              start: 55
+              end: 60
+          - order: 9
+            element_name: ITEM RESEARCH NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 16
+            position:
+              start: 61
+              end: 76
+          - order: 10
+            element_name: ITEM TYPE INDICATOR
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 11
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 12
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+
+      - name: TRX ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: TOTAL AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: IDENTIFICATION NUMBER
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: NUMBER OF ADDENDA RECORDS
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 4
+            position:
+              start: 55
+              end: 58
+          - order: 9
+            element_name: RECEIVING COMPANY NAME/ID NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 16
+            position:
+              start: 59
+              end: 74
+          - order: 10
+            element_name: RESERVED
+            field_inclusion_requirement: N/A
+            contents: blank
+            length: 2
+            position:
+              start: 75
+              end: 76
+          - order: 11
+            element_name: ITEM TYPE INDICATOR
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 12
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 13
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+        addenda_records:
+          - name: TRX ADDENDA RECORD
+            fields:
+              - order: 1
+                element_name: RECORD TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘7’
+                length: 1
+                position:
+                  start: 01
+                  end: 01
+              - order: 2
+                element_name: ADDENDA TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘05’
+                length: 2
+                position:
+                  start: 02
+                  end: 03
+              - order: 3
+                element_name: PAYMENT RELATED INFORMATION
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 80
+                position:
+                  start: 04
+                  end: 83
+              - order: 4
+                element_name: ADDENDA SEQUENCE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 4
+                position:
+                  start: 84
+                  end: 87
+              - order: 5
+                element_name: ENTRY DETAIL SEQUENCE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 7
+                position:
+                  start: 88
+                  end: 94
+
+      - name: WEB ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: INDIVIDUAL IDENTIFICATION NUMBER1
+            field_inclusion_requirement: optional/R
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: INDIVIDUAL NAME
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 22
+            position:
+              start: 55
+              end: 76
+          - order: 9
+            element_name: PAYMENT TYPE CODE
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 10
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 11
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
+        addenda_records:
+          - name: WEB ADDENDA RECORD
+            fields:
+              - order: 1
+                element_name: RECORD TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘7’
+                length: 1
+                position:
+                  start: 01
+                  end: 01
+              - order: 2
+                element_name: ADDENDA TYPE CODE
+                field_inclusion_requirement: mandatory
+                contents: ‘05’
+                length: 2
+                position:
+                  start: 02
+                  end: 03
+              - order: 3
+                element_name: PAYMENT RELATED INFORMATION
+                field_inclusion_requirement: optional
+                contents: alphameric
+                length: 80
+                position:
+                  start: 04
+                  end: 83
+              - order: 4
+                element_name: ADDENDA SEQUENCE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 4
+                position:
+                  start: 84
+                  end: 87
+              - order: 5
+                element_name: ENTRY DETAIL SEQUENCE NUMBER
+                field_inclusion_requirement: mandatory
+                contents: numeric
+                length: 7
+                position:
+                  start: 88
+                  end: 94
+
+      - name: XCK ENTRY DETAIL RECORD
+        fields:
+          - order: 1
+            element_name: RECORD TYPE CODE
+            field_inclusion_requirement: mandatory
+            contents: ‘6’
+            length: 1
+            position:
+              start: 01
+              end: 01
+          - order: 2
+            element_name: TRANSACTION CODE
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 2
+            position:
+              start: 02
+              end: 03
+          - order: 3
+            element_name: RECEIVING DFI IDENTIFICATION
+            field_inclusion_requirement: mandatory
+            contents: ttttaaaa
+            length: 8
+            position:
+              start: 04
+              end: 11
+          - order: 4
+            element_name: CHECK DIGIT
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 12
+              end: 12
+          - order: 5
+            element_name: DFI ACCOUNT NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 17
+            position:
+              start: 13
+              end: 29
+          - order: 6
+            element_name: AMOUNT
+            field_inclusion_requirement: mandatory
+            contents: dollar_amount
+            length: 10
+            position:
+              start: 30
+              end: 39
+          - order: 7
+            element_name: CHECK SERIAL NUMBER
+            field_inclusion_requirement: mandatory
+            contents: alphameric
+            length: 15
+            position:
+              start: 40
+              end: 54
+          - order: 8
+            element_name: PROCESS CONTROL FIELD
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 6
+            position:
+              start: 55
+              end: 60
+          - order: 9
+            element_name: ITEM RESEARCH NUMBER
+            field_inclusion_requirement: required
+            contents: alphameric
+            length: 16
+            position:
+              start: 61
+              end: 76
+          - order: 10
+            element_name: DISCRETIONARY DATA
+            field_inclusion_requirement: optional
+            contents: alphameric
+            length: 2
+            position:
+              start: 77
+              end: 78
+          - order: 11
+            element_name: ADDENDA RECORD INDICATOR
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 1
+            position:
+              start: 79
+              end: 79
+          - order: 12
+            element_name: TRACE NUMBER
+            field_inclusion_requirement: mandatory
+            contents: numeric
+            length: 15
+            position:
+              start: 80
+              end: 94
