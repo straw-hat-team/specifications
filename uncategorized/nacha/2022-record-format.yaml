@@ -1,5 +1,12 @@
 version: 2022
 
+field_inclusion_requirements:
+  - id: optional
+  - id: mandatory
+  - id: required
+  - id: na
+  - id: ach_operator_dependent
+
 content_types:
   - id: numeric
   - id: alphameric
@@ -327,7 +334,7 @@ records:
         element_name: SETTLEMENT DATE
         id: settlement_date
         field_inclusion_requirement:
-          - Inserted by ACH Operator
+          - ach_operator_dependent
         contents: numeric
         length: 3
         position:
@@ -615,7 +622,7 @@ records:
         element_name: SETTLEMENT DATE
         id: settlement_date
         field_inclusion_requirement:
-          - Inserted by ACH Operator
+          - ach_operator_dependent
         contents: numeric
         length: 3
         position:
