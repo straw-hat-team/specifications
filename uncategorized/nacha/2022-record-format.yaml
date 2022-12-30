@@ -4873,6 +4873,7 @@ records:
               end: 79
           - order: 12
             element_name: TRACE NUMBER
+            id: trace_number
             field_inclusion_requirements:
               - mandatory
             content_type: numeric
