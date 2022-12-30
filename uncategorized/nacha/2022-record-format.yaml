@@ -25,7 +25,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘1’
         length: 1
@@ -35,7 +35,7 @@ records:
       - order: 2
         element_name: PRIORITY CODE
         id: priority_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: numeric
         length: 2
@@ -45,7 +45,7 @@ records:
       - order: 3
         element_name: IMMEDIATE DESTINATION
         id: immediate_destination
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: bttttaaaac
         length: 10
@@ -55,7 +55,7 @@ records:
       - order: 4
         element_name: IMMEDIATE ORIGIN
         id: immediate_origin
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: bttttaaaac
         length: 10
@@ -65,7 +65,7 @@ records:
       - order: 5
         element_name: FILE CREATION DATE
         id: file_creation_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: yymmdd
         length: 6
@@ -75,7 +75,7 @@ records:
       - order: 6
         element_name: FILE CREATION TIME
         id: file_creation_time
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: hhmm
         length: 4
@@ -85,7 +85,7 @@ records:
       - order: 7
         element_name: FILE ID MODIFIER
         id: file_id_modifier
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: UPPER CASE A-Z NUMERIC 0-9
         length: 1
@@ -95,7 +95,7 @@ records:
       - order: 8
         element_name: RECORD SIZE
         id: record_size
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘094’
         length: 3
@@ -105,7 +105,7 @@ records:
       - order: 9
         element_name: BLOCKING FACTOR
         id: blocking_factor
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘10’
         length: 2
@@ -115,7 +115,7 @@ records:
       - order: 10
         element_name: FORMAT CODE
         id: format_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘1’
         length: 1
@@ -125,7 +125,7 @@ records:
       - order: 11
         element_name: IMMEDIATE DESTINATION NAME
         id: immediate_destination_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 23
@@ -135,7 +135,7 @@ records:
       - order: 12
         element_name: IMMEDIATE ORIGIN NAME
         id: immediate_origin_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 23
@@ -145,7 +145,7 @@ records:
       - order: 13
         element_name: REFERENCE CODE
         id: reference_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 8
@@ -159,7 +159,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘9’
         length: 1
@@ -169,7 +169,7 @@ records:
       - order: 2
         element_name: BATCH COUNT
         id: batch_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 6
@@ -179,7 +179,7 @@ records:
       - order: 3
         element_name: BLOCK COUNT
         id: block_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 6
@@ -189,7 +189,7 @@ records:
       - order: 4
         element_name: ENTRY/ADDENDA COUNT
         id: entry_and_addenda_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 8
@@ -199,7 +199,7 @@ records:
       - order: 5
         element_name: ENTRY HASH
         id: entry_hash
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 10
@@ -209,7 +209,7 @@ records:
       - order: 6
         element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT IN FILE
         id: total_debits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 12
@@ -219,7 +219,7 @@ records:
       - order: 7
         element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT IN FILE
         id: total_credits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 12
@@ -229,7 +229,7 @@ records:
       - order: 8
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 39
@@ -243,7 +243,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘5’
         length: 1
@@ -253,7 +253,7 @@ records:
       - order: 2
         element_name: SERVICE CLASS CODE
         id: service_class_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 3
@@ -263,7 +263,7 @@ records:
       - order: 3
         element_name: COMPANY NAME
         id: company_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 16
@@ -273,7 +273,7 @@ records:
       - order: 4
         element_name: COMPANY DISCRETIONARY DATA
         id: company_discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 20
@@ -283,7 +283,7 @@ records:
       - order: 5
         element_name: COMPANY IDENTIFICATION
         id: company_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 10
@@ -293,7 +293,7 @@ records:
       - order: 6
         element_name: STANDARD ENTRY CLASS CODE
         id: standard_entry_class_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 3
@@ -303,7 +303,7 @@ records:
       - order: 7
         element_name: COMPANY ENTRY DESCRIPTION
         id: company_entry_description
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 10
@@ -313,7 +313,7 @@ records:
       - order: 8
         element_name: COMPANY DESCRIPTIVE DATE
         id: company_descriptive_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 6
@@ -323,7 +323,7 @@ records:
       - order: 9
         element_name: EFFECTIVE ENTRY DATE
         id: effective_entry_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: yymmdd
         length: 6
@@ -333,7 +333,7 @@ records:
       - order: 10
         element_name: SETTLEMENT DATE
         id: settlement_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - ach_operator_dependent
         content_type: numeric
         length: 3
@@ -343,7 +343,7 @@ records:
       - order: 11
         element_name: ORIGINATOR STATUS CODE
         id: originator_status_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 1
@@ -353,7 +353,7 @@ records:
       - order: 12
         element_name: ORIGINATING DFI IDENTIFICATION
         id: originating_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -363,7 +363,7 @@ records:
       - order: 13
         element_name: BATCH NUMBER
         id: batch_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 7
@@ -377,7 +377,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘8’
         length: 1
@@ -387,7 +387,7 @@ records:
       - order: 2
         element_name: SERVICE CLASS CODE
         id: service_class_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 3
@@ -397,7 +397,7 @@ records:
       - order: 3
         element_name: ENTRY/ADDENDA COUNT
         id: entry_and_addenda_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 6
@@ -407,7 +407,7 @@ records:
       - order: 4
         element_name: ENTRY HASH
         id: entry_hash
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 10
@@ -417,7 +417,7 @@ records:
       - order: 5
         element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT
         id: total_debits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 12
@@ -427,7 +427,7 @@ records:
       - order: 6
         element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT
         id: total_credits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 12
@@ -437,7 +437,7 @@ records:
       - order: 7
         element_name: COMPANY IDENTIFICATION
         id: company_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 10
@@ -447,7 +447,7 @@ records:
       - order: 8
         element_name: MESSAGE AUTHENTICATION CODE
         id: message_authentication_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 19
@@ -457,7 +457,7 @@ records:
       - order: 9
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 6
@@ -467,7 +467,7 @@ records:
       - order: 10
         element_name: ORIGINATING DFI IDENTIFICATION
         id: originating_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -477,7 +477,7 @@ records:
       - order: 11
         element_name: BATCH NUMBER
         id: batch_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 7
@@ -491,7 +491,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘5’
         length: 1
@@ -501,7 +501,7 @@ records:
       - order: 2
         element_name: SERVICE CLASS CODE
         id: service_class_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 3
@@ -511,7 +511,7 @@ records:
       - order: 3
         element_name: IAT INDICATOR
         id: iat_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 16
@@ -521,7 +521,7 @@ records:
       - order: 4
         element_name: FOREIGN EXCHANGE INDICATOR
         id: foreign_exchange_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 2
@@ -531,7 +531,7 @@ records:
       - order: 5
         element_name: FOREIGN EXCHANGE REFERENCE INDICATOR
         id: foreign_exchange_reference_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: numeric
         length: 1
@@ -541,7 +541,7 @@ records:
       - order: 6
         element_name: FOREIGN EXCHANGE REFERENCE
         id: foreign_exchange_reference
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 15
@@ -551,7 +551,7 @@ records:
       - order: 7
         element_name: ISO DESTINATION COUNTRY CODE
         id: iso_destination_country_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 2
@@ -561,7 +561,7 @@ records:
       - order: 8
         element_name: ORIGINATOR IDENTIFICATION
         id: originator_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 10
@@ -571,7 +571,7 @@ records:
       - order: 9
         element_name: STANDARD ENTRY CLASS CODE
         id: standard_entry_class_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 3
@@ -581,7 +581,7 @@ records:
       - order: 10
         element_name: COMPANY ENTRY DESCRIPTION
         id: company_entry_description
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 10
@@ -591,7 +591,7 @@ records:
       - order: 11
         element_name: ISO ORIGINATING CURRENCY CODE
         id: iso_originating_currency_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 3
@@ -601,7 +601,7 @@ records:
       - order: 12
         element_name: ISO DESTINATION CURRENCY CODE
         id: iso_destination_currency_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 3
@@ -611,7 +611,7 @@ records:
       - order: 13
         element_name: EFFECTIVE ENTRY DATE
         id: effective_entry_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: yymmdd
         length: 6
@@ -621,7 +621,7 @@ records:
       - order: 14
         element_name: SETTLEMENT DATE
         id: settlement_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - ach_operator_dependent
         content_type: numeric
         length: 3
@@ -631,7 +631,7 @@ records:
       - order: 15
         element_name: ORIGINATOR STATUS CODE
         id: originator_status_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 1
@@ -641,7 +641,7 @@ records:
       - order: 16
         element_name: GO IDENTIFICATION/ ORIGINATING DFI IDENTIFICATION
         id: go_identification_or_originating_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -651,7 +651,7 @@ records:
       - order: 17
         element_name: BATCH NUMBER
         id: batch_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 7
@@ -664,7 +664,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘1’
         length: 1
@@ -674,7 +674,7 @@ records:
       - order: 2
         element_name: PRIORITY CODE
         id: priority_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: numeric
         length: 2
@@ -684,7 +684,7 @@ records:
       - order: 3
         element_name: IMMEDIATE DESTINATION
         id: immediate_destination
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: bttttaaaac
         length: 10
@@ -694,7 +694,7 @@ records:
       - order: 4
         element_name: IMMEDIATE ORIGIN
         id: immediate_origin
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: bttttaaaac
         length: 10
@@ -704,7 +704,7 @@ records:
       - order: 5
         element_name: FILE CREATION DATE
         id: file_creation_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: yymmdd
         length: 6
@@ -714,7 +714,7 @@ records:
       - order: 6
         element_name: FILE CREATION TIME
         id: file_creation_time
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: hhmm
         length: 4
@@ -724,7 +724,7 @@ records:
       - order: 7
         element_name: FILE ID MODIFIER
         id: file_id_modifier
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: UPPER CASE A-Z NUMERIC 0-9
         length: 1
@@ -734,7 +734,7 @@ records:
       - order: 8
         element_name: RECORD SIZE
         id: record_size
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘094’
         length: 3
@@ -744,7 +744,7 @@ records:
       - order: 9
         element_name: BLOCKING FACTOR
         id: blocking_factor
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘10’
         length: 2
@@ -754,7 +754,7 @@ records:
       - order: 10
         element_name: FORMAT CODE
         id: format_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘1’
         length: 1
@@ -764,7 +764,7 @@ records:
       - order: 11
         element_name: IMMEDIATE DESTINATION NAME
         id: immediate_destination_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 23
@@ -774,7 +774,7 @@ records:
       - order: 12
         element_name: IMMEDIATE ORIGIN NAME
         id: immediate_origin_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 23
@@ -784,7 +784,7 @@ records:
       - order: 13
         element_name: REFERENCE CODE
         id: reference_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 8
@@ -798,7 +798,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘9’
         length: 1
@@ -808,7 +808,7 @@ records:
       - order: 2
         element_name: BATCH COUNT
         id: batch_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 6
@@ -818,7 +818,7 @@ records:
       - order: 3
         element_name: BLOCK COUNT
         id: block_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 6
@@ -828,7 +828,7 @@ records:
       - order: 4
         element_name: ENTRY/ADDENDA COUNT
         id: entry_and_addenda_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 8
@@ -838,7 +838,7 @@ records:
       - order: 5
         element_name: ENTRY HASH
         id: entry_hash
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 10
@@ -848,7 +848,7 @@ records:
       - order: 6
         element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT IN FILE
         id: total_debits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 20
@@ -858,7 +858,7 @@ records:
       - order: 7
         element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT IN FILE
         id: total_credits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 20
@@ -868,7 +868,7 @@ records:
       - order: 8
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 23
@@ -882,7 +882,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘8’
         length: 1
@@ -892,7 +892,7 @@ records:
       - order: 2
         element_name: SERVICE CLASS CODE
         id: service_class_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 3
@@ -902,7 +902,7 @@ records:
       - order: 3
         element_name: ENTRY/ADDENDA COUNT
         id: entry_and_addenda_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 6
@@ -912,7 +912,7 @@ records:
       - order: 4
         element_name: ENTRY HASH
         id: entry_hash
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 10
@@ -922,7 +922,7 @@ records:
       - order: 5
         element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT
         id: total_debits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 20
@@ -932,7 +932,7 @@ records:
       - order: 6
         element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT
         id: total_credits_dollar_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 20
@@ -942,7 +942,7 @@ records:
       - order: 7
         element_name: ACH OPERATOR DATA
         id: ach_operator_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 19
@@ -952,7 +952,7 @@ records:
       - order: 8
         element_name: ORIGINATING DFI IDENTIFICATION
         id: originating_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -962,7 +962,7 @@ records:
       - order: 9
         element_name: BATCH NUMBER
         id: batch_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 7
@@ -976,7 +976,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -986,7 +986,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -996,7 +996,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1006,7 +1006,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1016,7 +1016,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 15
@@ -1026,7 +1026,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 12
@@ -1036,7 +1036,7 @@ records:
       - order: 7
         element_name: ADVICE ROUTING NUMBER
         id: advice_routing_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 9
@@ -1046,7 +1046,7 @@ records:
       - order: 8
         element_name: FILE IDENTIFICATION
         id: file_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 5
@@ -1056,7 +1056,7 @@ records:
       - order: 9
         element_name: ACH OPERATOR DATA
         id: ach_operator_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 1
@@ -1066,7 +1066,7 @@ records:
       - order: 10
         element_name: INDIVIDUAL NAME
         id: individual_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 22
@@ -1076,7 +1076,7 @@ records:
       - order: 11
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1086,7 +1086,7 @@ records:
       - order: 12
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1096,7 +1096,7 @@ records:
       - order: 13
         element_name: ROUTING NUMBER OF ACH OPERATOR
         id: ach_operator_routing_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1106,7 +1106,7 @@ records:
       - order: 14
         element_name: JULIAN DATE ON WHICH THIS ADVICE IS CREATED
         id: created_julian_date
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 3
@@ -1116,7 +1116,7 @@ records:
       - order: 15
         element_name: SEQUENCE NUMBER WITHIN BATCH
         id: sequence_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 4
@@ -1130,7 +1130,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -1140,7 +1140,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -1150,7 +1150,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1160,7 +1160,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1170,7 +1170,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -1180,7 +1180,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -1190,7 +1190,7 @@ records:
       - order: 7
         element_name: CHECK SERIAL NUMBER
         id: check_serial_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 15
@@ -1200,7 +1200,7 @@ records:
       - order: 8
         element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
         id: individual_name_or_receiving_company_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 22
@@ -1210,7 +1210,7 @@ records:
       - order: 9
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1220,7 +1220,7 @@ records:
       - order: 10
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1230,7 +1230,7 @@ records:
       - order: 11
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -1244,7 +1244,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -1254,7 +1254,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -1264,7 +1264,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1274,7 +1274,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1284,7 +1284,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -1294,7 +1294,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -1304,7 +1304,7 @@ records:
       - order: 7
         element_name: CHECK SERIAL NUMBER
         id: check_serial_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 15
@@ -1314,7 +1314,7 @@ records:
       - order: 8
         element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
         id: individual_name_or_receiving_company_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 22
@@ -1324,7 +1324,7 @@ records:
       - order: 9
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1334,7 +1334,7 @@ records:
       - order: 10
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1344,7 +1344,7 @@ records:
       - order: 11
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -1358,7 +1358,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -1368,7 +1368,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -1378,7 +1378,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1388,7 +1388,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1398,7 +1398,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -1408,7 +1408,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -1418,7 +1418,7 @@ records:
       - order: 7
         element_name: IDENTIFICATION NUMBER
         id: identification_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 15
@@ -1428,7 +1428,7 @@ records:
       - order: 8
         element_name: RECEIVING COMPANY NAME
         id: receiving_company_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 22
@@ -1438,7 +1438,7 @@ records:
       - order: 9
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1448,7 +1448,7 @@ records:
       - order: 10
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1458,7 +1458,7 @@ records:
       - order: 11
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -1472,7 +1472,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -1482,7 +1482,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘05’
             length: 2
@@ -1492,7 +1492,7 @@ records:
           - order: 3
             element_name: PAYMENT RELATED INFORMATION
             id: payment_related_information
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 80
@@ -1502,7 +1502,7 @@ records:
           - order: 4
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -1512,7 +1512,7 @@ records:
           - order: 5
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -1526,7 +1526,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -1536,7 +1536,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -1546,7 +1546,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1556,7 +1556,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1566,7 +1566,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -1576,7 +1576,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -1586,7 +1586,7 @@ records:
       - order: 7
         element_name: INDIVIDUAL NAME
         id: individual_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 15
@@ -1596,7 +1596,7 @@ records:
       - order: 8
         element_name: INDIVIDUAL IDENTIFICATION NUMBER
         id: individual_identification_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 22
@@ -1606,7 +1606,7 @@ records:
       - order: 9
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1616,7 +1616,7 @@ records:
       - order: 10
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1626,7 +1626,7 @@ records:
       - order: 11
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -1640,7 +1640,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -1650,7 +1650,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘05’
             length: 2
@@ -1660,7 +1660,7 @@ records:
           - order: 3
             element_name: PAYMENT RELATED INFORMATION
             id: payment_related_information
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 80
@@ -1670,7 +1670,7 @@ records:
           - order: 4
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -1680,7 +1680,7 @@ records:
           - order: 5
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -1694,7 +1694,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -1704,7 +1704,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -1714,7 +1714,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1724,7 +1724,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1734,7 +1734,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -1744,7 +1744,7 @@ records:
       - order: 6
         element_name: TOTAL AMOUNT
         id: total_amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -1754,7 +1754,7 @@ records:
       - order: 7
         element_name: IDENTIFICATION NUMBER
         id: identification_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 15
@@ -1764,7 +1764,7 @@ records:
       - order: 8
         element_name: NUMBER OF ADDENDA RECORDS
         id: addenda_records_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 4
@@ -1774,7 +1774,7 @@ records:
       - order: 9
         element_name: RECEIVING COMPANY NAME/ID NUMBER
         id: receiving_company_name_or_id_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 16
@@ -1784,7 +1784,7 @@ records:
       - order: 10
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 2
@@ -1794,7 +1794,7 @@ records:
       - order: 11
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1804,7 +1804,7 @@ records:
       - order: 12
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1814,7 +1814,7 @@ records:
       - order: 13
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -1828,7 +1828,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -1838,7 +1838,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘05’
             length: 2
@@ -1848,7 +1848,7 @@ records:
           - order: 3
             element_name: PAYMENT RELATED INFORMATION
             id: payment_related_information
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 80
@@ -1858,7 +1858,7 @@ records:
           - order: 4
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -1868,7 +1868,7 @@ records:
           - order: 5
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -1882,7 +1882,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -1892,7 +1892,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -1902,7 +1902,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -1912,7 +1912,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1922,7 +1922,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -1932,7 +1932,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -1942,7 +1942,7 @@ records:
       - order: 7
         element_name: INDIVIDUAL IDENTIFICATION NUMBER
         id: individual_identification_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 15
@@ -1952,7 +1952,7 @@ records:
       - order: 8
         element_name: INDIVIDUAL NAME
         id: individual_name
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 22
@@ -1962,7 +1962,7 @@ records:
       - order: 9
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -1972,7 +1972,7 @@ records:
       - order: 10
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -1982,7 +1982,7 @@ records:
       - order: 11
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -1996,7 +1996,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2006,7 +2006,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘05’
             length: 2
@@ -2016,7 +2016,7 @@ records:
           - order: 3
             element_name: PAYMENT RELATED INFORMATION
             id: payment_related_information
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 80
@@ -2026,7 +2026,7 @@ records:
           - order: 4
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -2036,7 +2036,7 @@ records:
           - order: 5
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2050,7 +2050,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -2060,7 +2060,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -2070,7 +2070,7 @@ records:
       - order: 3
         element_name: RECEIVING DFI IDENTIFICATION
         id: receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -2080,7 +2080,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -2090,7 +2090,7 @@ records:
       - order: 5
         element_name: DFI ACCOUNT NUMBER
         id: dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 17
@@ -2100,7 +2100,7 @@ records:
       - order: 6
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: 0000000000
         length: 10
@@ -2110,7 +2110,7 @@ records:
       - order: 7
         element_name: IDENTIFICATION NUMBER
         id: identification_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 15
@@ -2120,7 +2120,7 @@ records:
       - order: 8
         element_name: NUMBER OF ADDENDA RECORDS
         id: number_of_addenda_records
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 4
@@ -2130,7 +2130,7 @@ records:
       - order: 9
         element_name: RECEIVING COMPANY NAME/ID NUMBER
         id: receiving_company_name_or_id_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - required
         content_type: alphameric
         length: 16
@@ -2140,7 +2140,7 @@ records:
       - order: 10
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 2
@@ -2150,7 +2150,7 @@ records:
       - order: 11
         element_name: DISCRETIONARY DATA
         id: discretionary_data
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 2
@@ -2160,7 +2160,7 @@ records:
       - order: 12
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -2170,7 +2170,7 @@ records:
       - order: 13
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -2184,7 +2184,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2194,7 +2194,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘05’
             length: 2
@@ -2204,7 +2204,7 @@ records:
           - order: 3
             element_name: PAYMENT RELATED INFORMATION
             id: payment_related_information
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 80
@@ -2214,7 +2214,7 @@ records:
           - order: 4
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -2224,7 +2224,7 @@ records:
           - order: 5
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2238,7 +2238,7 @@ records:
       - order: 1
         element_name: RECORD TYPE CODE
         id: record_type_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ‘6’
         length: 1
@@ -2248,7 +2248,7 @@ records:
       - order: 2
         element_name: TRANSACTION CODE
         id: transaction_code
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 2
@@ -2258,7 +2258,7 @@ records:
       - order: 3
         element_name: GO IDENTIFICATION/RECEIVING DFI IDENTIFICATION
         id: go_identification_or_receiving_dfi_identification
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: ttttaaaa
         length: 8
@@ -2268,7 +2268,7 @@ records:
       - order: 4
         element_name: CHECK DIGIT
         id: check_digit
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -2278,7 +2278,7 @@ records:
       - order: 5
         element_name: NUMBER OF ADDENDA RECORDS
         id: addenda_records_count
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 4
@@ -2288,7 +2288,7 @@ records:
       - order: 6
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 13
@@ -2298,7 +2298,7 @@ records:
       - order: 7
         element_name: AMOUNT
         id: amount
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: dollar_amount
         length: 10
@@ -2308,7 +2308,7 @@ records:
       - order: 8
         element_name: FOREIGN RECEIVER’S ACCOUNT NUMBER/ DFI ACCOUNT NUMBER
         id: foreign_receivers_account_number_or_dfi_account_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: alphameric
         length: 35
@@ -2318,7 +2318,7 @@ records:
       - order: 9
         element_name: RESERVED
         id: reserved
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - N/A
         content_type: blank
         length: 2
@@ -2328,7 +2328,7 @@ records:
       - order: 10
         element_name: GATEWAY OPERATOR OFAC SCREENING INDICATOR
         id: gateway_operator_ofac_screening_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 1
@@ -2338,7 +2338,7 @@ records:
       - order: 11
         element_name: SECONDARY OFAC SCREENING INDICATOR
         id: secondary_ofac_screening_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - optional
         content_type: alphameric
         length: 1
@@ -2348,7 +2348,7 @@ records:
       - order: 12
         element_name: ADDENDA RECORD INDICATOR
         id: addenda_record_indicator
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 1
@@ -2358,7 +2358,7 @@ records:
       - order: 13
         element_name: TRACE NUMBER
         id: trace_number
-        field_inclusion_requirement:
+        field_inclusion_requirements:
           - mandatory
         content_type: numeric
         length: 15
@@ -2372,7 +2372,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2382,7 +2382,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘10’
             length: 2
@@ -2392,7 +2392,7 @@ records:
           - order: 3
             element_name: TRANSACTION TYPE CODE
             id: transaction_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 3
@@ -2402,7 +2402,7 @@ records:
           - order: 4
             element_name: FOREIGN PAYMENT AMOUNT
             id: foreign_payment_amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: dollar_amount
             length: 18
@@ -2412,7 +2412,7 @@ records:
           - order: 5
             element_name: FOREIGN TRACE NUMBER
             id: foreign_trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 22
@@ -2422,7 +2422,7 @@ records:
           - order: 6
             element_name: RECEIVING COMPANY NAME/INDIVIDUAL NAME
             id: receiving_company_name_or_individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2432,7 +2432,7 @@ records:
           - order: 7
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 6
@@ -2442,7 +2442,7 @@ records:
           - order: 8
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2456,7 +2456,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2466,7 +2466,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘11’
             length: 2
@@ -2476,7 +2476,7 @@ records:
           - order: 3
             element_name: ORIGINATOR NAME
             id: originator_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2486,7 +2486,7 @@ records:
           - order: 4
             element_name: ORIGINATOR STREET ADDRESS
             id: originator_street_address
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2496,7 +2496,7 @@ records:
           - order: 5
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 14
@@ -2506,7 +2506,7 @@ records:
           - order: 6
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2520,7 +2520,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2530,7 +2530,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘12’
             length: 2
@@ -2540,7 +2540,7 @@ records:
           - order: 3
             element_name: ORIGINATOR CITY AND STATE/PROVINCE
             id: originator_city_and_state_or_province
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2550,7 +2550,7 @@ records:
           - order: 4
             element_name: ORIGINATOR COUNTRY AND POSTAL CODE
             id: originator_country_and_postal_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2560,7 +2560,7 @@ records:
           - order: 5
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 14
@@ -2570,7 +2570,7 @@ records:
           - order: 6
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2584,7 +2584,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2594,7 +2594,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘13’
             length: 2
@@ -2604,7 +2604,7 @@ records:
           - order: 3
             element_name: ORIGINATING DFI NAME
             id: originating_dfi_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2614,7 +2614,7 @@ records:
           - order: 4
             element_name: ORIGINATING DFI IDENTIFICATION NUMBER QUALIFIER
             id: originating_dfi_identification_number_qualifier
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 2
@@ -2624,7 +2624,7 @@ records:
           - order: 5
             element_name: ORIGINATING DFI IDENTIFICATION
             id: originating_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 34
@@ -2634,7 +2634,7 @@ records:
           - order: 6
             element_name: ORIGINATING DFI BRANCH COUNTRY CODE
             id: originating_dfi_branch_country_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 3
@@ -2644,7 +2644,7 @@ records:
           - order: 7
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 10
@@ -2654,7 +2654,7 @@ records:
           - order: 8
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2668,7 +2668,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2678,7 +2678,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘14’
             length: 2
@@ -2688,7 +2688,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI NAME
             id: receiving_dfi_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2698,7 +2698,7 @@ records:
           - order: 4
             element_name: RECEIVING DFI IDENTIFICATION NUMBER QUALIFIER
             id: receiving_dfi_identification_number_qualifier
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 2
@@ -2708,7 +2708,7 @@ records:
           - order: 5
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 34
@@ -2718,7 +2718,7 @@ records:
           - order: 6
             element_name: RECEIVING DFI BRANCH COUNTRY CODE
             id: receiving_dfi_branch_country_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 3
@@ -2728,7 +2728,7 @@ records:
           - order: 7
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 10
@@ -2738,7 +2738,7 @@ records:
           - order: 8
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2752,7 +2752,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2762,7 +2762,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘15’
             length: 2
@@ -2772,7 +2772,7 @@ records:
           - order: 3
             element_name: RECEIVER IDENTIFICATION NUMBER
             id: receiver_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 15
@@ -2782,7 +2782,7 @@ records:
           - order: 4
             element_name: RECEIVER STREET ADDRESS
             id: receiver_street_address
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2792,7 +2792,7 @@ records:
           - order: 5
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 34
@@ -2802,7 +2802,7 @@ records:
           - order: 6
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2816,7 +2816,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2826,7 +2826,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘16’
             length: 2
@@ -2836,7 +2836,7 @@ records:
           - order: 3
             element_name: RECEIVER CITY AND STATE/PROVINCE
             id: receiver_city_and_state_province
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2846,7 +2846,7 @@ records:
           - order: 4
             element_name: RECEIVER COUNTRY AND POSTAL CODE
             id: receiver_country_and_postal_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2856,7 +2856,7 @@ records:
           - order: 5
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 14
@@ -2866,7 +2866,7 @@ records:
           - order: 6
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2880,7 +2880,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2890,7 +2890,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘17’
             length: 2
@@ -2900,7 +2900,7 @@ records:
           - order: 3
             element_name: PAYMENT RELATED INFORMATION
             id: payment_related_information
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 80
@@ -2910,7 +2910,7 @@ records:
           - order: 4
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -2920,7 +2920,7 @@ records:
           - order: 5
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -2934,7 +2934,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘7’
             length: 1
@@ -2944,7 +2944,7 @@ records:
           - order: 2
             element_name: ADDENDA TYPE CODE
             id: addenda_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘18’
             length: 2
@@ -2954,7 +2954,7 @@ records:
           - order: 3
             element_name: FOREIGN CORRESPONDENT BANK NAME
             id: foreign_correspondent_bank_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 35
@@ -2964,7 +2964,7 @@ records:
           - order: 4
             element_name: FOREIGN CORRESPONDENT BANK IDENTIFICATION NUMBER QUALIFIER
             id: foreign_correspondent_bank_identification_number_qualifier
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 2
@@ -2974,7 +2974,7 @@ records:
           - order: 5
             element_name: FOREIGN CORRESPONDENT BANK IDENTIFICATION NUMBER
             id: foreign_correspondent_bank_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 34
@@ -2984,7 +2984,7 @@ records:
           - order: 6
             element_name: FOREIGN CORRESPONDENT BANK BRANCH COUNTRY CODE
             id: foreign_correspondent_bank_branch_country_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 3
@@ -2994,7 +2994,7 @@ records:
           - order: 7
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 6
@@ -3004,7 +3004,7 @@ records:
           - order: 8
             element_name: ADDENDA SEQUENCE NUMBER
             id: addenda_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -3014,7 +3014,7 @@ records:
           - order: 9
             element_name: ENTRY DETAIL SEQUENCE NUMBER
             id: entry_detail_sequence_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 7
@@ -3028,7 +3028,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -3038,7 +3038,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -3048,7 +3048,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -3058,7 +3058,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3068,7 +3068,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -3078,7 +3078,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -3088,7 +3088,7 @@ records:
           - order: 7
             element_name: INDIVIDUAL NAME
             id: individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 15
@@ -3098,7 +3098,7 @@ records:
           - order: 8
             element_name: INDIVIDUAL IDENTIFICATION NUMBER
             id: individual_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 22
@@ -3108,7 +3108,7 @@ records:
           - order: 9
             element_name: DISCRETIONARY DATA
             id: discretionary_data
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -3118,7 +3118,7 @@ records:
           - order: 10
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3128,7 +3128,7 @@ records:
           - order: 11
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -3142,7 +3142,7 @@ records:
               - order: 1
                 element_name: RECORD TYPE CODE
                 id: record_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘7’
                 length: 1
@@ -3152,7 +3152,7 @@ records:
               - order: 2
                 element_name: ADDENDA TYPE CODE
                 id: addenda_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘02’
                 length: 2
@@ -3162,7 +3162,7 @@ records:
               - order: 3
                 element_name: TRANSACTION DESCRIPTION
                 id: transaction_description
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 7
@@ -3172,7 +3172,7 @@ records:
               - order: 4
                 element_name: NETWORK IDENTIFICATION CODE
                 id: network_identification_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 3
@@ -3182,7 +3182,7 @@ records:
               - order: 5
                 element_name: TERMINAL IDENTIFICATION CODE
                 id: terminal_identification_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 6
@@ -3192,7 +3192,7 @@ records:
               - order: 6
                 element_name: TRANSACTION SERIAL NUMBER
                 id: transaction_serial_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 6
@@ -3202,7 +3202,7 @@ records:
               - order: 7
                 element_name: TRANSACTION DATE
                 id: transaction_date
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: MMDD
                 length: 4
@@ -3212,7 +3212,7 @@ records:
               - order: 8
                 element_name: TRANSACTION TIME
                 id: transaction_time
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: hhmmSS
                 length: 6
@@ -3222,7 +3222,7 @@ records:
               - order: 9
                 element_name: TERMINAL LOCATION
                 id: terminal_location
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 27
@@ -3232,7 +3232,7 @@ records:
               - order: 10
                 element_name: TERMINAL CITY
                 id: terminal_city
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 15
@@ -3242,7 +3242,7 @@ records:
               - order: 11
                 element_name: TERMINAL STATE
                 id: terminal_state
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 2
@@ -3252,7 +3252,7 @@ records:
               - order: 12
                 element_name: TRACE NUMBER
                 id: trace_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 15
@@ -3266,7 +3266,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -3276,7 +3276,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -3286,7 +3286,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -3296,7 +3296,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3306,7 +3306,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -3316,7 +3316,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -3326,7 +3326,7 @@ records:
           - order: 7
             element_name: CHECK SERIAL NUMBER
             id: check_serial_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 9
@@ -3336,7 +3336,7 @@ records:
           - order: 8
             element_name: TERMINAL CITY
             id: terminal_city
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 4
@@ -3346,7 +3346,7 @@ records:
           - order: 9
             element_name: TERMINAL STATE
             id: terminal_state
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 2
@@ -3356,7 +3356,7 @@ records:
           - order: 10
             element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
             id: individual_name_or_receiving_company_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 22
@@ -3366,7 +3366,7 @@ records:
           - order: 11
             element_name: DISCRETIONARY DATA
             id: discretionary_data
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -3376,7 +3376,7 @@ records:
           - order: 12
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3386,7 +3386,7 @@ records:
           - order: 13
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -3400,7 +3400,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -3410,7 +3410,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -3420,7 +3420,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -3430,7 +3430,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3440,7 +3440,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -3450,7 +3450,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -3460,7 +3460,7 @@ records:
           - order: 7
             element_name: INDIVIDUAL IDENTIFICATION NUMBER
             id: individual_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 15
@@ -3470,7 +3470,7 @@ records:
           - order: 8
             element_name: INDIVIDUAL NAME
             id: individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 22
@@ -3480,7 +3480,7 @@ records:
           - order: 9
             element_name: CARD TRANSACTION TYPE CODE
             id: card_transaction_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 2
@@ -3490,7 +3490,7 @@ records:
           - order: 10
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3500,7 +3500,7 @@ records:
           - order: 11
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -3514,7 +3514,7 @@ records:
               - order: 1
                 element_name: RECORD TYPE CODE
                 id: record_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘7’
                 length: 1
@@ -3524,7 +3524,7 @@ records:
               - order: 2
                 element_name: ADDENDA TYPE CODE
                 id: addenda_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘02’
                 length: 2
@@ -3534,7 +3534,7 @@ records:
               - order: 3
                 element_name: REFERENCE INFORMATION
                 id: reference_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 7
@@ -3544,7 +3544,7 @@ records:
               - order: 4
                 element_name: REFERENCE INFORMATION
                 id: reference_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 3
@@ -3554,7 +3554,7 @@ records:
               - order: 5
                 element_name: TERMINAL IDENTIFICATION CODE
                 id: terminal_identification_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 6
@@ -3564,7 +3564,7 @@ records:
               - order: 6
                 element_name: TRANSACTION SERIAL NUMBER
                 id: transaction_serial_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 6
@@ -3574,7 +3574,7 @@ records:
               - order: 7
                 element_name: TRANSACTION DATE
                 id: transaction_date
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: MMDD
                 length: 4
@@ -3584,7 +3584,7 @@ records:
               - order: 8
                 element_name: AUTHORIZATION CODE OR CARD EXPIRATION DATE
                 id: authorization_code_or_card_expiration_date
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 6
@@ -3594,7 +3594,7 @@ records:
               - order: 9
                 element_name: TERMINAL LOCATION
                 id: terminal_location
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 27
@@ -3604,7 +3604,7 @@ records:
               - order: 10
                 element_name: TERMINAL CITY
                 id: terminal_city
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 15
@@ -3614,7 +3614,7 @@ records:
               - order: 11
                 element_name: TERMINAL STATE
                 id: terminal_state
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 2
@@ -3624,7 +3624,7 @@ records:
               - order: 12
                 element_name: TRACE NUMBER
                 id: trace_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 15
@@ -3638,7 +3638,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -3648,7 +3648,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -3658,7 +3658,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -3668,7 +3668,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3678,7 +3678,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -3688,7 +3688,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -3698,7 +3698,7 @@ records:
           - order: 7
             element_name: INDIVIDUAL IDENTIFICATION NUMBER
             id: individual_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 15
@@ -3708,7 +3708,7 @@ records:
           - order: 8
             element_name: INDIVIDUAL NAME
             id: individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 22
@@ -3718,7 +3718,7 @@ records:
           - order: 9
             element_name: DISCRETIONARY DATA
             id: discretionary_data
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -3728,7 +3728,7 @@ records:
           - order: 10
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3738,7 +3738,7 @@ records:
           - order: 11
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -3752,7 +3752,7 @@ records:
               - order: 1
                 element_name: RECORD TYPE CODE
                 id: record_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘7’
                 length: 1
@@ -3762,7 +3762,7 @@ records:
               - order: 2
                 element_name: ADDENDA TYPE CODE
                 id: addenda_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘05’
                 length: 2
@@ -3772,7 +3772,7 @@ records:
               - order: 3
                 element_name: PAYMENT RELATED INFORMATION
                 id: payment_related_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 80
@@ -3782,7 +3782,7 @@ records:
               - order: 4
                 element_name: ADDENDA SEQUENCE NUMBER
                 id: addenda_sequence_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 4
@@ -3792,7 +3792,7 @@ records:
               - order: 5
                 element_name: ENTRY DETAIL SEQUENCE NUMBER
                 id: entry_detail_sequence_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 7
@@ -3806,7 +3806,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -3816,7 +3816,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -3826,7 +3826,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -3836,7 +3836,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3846,7 +3846,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -3856,7 +3856,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -3866,7 +3866,7 @@ records:
           - order: 7
             element_name: CHECK SERIAL NUMBER
             id: check_serial_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 15
@@ -3876,7 +3876,7 @@ records:
           - order: 8
             element_name: INDIVIDUAL NAME
             id: individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 22
@@ -3886,7 +3886,7 @@ records:
           - order: 9
             element_name: DISCRETIONARY DATA
             id: discretionary_data
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -3896,7 +3896,7 @@ records:
           - order: 10
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3906,7 +3906,7 @@ records:
           - order: 11
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -3920,7 +3920,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -3930,7 +3930,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -3940,7 +3940,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -3950,7 +3950,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -3960,7 +3960,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -3970,7 +3970,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -3980,7 +3980,7 @@ records:
           - order: 7
             element_name: CARD EXPIRATION DATE
             id: card_expiration_date
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: MMYY
             length: 4
@@ -3990,7 +3990,7 @@ records:
           - order: 8
             element_name: DOCUMENT REFERENCE NUMBER
             id: document_reference_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: numeric
             length: 11
@@ -4000,7 +4000,7 @@ records:
           - order: 9
             element_name: INDIVIDUAL CARD ACCOUNT NUMBER
             id: individual_card_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: numeric
             length: 22
@@ -4010,7 +4010,7 @@ records:
           - order: 10
             element_name: CARD TRANSACTION TYPE CODE
             id: card_transaction_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -4020,7 +4020,7 @@ records:
           - order: 11
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4030,7 +4030,7 @@ records:
           - order: 12
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -4044,7 +4044,7 @@ records:
               - order: 1
                 element_name: RECORD TYPE CODE
                 id: record_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘7’
                 length: 1
@@ -4054,7 +4054,7 @@ records:
               - order: 2
                 element_name: ADDENDA TYPE CODE
                 id: addenda_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘02’
                 length: 2
@@ -4064,7 +4064,7 @@ records:
               - order: 3
                 element_name: REFERENCE INFORMATION
                 id: reference_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 7
@@ -4074,7 +4074,7 @@ records:
               - order: 4
                 element_name: REFERENCE INFORMATION
                 id: reference_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 3
@@ -4084,7 +4084,7 @@ records:
               - order: 5
                 element_name: TERMINAL IDENTIFICATION CODE
                 id: terminal_identification_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 6
@@ -4094,7 +4094,7 @@ records:
               - order: 6
                 element_name: TRANSACTION SERIAL NUMBER
                 id: transaction_serial_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 6
@@ -4104,7 +4104,7 @@ records:
               - order: 7
                 element_name: TRANSACTION DATE
                 id: transaction_date
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: MMDD
                 length: 4
@@ -4114,7 +4114,7 @@ records:
               - order: 8
                 element_name: AUTHORIZATION CODE OR CARD EXPIRATION DATE
                 id: authorization_code_or_card_expiration_date
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 6
@@ -4124,7 +4124,7 @@ records:
               - order: 9
                 element_name: TERMINAL LOCATION
                 id: terminal_location
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 27
@@ -4134,7 +4134,7 @@ records:
               - order: 10
                 element_name: TERMINAL CITY
                 id: terminal_city
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 15
@@ -4144,7 +4144,7 @@ records:
               - order: 11
                 element_name: TERMINAL STATE
                 id: terminal_state
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - required
                 content_type: alphameric
                 length: 2
@@ -4154,7 +4154,7 @@ records:
               - order: 12
                 element_name: TRACE NUMBER
                 id: trace_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 15
@@ -4168,7 +4168,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -4178,7 +4178,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -4188,7 +4188,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -4198,7 +4198,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4208,7 +4208,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -4218,7 +4218,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -4228,7 +4228,7 @@ records:
           - order: 7
             element_name: INDIVIDUAL IDENTIFICATION NUMBER
             id: individual_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 15
@@ -4238,7 +4238,7 @@ records:
           - order: 8
             element_name: INDIVIDUAL NAME
             id: individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 22
@@ -4248,7 +4248,7 @@ records:
           - order: 9
             element_name: PAYMENT TYPE CODE
             id: payment_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -4258,7 +4258,7 @@ records:
           - order: 10
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4268,7 +4268,7 @@ records:
           - order: 11
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -4282,7 +4282,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -4292,7 +4292,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -4302,7 +4302,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -4312,7 +4312,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4322,7 +4322,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -4332,7 +4332,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -4342,7 +4342,7 @@ records:
           - order: 7
             element_name: CHECK SERIAL NUMBER
             id: check_serial_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 15
@@ -4352,7 +4352,7 @@ records:
           - order: 8
             element_name: PROCESS CONTROL FIELD
             id: process_control_field
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 6
@@ -4362,7 +4362,7 @@ records:
           - order: 9
             element_name: ITEM RESEARCH NUMBER
             id: item_research_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 16
@@ -4372,7 +4372,7 @@ records:
           - order: 10
             element_name: ITEM TYPE INDICATOR
             id: item_type_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -4382,7 +4382,7 @@ records:
           - order: 11
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4392,7 +4392,7 @@ records:
           - order: 12
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -4406,7 +4406,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -4416,7 +4416,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -4426,7 +4426,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -4436,7 +4436,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4446,7 +4446,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -4456,7 +4456,7 @@ records:
           - order: 6
             element_name: TOTAL AMOUNT
             id: total_amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -4466,7 +4466,7 @@ records:
           - order: 7
             element_name: IDENTIFICATION NUMBER
             id: identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 15
@@ -4476,7 +4476,7 @@ records:
           - order: 8
             element_name: NUMBER OF ADDENDA RECORDS
             id: addenda_records_count
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 4
@@ -4486,7 +4486,7 @@ records:
           - order: 9
             element_name: RECEIVING COMPANY NAME/ID NUMBER
             id: receiving_company_name_or_id_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 16
@@ -4496,7 +4496,7 @@ records:
           - order: 10
             element_name: RESERVED
             id: reserved
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - N/A
             content_type: blank
             length: 2
@@ -4506,7 +4506,7 @@ records:
           - order: 11
             element_name: ITEM TYPE INDICATOR
             id: item_type_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -4516,7 +4516,7 @@ records:
           - order: 12
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4526,7 +4526,7 @@ records:
           - order: 13
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -4540,7 +4540,7 @@ records:
               - order: 1
                 element_name: RECORD TYPE CODE
                 id: record_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘7’
                 length: 1
@@ -4550,7 +4550,7 @@ records:
               - order: 2
                 element_name: ADDENDA TYPE CODE
                 id: addenda_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘05’
                 length: 2
@@ -4560,7 +4560,7 @@ records:
               - order: 3
                 element_name: PAYMENT RELATED INFORMATION
                 id: payment_related_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 80
@@ -4570,7 +4570,7 @@ records:
               - order: 4
                 element_name: ADDENDA SEQUENCE NUMBER
                 id: addenda_sequence_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 4
@@ -4580,7 +4580,7 @@ records:
               - order: 5
                 element_name: ENTRY DETAIL SEQUENCE NUMBER
                 id: entry_detail_sequence_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 7
@@ -4594,7 +4594,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -4604,7 +4604,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -4614,7 +4614,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -4624,7 +4624,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4634,7 +4634,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -4644,7 +4644,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -4654,7 +4654,7 @@ records:
           - order: 7
             element_name: INDIVIDUAL IDENTIFICATION NUMBER
             id: individual_identification_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
               - required
             content_type: alphameric
@@ -4665,7 +4665,7 @@ records:
           - order: 8
             element_name: INDIVIDUAL NAME
             id: individual_name
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 22
@@ -4675,7 +4675,7 @@ records:
           - order: 9
             element_name: PAYMENT TYPE CODE
             id: payment_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -4685,7 +4685,7 @@ records:
           - order: 10
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4695,7 +4695,7 @@ records:
           - order: 11
             element_name: TRACE NUMBER
             id: trace_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
@@ -4709,7 +4709,7 @@ records:
               - order: 1
                 element_name: RECORD TYPE CODE
                 id: record_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘7’
                 length: 1
@@ -4719,7 +4719,7 @@ records:
               - order: 2
                 element_name: ADDENDA TYPE CODE
                 id: addenda_type_code
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: ‘05’
                 length: 2
@@ -4729,7 +4729,7 @@ records:
               - order: 3
                 element_name: PAYMENT RELATED INFORMATION
                 id: payment_related_information
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - optional
                 content_type: alphameric
                 length: 80
@@ -4739,7 +4739,7 @@ records:
               - order: 4
                 element_name: ADDENDA SEQUENCE NUMBER
                 id: addenda_sequence_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 4
@@ -4749,7 +4749,7 @@ records:
               - order: 5
                 element_name: ENTRY DETAIL SEQUENCE NUMBER
                 id: entry_detail_sequence_number
-                field_inclusion_requirement:
+                field_inclusion_requirements:
                   - mandatory
                 content_type: numeric
                 length: 7
@@ -4763,7 +4763,7 @@ records:
           - order: 1
             element_name: RECORD TYPE CODE
             id: record_type_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ‘6’
             length: 1
@@ -4773,7 +4773,7 @@ records:
           - order: 2
             element_name: TRANSACTION CODE
             id: transaction_code
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 2
@@ -4783,7 +4783,7 @@ records:
           - order: 3
             element_name: RECEIVING DFI IDENTIFICATION
             id: receiving_dfi_identification
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: ttttaaaa
             length: 8
@@ -4793,7 +4793,7 @@ records:
           - order: 4
             element_name: CHECK DIGIT
             id: check_digit
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4803,7 +4803,7 @@ records:
           - order: 5
             element_name: DFI ACCOUNT NUMBER
             id: dfi_account_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 17
@@ -4813,7 +4813,7 @@ records:
           - order: 6
             element_name: AMOUNT
             id: amount
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: dollar_amount
             length: 10
@@ -4823,7 +4823,7 @@ records:
           - order: 7
             element_name: CHECK SERIAL NUMBER
             id: check_serial_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: alphameric
             length: 15
@@ -4833,7 +4833,7 @@ records:
           - order: 8
             element_name: PROCESS CONTROL FIELD
             id: process_control_field
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 6
@@ -4843,7 +4843,7 @@ records:
           - order: 9
             element_name: ITEM RESEARCH NUMBER
             id: item_research_number
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - required
             content_type: alphameric
             length: 16
@@ -4853,7 +4853,7 @@ records:
           - order: 10
             element_name: DISCRETIONARY DATA
             id: discretionary_data
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - optional
             content_type: alphameric
             length: 2
@@ -4863,7 +4863,7 @@ records:
           - order: 11
             element_name: ADDENDA RECORD INDICATOR
             id: addenda_record_indicator
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 1
@@ -4872,7 +4872,7 @@ records:
               end: 79
           - order: 12
             element_name: TRACE NUMBER
-            field_inclusion_requirement:
+            field_inclusion_requirements:
               - mandatory
             content_type: numeric
             length: 15
