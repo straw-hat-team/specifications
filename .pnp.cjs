@@ -302,7 +302,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@stoplight-json-ref-readers-npm-1.2.2-0a491f877d-31b0e78b11.zip/node_modules/@stoplight/json-ref-readers/",\
           "packageDependencies": [\
             ["@stoplight/json-ref-readers", "npm:1.2.2"],\
-            ["node-fetch", "npm:2.6.6"],\
+            ["node-fetch", "virtual:0a491f877d2e78d0e37c05c879e7921f86bc24ae221c45172bc33d253988b4e71b27c4426b8f8717d0df2cc388e63cb54036912c2077dc6fe2f4845e44ecea5d#npm:2.6.7"],\
             ["tslib", "npm:1.14.1"]\
           ],\
           "linkType": "HARD"\
@@ -562,7 +562,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@stoplight/types", "npm:12.3.0"],\
             ["abort-controller", "npm:3.0.0"],\
             ["lodash", "npm:4.17.21"],\
-            ["node-fetch", "npm:2.6.6"]\
+            ["node-fetch", "virtual:0a491f877d2e78d0e37c05c879e7921f86bc24ae221c45172bc33d253988b4e71b27c4426b8f8717d0df2cc388e63cb54036912c2077dc6fe2f4845e44ecea5d#npm:2.6.7"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2821,11 +2821,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-fetch", [\
-        ["npm:2.6.6", {\
-          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.6-056db6b778-ee8290626b.zip/node_modules/node-fetch/",\
+        ["npm:2.6.7", {\
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
           "packageDependencies": [\
-            ["node-fetch", "npm:2.6.6"],\
+            ["node-fetch", "npm:2.6.7"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0a491f877d2e78d0e37c05c879e7921f86bc24ae221c45172bc33d253988b4e71b27c4426b8f8717d0df2cc388e63cb54036912c2077dc6fe2f4845e44ecea5d#npm:2.6.7", {\
+          "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-04f9bcac8a/0/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
+          "packageDependencies": [\
+            ["node-fetch", "virtual:0a491f877d2e78d0e37c05c879e7921f86bc24ae221c45172bc33d253988b4e71b27c4426b8f8717d0df2cc388e63cb54036912c2077dc6fe2f4845e44ecea5d#npm:2.6.7"],\
+            ["@types/encoding", null],\
+            ["encoding", null],\
             ["whatwg-url", "npm:5.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/encoding",\
+            "encoding"\
           ],\
           "linkType": "HARD"\
         }]\
