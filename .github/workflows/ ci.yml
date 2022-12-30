@@ -1,0 +1,22 @@
+name: Node CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.3
+      - shell: sh
+        run: yarn install --immutable
+        env:
+          SHT_NPM_TOKEN: ${{ secrets.SHT_NPM_TOKEN }}
+      - uses: straw-hat-team/github-actions-workflows/nodejs/prettier@v1.6.3
+        with:
+          sht-npm-token: ${{ secrets.SHT_NPM_TOKEN }}
