@@ -27,7 +27,7 @@ records:
     id: file_header_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -40,7 +40,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: PRIORITY CODE
+        element_name: Priority Code
         id: priority_code
         field_inclusion_requirements:
           - required
@@ -51,7 +51,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: IMMEDIATE DESTINATION
+        element_name: Immediate Destination
         id: immediate_destination
         field_inclusion_requirements:
           - mandatory
@@ -62,7 +62,7 @@ records:
           start: 04
           end: 13
       - order: 4
-        element_name: IMMEDIATE ORIGIN
+        element_name: Immediate Origin
         id: immediate_origin
         field_inclusion_requirements:
           - mandatory
@@ -73,7 +73,7 @@ records:
           start: 14
           end: 23
       - order: 5
-        element_name: FILE CREATION DATE
+        element_name: File Creation Date
         id: file_creation_date
         field_inclusion_requirements:
           - mandatory
@@ -84,7 +84,7 @@ records:
           start: 24
           end: 29
       - order: 6
-        element_name: FILE CREATION TIME
+        element_name: File Creation Time
         id: file_creation_time
         field_inclusion_requirements:
           - optional
@@ -97,7 +97,7 @@ records:
           start: 30
           end: 33
       - order: 7
-        element_name: FILE ID MODIFIER
+        element_name: File ID Modifier
         id: file_id_modifier
         field_inclusion_requirements:
           - mandatory
@@ -108,7 +108,7 @@ records:
           start: 34
           end: 34
       - order: 8
-        element_name: RECORD SIZE
+        element_name: Record Size
         id: record_size
         field_inclusion_requirements:
           - mandatory
@@ -121,7 +121,7 @@ records:
           start: 35
           end: 37
       - order: 9
-        element_name: BLOCKING FACTOR
+        element_name: Blocking Factor
         id: blocking_factor
         field_inclusion_requirements:
           - mandatory
@@ -134,7 +134,7 @@ records:
           start: 38
           end: 39
       - order: 10
-        element_name: FORMAT CODE
+        element_name: Format Code
         id: format_code
         field_inclusion_requirements:
           - mandatory
@@ -147,7 +147,7 @@ records:
           start: 40
           end: 40
       - order: 11
-        element_name: IMMEDIATE DESTINATION NAME
+        element_name: Immediate Destination Name
         id: immediate_destination_name
         field_inclusion_requirements:
           - optional
@@ -158,7 +158,7 @@ records:
           start: 41
           end: 63
       - order: 12
-        element_name: IMMEDIATE ORIGIN NAME
+        element_name: Immediate Origin Name
         id: immediate_origin_name
         field_inclusion_requirements:
           - optional
@@ -169,7 +169,7 @@ records:
           start: 64
           end: 86
       - order: 13
-        element_name: REFERENCE CODE
+        element_name: Reference Code
         id: reference_code
         field_inclusion_requirements:
           - optional
@@ -184,7 +184,7 @@ records:
     id: file_control_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -197,7 +197,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: BATCH COUNT
+        element_name: Batch Count
         id: batch_count
         field_inclusion_requirements:
           - mandatory
@@ -208,7 +208,7 @@ records:
           start: 02
           end: 07
       - order: 3
-        element_name: BLOCK COUNT
+        element_name: Block Count
         id: block_count
         field_inclusion_requirements:
           - mandatory
@@ -219,7 +219,7 @@ records:
           start: 08
           end: 13
       - order: 4
-        element_name: ENTRY/ADDENDA COUNT
+        element_name: Entry/Addenda Count
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
@@ -230,7 +230,7 @@ records:
           start: 14
           end: 21
       - order: 5
-        element_name: ENTRY HASH
+        element_name: Entry Hash
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
@@ -241,7 +241,7 @@ records:
           start: 22
           end: 31
       - order: 6
-        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT IN FILE
+        element_name: Total Debit Entry Dollar Amount In File
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -252,7 +252,7 @@ records:
           start: 32
           end: 43
       - order: 7
-        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT IN FILE
+        element_name: Total Credit Entry Dollar Amount In File
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -263,7 +263,7 @@ records:
           start: 44
           end: 55
       - order: 8
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -278,7 +278,7 @@ records:
     id: company_or_batch_header_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -291,7 +291,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: SERVICE CLASS CODE
+        element_name: Service Class Code
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
@@ -302,7 +302,7 @@ records:
           start: 02
           end: 04
       - order: 3
-        element_name: COMPANY NAME
+        element_name: Company Name
         id: company_name
         field_inclusion_requirements:
           - mandatory
@@ -313,7 +313,7 @@ records:
           start: 05
           end: 20
       - order: 4
-        element_name: COMPANY DISCRETIONARY DATA
+        element_name: Company Discretionary Data
         id: company_discretionary_data
         field_inclusion_requirements:
           - optional
@@ -324,7 +324,7 @@ records:
           start: 21
           end: 40
       - order: 5
-        element_name: COMPANY IDENTIFICATION
+        element_name: Company Identification
         id: company_identification
         field_inclusion_requirements:
           - mandatory
@@ -335,7 +335,7 @@ records:
           start: 41
           end: 50
       - order: 6
-        element_name: STANDARD ENTRY CLASS CODE
+        element_name: Standard Entry Class Code
         id: standard_entry_class_code
         field_inclusion_requirements:
           - mandatory
@@ -346,7 +346,7 @@ records:
           start: 51
           end: 53
       - order: 7
-        element_name: COMPANY ENTRY DESCRIPTION
+        element_name: Company Entry Description
         id: company_entry_description
         field_inclusion_requirements:
           - mandatory
@@ -357,7 +357,7 @@ records:
           start: 54
           end: 63
       - order: 8
-        element_name: COMPANY DESCRIPTIVE DATE
+        element_name: Company Descriptive Date
         id: company_descriptive_date
         field_inclusion_requirements:
           - optional
@@ -368,7 +368,7 @@ records:
           start: 64
           end: 69
       - order: 9
-        element_name: EFFECTIVE ENTRY DATE
+        element_name: Effective Entry Date
         id: effective_entry_date
         field_inclusion_requirements:
           - required
@@ -379,7 +379,7 @@ records:
           start: 70
           end: 75
       - order: 10
-        element_name: SETTLEMENT DATE
+        element_name: Settlement Date
         id: settlement_date
         field_inclusion_requirements:
           - ach_operator_dependent
@@ -390,7 +390,7 @@ records:
           start: 76
           end: 78
       - order: 11
-        element_name: ORIGINATOR STATUS CODE
+        element_name: Originator Status Code
         id: originator_status_code
         field_inclusion_requirements:
           - mandatory
@@ -401,7 +401,7 @@ records:
           start: 79
           end: 79
       - order: 12
-        element_name: ORIGINATING DFI IDENTIFICATION
+        element_name: Originating DFI Identification
         id: originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -412,7 +412,7 @@ records:
           start: 80
           end: 87
       - order: 13
-        element_name: BATCH NUMBER
+        element_name: Batch Number
         id: batch_number
         field_inclusion_requirements:
           - mandatory
@@ -427,7 +427,7 @@ records:
     id: company_or_batch_control_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -440,7 +440,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: SERVICE CLASS CODE
+        element_name: Service Class Code
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
@@ -451,7 +451,7 @@ records:
           start: 02
           end: 04
       - order: 3
-        element_name: ENTRY/ADDENDA COUNT
+        element_name: Entry/Addenda Count
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
@@ -462,7 +462,7 @@ records:
           start: 05
           end: 10
       - order: 4
-        element_name: ENTRY HASH
+        element_name: Entry Hash
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
@@ -473,7 +473,7 @@ records:
           start: 11
           end: 20
       - order: 5
-        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT
+        element_name: Total Debit Entry Dollar Amount
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -484,7 +484,7 @@ records:
           start: 21
           end: 32
       - order: 6
-        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT
+        element_name: Total Credit Entry Dollar Amount
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -495,7 +495,7 @@ records:
           start: 33
           end: 44
       - order: 7
-        element_name: COMPANY IDENTIFICATION
+        element_name: Company Identification
         id: company_identification
         field_inclusion_requirements:
           - required
@@ -506,7 +506,7 @@ records:
           start: 45
           end: 54
       - order: 8
-        element_name: MESSAGE AUTHENTICATION CODE
+        element_name: Message Authentication Code
         id: message_authentication_code
         field_inclusion_requirements:
           - optional
@@ -517,7 +517,7 @@ records:
           start: 55
           end: 73
       - order: 9
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -528,7 +528,7 @@ records:
           start: 74
           end: 79
       - order: 10
-        element_name: ORIGINATING DFI IDENTIFICATION
+        element_name: Originating DFI Identification
         id: originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -539,7 +539,7 @@ records:
           start: 80
           end: 87
       - order: 11
-        element_name: BATCH NUMBER
+        element_name: Batch Number
         id: batch_number
         field_inclusion_requirements:
           - mandatory
@@ -554,7 +554,7 @@ records:
     id: iat_company_or_batch_header_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -567,7 +567,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: SERVICE CLASS CODE
+        element_name: Service Class Code
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
@@ -578,7 +578,7 @@ records:
           start: 02
           end: 04
       - order: 3
-        element_name: IAT INDICATOR
+        element_name: IAT Indicator
         id: iat_indicator
         field_inclusion_requirements:
           - optional
@@ -589,7 +589,7 @@ records:
           start: 05
           end: 20
       - order: 4
-        element_name: FOREIGN EXCHANGE INDICATOR
+        element_name: Foreign Exchange Indicator
         id: foreign_exchange_indicator
         field_inclusion_requirements:
           - mandatory
@@ -600,7 +600,7 @@ records:
           start: 21
           end: 22
       - order: 5
-        element_name: FOREIGN EXCHANGE REFERENCE INDICATOR
+        element_name: Foreign Exchange Reference Indicator
         id: foreign_exchange_reference_indicator
         field_inclusion_requirements:
           - required
@@ -611,7 +611,7 @@ records:
           start: 23
           end: 23
       - order: 6
-        element_name: FOREIGN EXCHANGE REFERENCE
+        element_name: Foreign Exchange Reference
         id: foreign_exchange_reference
         field_inclusion_requirements:
           - required
@@ -622,7 +622,7 @@ records:
           start: 24
           end: 38
       - order: 7
-        element_name: ISO DESTINATION COUNTRY CODE
+        element_name: ISO Destination Country Code
         id: iso_destination_country_code
         field_inclusion_requirements:
           - mandatory
@@ -633,7 +633,7 @@ records:
           start: 39
           end: 40
       - order: 8
-        element_name: ORIGINATOR IDENTIFICATION
+        element_name: Originator Identification
         id: originator_identification
         field_inclusion_requirements:
           - mandatory
@@ -644,7 +644,7 @@ records:
           start: 41
           end: 50
       - order: 9
-        element_name: STANDARD ENTRY CLASS CODE
+        element_name: Standard Entry Class Code
         id: standard_entry_class_code
         field_inclusion_requirements:
           - mandatory
@@ -655,7 +655,7 @@ records:
           start: 51
           end: 53
       - order: 10
-        element_name: COMPANY ENTRY DESCRIPTION
+        element_name: Company Entry Description
         id: company_entry_description
         field_inclusion_requirements:
           - mandatory
@@ -666,7 +666,7 @@ records:
           start: 54
           end: 63
       - order: 11
-        element_name: ISO ORIGINATING CURRENCY CODE
+        element_name: ISO Originating Currency Code
         id: iso_originating_currency_code
         field_inclusion_requirements:
           - mandatory
@@ -677,7 +677,7 @@ records:
           start: 64
           end: 66
       - order: 12
-        element_name: ISO DESTINATION CURRENCY CODE
+        element_name: ISO Destination Currency Code
         id: iso_destination_currency_code
         field_inclusion_requirements:
           - mandatory
@@ -688,7 +688,7 @@ records:
           start: 67
           end: 69
       - order: 13
-        element_name: EFFECTIVE ENTRY DATE
+        element_name: Effective Entry Date
         id: effective_entry_date
         field_inclusion_requirements:
           - required
@@ -699,7 +699,7 @@ records:
           start: 70
           end: 75
       - order: 14
-        element_name: SETTLEMENT DATE
+        element_name: Settlement Date
         id: settlement_date
         field_inclusion_requirements:
           - ach_operator_dependent
@@ -710,7 +710,7 @@ records:
           start: 76
           end: 78
       - order: 15
-        element_name: ORIGINATOR STATUS CODE
+        element_name: Originator Status Code
         id: originator_status_code
         field_inclusion_requirements:
           - mandatory
@@ -721,7 +721,7 @@ records:
           start: 79
           end: 79
       - order: 16
-        element_name: GO IDENTIFICATION/ ORIGINATING DFI IDENTIFICATION
+        element_name: Go Identification/ Originating DFI Identification
         id: go_identification_or_originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -732,7 +732,7 @@ records:
           start: 80
           end: 87
       - order: 17
-        element_name: BATCH NUMBER
+        element_name: Batch Number
         id: batch_number
         field_inclusion_requirements:
           - mandatory
@@ -746,7 +746,7 @@ records:
   - name: ADV File Header Record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -759,7 +759,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: PRIORITY CODE
+        element_name: Priority Code
         id: priority_code
         field_inclusion_requirements:
           - required
@@ -770,7 +770,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: IMMEDIATE DESTINATION
+        element_name: Immediate Destination
         id: immediate_destination
         field_inclusion_requirements:
           - mandatory
@@ -781,7 +781,7 @@ records:
           start: 04
           end: 13
       - order: 4
-        element_name: IMMEDIATE ORIGIN
+        element_name: Immediate Origin
         id: immediate_origin
         field_inclusion_requirements:
           - mandatory
@@ -792,7 +792,7 @@ records:
           start: 14
           end: 23
       - order: 5
-        element_name: FILE CREATION DATE
+        element_name: File Creation Date
         id: file_creation_date
         field_inclusion_requirements:
           - mandatory
@@ -803,7 +803,7 @@ records:
           start: 24
           end: 29
       - order: 6
-        element_name: FILE CREATION TIME
+        element_name: File Creation Time
         id: file_creation_time
         field_inclusion_requirements:
           - optional
@@ -816,7 +816,7 @@ records:
           start: 30
           end: 33
       - order: 7
-        element_name: FILE ID MODIFIER
+        element_name: File ID Modifier
         id: file_id_modifier
         field_inclusion_requirements:
           - mandatory
@@ -827,7 +827,7 @@ records:
           start: 34
           end: 34
       - order: 8
-        element_name: RECORD SIZE
+        element_name: Record Size
         id: record_size
         field_inclusion_requirements:
           - mandatory
@@ -840,7 +840,7 @@ records:
           start: 35
           end: 37
       - order: 9
-        element_name: BLOCKING FACTOR
+        element_name: Blocking Factor
         id: blocking_factor
         field_inclusion_requirements:
           - mandatory
@@ -853,7 +853,7 @@ records:
           start: 38
           end: 39
       - order: 10
-        element_name: FORMAT CODE
+        element_name: Format Code
         id: format_code
         field_inclusion_requirements:
           - mandatory
@@ -866,7 +866,7 @@ records:
           start: 40
           end: 40
       - order: 11
-        element_name: IMMEDIATE DESTINATION NAME
+        element_name: Immediate Destination Name
         id: immediate_destination_name
         field_inclusion_requirements:
           - mandatory
@@ -877,7 +877,7 @@ records:
           start: 41
           end: 63
       - order: 12
-        element_name: IMMEDIATE ORIGIN NAME
+        element_name: Immediate Origin Name
         id: immediate_origin_name
         field_inclusion_requirements:
           - mandatory
@@ -888,7 +888,7 @@ records:
           start: 64
           end: 86
       - order: 13
-        element_name: REFERENCE CODE
+        element_name: Reference Code
         id: reference_code
         field_inclusion_requirements:
           - optional
@@ -903,7 +903,7 @@ records:
     id: adv_file_control_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -916,7 +916,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: BATCH COUNT
+        element_name: Batch Count
         id: batch_count
         field_inclusion_requirements:
           - mandatory
@@ -927,7 +927,7 @@ records:
           start: 02
           end: 07
       - order: 3
-        element_name: BLOCK COUNT
+        element_name: Block Count
         id: block_count
         field_inclusion_requirements:
           - mandatory
@@ -938,7 +938,7 @@ records:
           start: 08
           end: 13
       - order: 4
-        element_name: ENTRY/ADDENDA COUNT
+        element_name: Entry/Addenda Count
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
@@ -949,7 +949,7 @@ records:
           start: 14
           end: 21
       - order: 5
-        element_name: ENTRY HASH
+        element_name: Entry Hash
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
@@ -960,7 +960,7 @@ records:
           start: 22
           end: 31
       - order: 6
-        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT IN FILE
+        element_name: Total Debit Entry Dollar Amount In File
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -971,7 +971,7 @@ records:
           start: 32
           end: 51
       - order: 7
-        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT IN FILE
+        element_name: Total Credit Entry Dollar Amount In File
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -982,7 +982,7 @@ records:
           start: 52
           end: 71
       - order: 8
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -997,7 +997,7 @@ records:
     id: adv_company_or_batch_control_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1010,7 +1010,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: SERVICE CLASS CODE
+        element_name: Service Class Code
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
@@ -1021,7 +1021,7 @@ records:
           start: 02
           end: 04
       - order: 3
-        element_name: ENTRY/ADDENDA COUNT
+        element_name: Entry/Addenda Count
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
@@ -1032,7 +1032,7 @@ records:
           start: 05
           end: 10
       - order: 4
-        element_name: ENTRY HASH
+        element_name: Entry Hash
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
@@ -1043,7 +1043,7 @@ records:
           start: 11
           end: 20
       - order: 5
-        element_name: TOTAL DEBIT ENTRY DOLLAR AMOUNT
+        element_name: Total Debit Entry Dollar Amount
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -1054,7 +1054,7 @@ records:
           start: 21
           end: 40
       - order: 6
-        element_name: TOTAL CREDIT ENTRY DOLLAR AMOUNT
+        element_name: Total Credit Entry Dollar Amount
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
@@ -1065,7 +1065,7 @@ records:
           start: 41
           end: 60
       - order: 7
-        element_name: ACH OPERATOR DATA
+        element_name: ACH Operator Data
         id: ach_operator_data
         field_inclusion_requirements:
           - optional
@@ -1076,7 +1076,7 @@ records:
           start: 61
           end: 79
       - order: 8
-        element_name: ORIGINATING DFI IDENTIFICATION
+        element_name: Originating DFI Identification
         id: originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1087,7 +1087,7 @@ records:
           start: 80
           end: 87
       - order: 9
-        element_name: BATCH NUMBER
+        element_name: Batch Number
         id: batch_number
         field_inclusion_requirements:
           - mandatory
@@ -1102,7 +1102,7 @@ records:
     id: adv_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1115,7 +1115,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -1126,7 +1126,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1137,7 +1137,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -1148,7 +1148,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -1159,7 +1159,7 @@ records:
           start: 13
           end: 27
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -1170,7 +1170,7 @@ records:
           start: 28
           end: 39
       - order: 7
-        element_name: ADVICE ROUTING NUMBER
+        element_name: Advice Routing Number
         id: advice_routing_number
         field_inclusion_requirements:
           - mandatory
@@ -1181,7 +1181,7 @@ records:
           start: 40
           end: 48
       - order: 8
-        element_name: FILE IDENTIFICATION
+        element_name: File Identification
         id: file_identification
         field_inclusion_requirements:
           - optional
@@ -1192,7 +1192,7 @@ records:
           start: 49
           end: 53
       - order: 9
-        element_name: ACH OPERATOR DATA
+        element_name: ACH Operator Data
         id: ach_operator_data
         field_inclusion_requirements:
           - optional
@@ -1203,7 +1203,7 @@ records:
           start: 54
           end: 54
       - order: 10
-        element_name: INDIVIDUAL NAME
+        element_name: Individual Name
         id: individual_name
         field_inclusion_requirements:
           - required
@@ -1214,7 +1214,7 @@ records:
           start: 55
           end: 76
       - order: 11
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -1225,7 +1225,7 @@ records:
           start: 77
           end: 78
       - order: 12
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -1236,7 +1236,7 @@ records:
           start: 79
           end: 79
       - order: 13
-        element_name: ROUTING NUMBER OF ACH OPERATOR
+        element_name: Routing Number Of ACH Operator
         id: ach_operator_routing_number
         field_inclusion_requirements:
           - mandatory
@@ -1247,7 +1247,7 @@ records:
           start: 80
           end: 87
       - order: 14
-        element_name: JULIAN DATE ON WHICH THIS ADVICE IS CREATED
+        element_name: Julian Date On Which This Advice Is Created
         id: created_julian_date
         field_inclusion_requirements:
           - mandatory
@@ -1258,7 +1258,7 @@ records:
           start: 88
           end: 90
       - order: 15
-        element_name: SEQUENCE NUMBER WITHIN BATCH
+        element_name: Sequence Number Within Batch
         id: sequence_number
         field_inclusion_requirements:
           - mandatory
@@ -1273,7 +1273,7 @@ records:
     id: arc_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1286,7 +1286,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -1297,7 +1297,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1308,7 +1308,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -1319,7 +1319,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -1330,7 +1330,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -1341,7 +1341,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: CHECK SERIAL NUMBER
+        element_name: Check Serial Number
         id: check_serial_number
         field_inclusion_requirements:
           - mandatory
@@ -1352,7 +1352,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
+        element_name: Individual Name/Receiving Company Name
         id: individual_name_or_receiving_company_name
         field_inclusion_requirements:
           - optional
@@ -1363,7 +1363,7 @@ records:
           start: 55
           end: 76
       - order: 9
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -1374,7 +1374,7 @@ records:
           start: 77
           end: 78
       - order: 10
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -1385,7 +1385,7 @@ records:
           start: 79
           end: 79
       - order: 11
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -1400,7 +1400,7 @@ records:
     id: boc_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1413,7 +1413,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -1424,7 +1424,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1435,7 +1435,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -1446,7 +1446,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -1457,7 +1457,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -1468,7 +1468,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: CHECK SERIAL NUMBER
+        element_name: Check Serial Number
         id: check_serial_number
         field_inclusion_requirements:
           - mandatory
@@ -1479,7 +1479,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
+        element_name: Individual Name/Receiving Company Name
         id: individual_name_or_receiving_company_name
         field_inclusion_requirements:
           - optional
@@ -1490,7 +1490,7 @@ records:
           start: 55
           end: 76
       - order: 9
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -1501,7 +1501,7 @@ records:
           start: 77
           end: 78
       - order: 10
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -1512,7 +1512,7 @@ records:
           start: 79
           end: 79
       - order: 11
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -1527,7 +1527,7 @@ records:
     id: ccd_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1540,7 +1540,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -1551,7 +1551,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1562,7 +1562,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -1573,7 +1573,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -1584,7 +1584,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -1595,7 +1595,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: IDENTIFICATION NUMBER
+        element_name: Identification Number
         id: identification_number
         field_inclusion_requirements:
           - optional
@@ -1606,7 +1606,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: RECEIVING COMPANY NAME
+        element_name: Receiving Company Name
         id: receiving_company_name
         field_inclusion_requirements:
           - required
@@ -1617,7 +1617,7 @@ records:
           start: 55
           end: 76
       - order: 9
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -1628,7 +1628,7 @@ records:
           start: 77
           end: 78
       - order: 10
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -1639,7 +1639,7 @@ records:
           start: 79
           end: 79
       - order: 11
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -1654,7 +1654,7 @@ records:
         id: ccd_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -1667,7 +1667,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -1680,7 +1680,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: PAYMENT RELATED INFORMATION
+            element_name: Payment Related Information
             id: payment_related_information
             field_inclusion_requirements:
               - optional
@@ -1691,7 +1691,7 @@ records:
               start: 04
               end: 83
           - order: 4
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -1702,7 +1702,7 @@ records:
               start: 84
               end: 87
           - order: 5
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -1717,7 +1717,7 @@ records:
     id: cie_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1730,7 +1730,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -1741,7 +1741,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1752,7 +1752,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -1763,7 +1763,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -1774,7 +1774,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -1785,7 +1785,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: INDIVIDUAL NAME
+        element_name: Individual Name
         id: individual_name
         field_inclusion_requirements:
           - required
@@ -1796,7 +1796,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: INDIVIDUAL IDENTIFICATION NUMBER
+        element_name: Individual Identification Number
         id: individual_identification_number
         field_inclusion_requirements:
           - mandatory
@@ -1807,7 +1807,7 @@ records:
           start: 55
           end: 76
       - order: 9
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -1818,7 +1818,7 @@ records:
           start: 77
           end: 78
       - order: 10
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -1829,7 +1829,7 @@ records:
           start: 79
           end: 79
       - order: 11
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -1844,7 +1844,7 @@ records:
         id: cie_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -1857,7 +1857,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -1870,7 +1870,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: PAYMENT RELATED INFORMATION
+            element_name: Payment Related Information
             id: payment_related_information
             field_inclusion_requirements:
               - optional
@@ -1881,7 +1881,7 @@ records:
               start: 04
               end: 83
           - order: 4
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -1892,7 +1892,7 @@ records:
               start: 84
               end: 87
           - order: 5
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -1907,7 +1907,7 @@ records:
     id: ctx_corporate_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -1920,7 +1920,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -1931,7 +1931,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -1942,7 +1942,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -1953,7 +1953,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -1964,7 +1964,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: TOTAL AMOUNT
+        element_name: Total Amount
         id: total_amount
         field_inclusion_requirements:
           - mandatory
@@ -1975,7 +1975,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: IDENTIFICATION NUMBER
+        element_name: Identification Number
         id: identification_number
         field_inclusion_requirements:
           - optional
@@ -1986,7 +1986,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: NUMBER OF ADDENDA RECORDS
+        element_name: Number Of Addenda Records
         id: addenda_records_count
         field_inclusion_requirements:
           - mandatory
@@ -1997,7 +1997,7 @@ records:
           start: 55
           end: 58
       - order: 9
-        element_name: RECEIVING COMPANY NAME/ID NUMBER
+        element_name: Receiving Company Name/Id Number
         id: receiving_company_name_or_id_number
         field_inclusion_requirements:
           - required
@@ -2008,7 +2008,7 @@ records:
           start: 59
           end: 74
       - order: 10
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -2019,7 +2019,7 @@ records:
           start: 75
           end: 76
       - order: 11
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -2030,7 +2030,7 @@ records:
           start: 77
           end: 78
       - order: 12
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -2041,7 +2041,7 @@ records:
           start: 79
           end: 79
       - order: 13
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -2056,7 +2056,7 @@ records:
         id: ctx_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2069,7 +2069,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2082,7 +2082,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: PAYMENT RELATED INFORMATION
+            element_name: Payment Related Information
             id: payment_related_information
             field_inclusion_requirements:
               - optional
@@ -2093,7 +2093,7 @@ records:
               start: 04
               end: 83
           - order: 4
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2104,7 +2104,7 @@ records:
               start: 84
               end: 87
           - order: 5
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2119,7 +2119,7 @@ records:
     id: dne_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -2132,7 +2132,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -2143,7 +2143,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -2154,7 +2154,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -2165,7 +2165,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -2176,7 +2176,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -2187,7 +2187,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: INDIVIDUAL IDENTIFICATION NUMBER
+        element_name: Individual Identification Number
         id: individual_identification_number
         field_inclusion_requirements:
           - optional
@@ -2198,7 +2198,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: INDIVIDUAL NAME
+        element_name: Individual Name
         id: individual_name
         field_inclusion_requirements:
           - required
@@ -2209,7 +2209,7 @@ records:
           start: 55
           end: 76
       - order: 9
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -2220,7 +2220,7 @@ records:
           start: 77
           end: 78
       - order: 10
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -2231,7 +2231,7 @@ records:
           start: 79
           end: 79
       - order: 11
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -2246,7 +2246,7 @@ records:
         id: dne_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2259,7 +2259,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2272,7 +2272,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: PAYMENT RELATED INFORMATION
+            element_name: Payment Related Information
             id: payment_related_information
             field_inclusion_requirements:
               - optional
@@ -2283,7 +2283,7 @@ records:
               start: 04
               end: 83
           - order: 4
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2294,7 +2294,7 @@ records:
               start: 84
               end: 87
           - order: 5
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2309,7 +2309,7 @@ records:
     id: enr_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -2322,7 +2322,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -2333,7 +2333,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: RECEIVING DFI IDENTIFICATION
+        element_name: Receiving DFI Identification
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -2344,7 +2344,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -2355,7 +2355,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: DFI ACCOUNT NUMBER
+        element_name: DFI Account Number
         id: dfi_account_number
         field_inclusion_requirements:
           - required
@@ -2366,7 +2366,7 @@ records:
           start: 13
           end: 29
       - order: 6
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -2377,7 +2377,7 @@ records:
           start: 30
           end: 39
       - order: 7
-        element_name: IDENTIFICATION NUMBER
+        element_name: Identification Number
         id: identification_number
         field_inclusion_requirements:
           - optional
@@ -2388,7 +2388,7 @@ records:
           start: 40
           end: 54
       - order: 8
-        element_name: NUMBER OF ADDENDA RECORDS
+        element_name: Number Of Addenda Records
         id: number_of_addenda_records
         field_inclusion_requirements:
           - mandatory
@@ -2399,7 +2399,7 @@ records:
           start: 55
           end: 58
       - order: 9
-        element_name: RECEIVING COMPANY NAME/ID NUMBER
+        element_name: Receiving Company Name/Id Number
         id: receiving_company_name_or_id_number
         field_inclusion_requirements:
           - required
@@ -2410,7 +2410,7 @@ records:
           start: 59
           end: 74
       - order: 10
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -2421,7 +2421,7 @@ records:
           start: 75
           end: 76
       - order: 11
-        element_name: DISCRETIONARY DATA
+        element_name: Discretionary Data
         id: discretionary_data
         field_inclusion_requirements:
           - optional
@@ -2432,7 +2432,7 @@ records:
           start: 77
           end: 78
       - order: 12
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -2443,7 +2443,7 @@ records:
           start: 79
           end: 79
       - order: 13
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -2458,7 +2458,7 @@ records:
         id: enr_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2471,7 +2471,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2484,7 +2484,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: PAYMENT RELATED INFORMATION
+            element_name: Payment Related Information
             id: payment_related_information
             field_inclusion_requirements:
               - required
@@ -2495,7 +2495,7 @@ records:
               start: 04
               end: 83
           - order: 4
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2506,7 +2506,7 @@ records:
               start: 84
               end: 87
           - order: 5
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2521,7 +2521,7 @@ records:
     id: iat_entry_detail_record
     fields:
       - order: 1
-        element_name: RECORD TYPE CODE
+        element_name: Record Type Code
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
@@ -2534,7 +2534,7 @@ records:
           start: 01
           end: 01
       - order: 2
-        element_name: TRANSACTION CODE
+        element_name: Transaction Code
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
@@ -2545,7 +2545,7 @@ records:
           start: 02
           end: 03
       - order: 3
-        element_name: GO IDENTIFICATION/RECEIVING DFI IDENTIFICATION
+        element_name: Go Identification/Receiving DFI Identification
         id: go_identification_or_receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
@@ -2556,7 +2556,7 @@ records:
           start: 04
           end: 11
       - order: 4
-        element_name: CHECK DIGIT
+        element_name: Check Digit
         id: check_digit
         field_inclusion_requirements:
           - mandatory
@@ -2567,7 +2567,7 @@ records:
           start: 12
           end: 12
       - order: 5
-        element_name: NUMBER OF ADDENDA RECORDS
+        element_name: Number Of Addenda Records
         id: addenda_records_count
         field_inclusion_requirements:
           - mandatory
@@ -2578,7 +2578,7 @@ records:
           start: 13
           end: 16
       - order: 6
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -2589,7 +2589,7 @@ records:
           start: 17
           end: 29
       - order: 7
-        element_name: AMOUNT
+        element_name: Amount
         id: amount
         field_inclusion_requirements:
           - mandatory
@@ -2600,7 +2600,7 @@ records:
           start: 30
           end: 39
       - order: 8
-        element_name: FOREIGN RECEIVER’S ACCOUNT NUMBER/ DFI ACCOUNT NUMBER
+        element_name: Foreign Receiver’S Account Number/ DFI Account Number
         id: foreign_receivers_account_number_or_dfi_account_number
         field_inclusion_requirements:
           - mandatory
@@ -2611,7 +2611,7 @@ records:
           start: 40
           end: 74
       - order: 9
-        element_name: RESERVED
+        element_name: Reserved
         id: reserved
         field_inclusion_requirements:
           - N/A
@@ -2622,7 +2622,7 @@ records:
           start: 75
           end: 76
       - order: 10
-        element_name: GATEWAY OPERATOR OFAC SCREENING INDICATOR
+        element_name: Gateway Operator Ofac Screening Indicator
         id: gateway_operator_ofac_screening_indicator
         field_inclusion_requirements:
           - optional
@@ -2633,7 +2633,7 @@ records:
           start: 77
           end: 77
       - order: 11
-        element_name: SECONDARY OFAC SCREENING INDICATOR
+        element_name: Secondary Ofac Screening Indicator
         id: secondary_ofac_screening_indicator
         field_inclusion_requirements:
           - optional
@@ -2644,7 +2644,7 @@ records:
           start: 78
           end: 78
       - order: 12
-        element_name: ADDENDA RECORD INDICATOR
+        element_name: Addenda Record Indicator
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
@@ -2655,7 +2655,7 @@ records:
           start: 79
           end: 79
       - order: 13
-        element_name: TRACE NUMBER
+        element_name: Trace Number
         id: trace_number
         field_inclusion_requirements:
           - mandatory
@@ -2670,7 +2670,7 @@ records:
         id: first_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2683,7 +2683,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2696,7 +2696,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: TRANSACTION TYPE CODE
+            element_name: Transaction Type Code
             id: transaction_type_code
             field_inclusion_requirements:
               - required
@@ -2707,7 +2707,7 @@ records:
               start: 04
               end: 06
           - order: 4
-            element_name: FOREIGN PAYMENT AMOUNT
+            element_name: Foreign Payment Amount
             id: foreign_payment_amount
             field_inclusion_requirements:
               - required
@@ -2718,7 +2718,7 @@ records:
               start: 07
               end: 24
           - order: 5
-            element_name: FOREIGN TRACE NUMBER
+            element_name: Foreign Trace Number
             id: foreign_trace_number
             field_inclusion_requirements:
               - optional
@@ -2729,7 +2729,7 @@ records:
               start: 25
               end: 46
           - order: 6
-            element_name: RECEIVING COMPANY NAME/INDIVIDUAL NAME
+            element_name: Receiving Company Name/Individual Name
             id: receiving_company_name_or_individual_name
             field_inclusion_requirements:
               - mandatory
@@ -2740,7 +2740,7 @@ records:
               start: 47
               end: 81
           - order: 7
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -2751,7 +2751,7 @@ records:
               start: 82
               end: 87
           - order: 8
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2766,7 +2766,7 @@ records:
         id: second_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2779,7 +2779,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2792,7 +2792,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: ORIGINATOR NAME
+            element_name: Originator Name
             id: originator_name
             field_inclusion_requirements:
               - mandatory
@@ -2803,7 +2803,7 @@ records:
               start: 04
               end: 38
           - order: 4
-            element_name: ORIGINATOR STREET ADDRESS
+            element_name: Originator Street Address
             id: originator_street_address
             field_inclusion_requirements:
               - mandatory
@@ -2814,7 +2814,7 @@ records:
               start: 39
               end: 73
           - order: 5
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -2825,7 +2825,7 @@ records:
               start: 74
               end: 87
           - order: 6
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2840,7 +2840,7 @@ records:
         id: third_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2853,7 +2853,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2866,7 +2866,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: ORIGINATOR CITY AND STATE/PROVINCE
+            element_name: Originator City And State/Province
             id: originator_city_and_state_or_province
             field_inclusion_requirements:
               - mandatory
@@ -2877,7 +2877,7 @@ records:
               start: 04
               end: 38
           - order: 4
-            element_name: ORIGINATOR COUNTRY AND POSTAL CODE
+            element_name: Originator Country And Postal Code
             id: originator_country_and_postal_code
             field_inclusion_requirements:
               - mandatory
@@ -2888,7 +2888,7 @@ records:
               start: 39
               end: 73
           - order: 5
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -2899,7 +2899,7 @@ records:
               start: 74
               end: 87
           - order: 6
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -2914,7 +2914,7 @@ records:
         id: fourth_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2927,7 +2927,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -2940,7 +2940,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: ORIGINATING DFI NAME
+            element_name: Originating DFI Name
             id: originating_dfi_name
             field_inclusion_requirements:
               - mandatory
@@ -2951,7 +2951,7 @@ records:
               start: 04
               end: 38
           - order: 4
-            element_name: ORIGINATING DFI IDENTIFICATION NUMBER QUALIFIER
+            element_name: Originating DFI Identification Number Qualifier
             id: originating_dfi_identification_number_qualifier
             field_inclusion_requirements:
               - mandatory
@@ -2962,7 +2962,7 @@ records:
               start: 39
               end: 40
           - order: 5
-            element_name: ORIGINATING DFI IDENTIFICATION
+            element_name: Originating DFI Identification
             id: originating_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -2973,7 +2973,7 @@ records:
               start: 41
               end: 74
           - order: 6
-            element_name: ORIGINATING DFI BRANCH COUNTRY CODE
+            element_name: Originating DFI Branch Country Code
             id: originating_dfi_branch_country_code
             field_inclusion_requirements:
               - mandatory
@@ -2984,7 +2984,7 @@ records:
               start: 75
               end: 77
           - order: 7
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -2995,7 +2995,7 @@ records:
               start: 78
               end: 87
           - order: 8
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3010,7 +3010,7 @@ records:
         id: fifth_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3023,7 +3023,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3036,7 +3036,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI NAME
+            element_name: Receiving DFI Name
             id: receiving_dfi_name
             field_inclusion_requirements:
               - mandatory
@@ -3047,7 +3047,7 @@ records:
               start: 04
               end: 38
           - order: 4
-            element_name: RECEIVING DFI IDENTIFICATION NUMBER QUALIFIER
+            element_name: Receiving DFI Identification Number Qualifier
             id: receiving_dfi_identification_number_qualifier
             field_inclusion_requirements:
               - mandatory
@@ -3058,7 +3058,7 @@ records:
               start: 39
               end: 40
           - order: 5
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -3069,7 +3069,7 @@ records:
               start: 41
               end: 74
           - order: 6
-            element_name: RECEIVING DFI BRANCH COUNTRY CODE
+            element_name: Receiving DFI Branch Country Code
             id: receiving_dfi_branch_country_code
             field_inclusion_requirements:
               - mandatory
@@ -3080,7 +3080,7 @@ records:
               start: 75
               end: 77
           - order: 7
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -3091,7 +3091,7 @@ records:
               start: 78
               end: 87
           - order: 8
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3106,7 +3106,7 @@ records:
         id: sixth_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3119,7 +3119,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3132,7 +3132,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVER IDENTIFICATION NUMBER
+            element_name: Receiver Identification Number
             id: receiver_identification_number
             field_inclusion_requirements:
               - optional
@@ -3143,7 +3143,7 @@ records:
               start: 04
               end: 18
           - order: 4
-            element_name: RECEIVER STREET ADDRESS
+            element_name: Receiver Street Address
             id: receiver_street_address
             field_inclusion_requirements:
               - mandatory
@@ -3154,7 +3154,7 @@ records:
               start: 19
               end: 53
           - order: 5
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -3165,7 +3165,7 @@ records:
               start: 54
               end: 87
           - order: 6
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3180,7 +3180,7 @@ records:
         id: seventh_iat_addenda_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3193,7 +3193,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3206,7 +3206,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVER CITY AND STATE/PROVINCE
+            element_name: Receiver City And State/Province
             id: receiver_city_and_state_province
             field_inclusion_requirements:
               - mandatory
@@ -3217,7 +3217,7 @@ records:
               start: 04
               end: 38
           - order: 4
-            element_name: RECEIVER COUNTRY AND POSTAL CODE
+            element_name: Receiver Country And Postal Code
             id: receiver_country_and_postal_code
             field_inclusion_requirements:
               - mandatory
@@ -3228,7 +3228,7 @@ records:
               start: 39
               end: 73
           - order: 5
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -3239,7 +3239,7 @@ records:
               start: 74
               end: 87
           - order: 6
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3254,7 +3254,7 @@ records:
         id: iat_addenda_record_for_remittance_information
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3267,7 +3267,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3280,7 +3280,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: PAYMENT RELATED INFORMATION
+            element_name: Payment Related Information
             id: payment_related_information
             field_inclusion_requirements:
               - optional
@@ -3291,7 +3291,7 @@ records:
               start: 04
               end: 83
           - order: 4
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3302,7 +3302,7 @@ records:
               start: 84
               end: 87
           - order: 5
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3317,7 +3317,7 @@ records:
         id: iat_addenda_record_for_foreign_correspondent_bank_information
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3330,7 +3330,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: ADDENDA TYPE CODE
+            element_name: Addenda Type Code
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3343,7 +3343,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: FOREIGN CORRESPONDENT BANK NAME
+            element_name: Foreign Correspondent Bank Name
             id: foreign_correspondent_bank_name
             field_inclusion_requirements:
               - mandatory
@@ -3354,7 +3354,7 @@ records:
               start: 04
               end: 38
           - order: 4
-            element_name: FOREIGN CORRESPONDENT BANK IDENTIFICATION NUMBER QUALIFIER
+            element_name: Foreign Correspondent Bank Identification Number Qualifier
             id: foreign_correspondent_bank_identification_number_qualifier
             field_inclusion_requirements:
               - mandatory
@@ -3365,7 +3365,7 @@ records:
               start: 39
               end: 40
           - order: 5
-            element_name: FOREIGN CORRESPONDENT BANK IDENTIFICATION NUMBER
+            element_name: Foreign Correspondent Bank Identification Number
             id: foreign_correspondent_bank_identification_number
             field_inclusion_requirements:
               - mandatory
@@ -3376,7 +3376,7 @@ records:
               start: 41
               end: 74
           - order: 6
-            element_name: FOREIGN CORRESPONDENT BANK BRANCH COUNTRY CODE
+            element_name: Foreign Correspondent Bank Branch Country Code
             id: foreign_correspondent_bank_branch_country_code
             field_inclusion_requirements:
               - mandatory
@@ -3387,7 +3387,7 @@ records:
               start: 75
               end: 77
           - order: 7
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -3398,7 +3398,7 @@ records:
               start: 78
               end: 83
           - order: 8
-            element_name: ADDENDA SEQUENCE NUMBER
+            element_name: Addenda Sequence Number
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3409,7 +3409,7 @@ records:
               start: 84
               end: 87
           - order: 9
-            element_name: ENTRY DETAIL SEQUENCE NUMBER
+            element_name: Entry Detail Sequence Number
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
@@ -3424,7 +3424,7 @@ records:
         id: mte_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3437,7 +3437,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -3448,7 +3448,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -3459,7 +3459,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -3470,7 +3470,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -3481,7 +3481,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -3492,7 +3492,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: INDIVIDUAL NAME
+            element_name: Individual Name
             id: individual_name
             field_inclusion_requirements:
               - mandatory
@@ -3503,7 +3503,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            element_name: Individual Identification Number
             id: individual_identification_number
             field_inclusion_requirements:
               - mandatory
@@ -3514,7 +3514,7 @@ records:
               start: 55
               end: 76
           - order: 9
-            element_name: DISCRETIONARY DATA
+            element_name: Discretionary Data
             id: discretionary_data
             field_inclusion_requirements:
               - optional
@@ -3525,7 +3525,7 @@ records:
               start: 77
               end: 78
           - order: 10
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -3536,7 +3536,7 @@ records:
               start: 79
               end: 79
           - order: 11
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -3551,7 +3551,7 @@ records:
             id: mte_addenda_record
             fields:
               - order: 1
-                element_name: RECORD TYPE CODE
+                element_name: Record Type Code
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -3564,7 +3564,7 @@ records:
                   start: 01
                   end: 01
               - order: 2
-                element_name: ADDENDA TYPE CODE
+                element_name: Addenda Type Code
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -3577,7 +3577,7 @@ records:
                   start: 02
                   end: 03
               - order: 3
-                element_name: TRANSACTION DESCRIPTION
+                element_name: Transaction Description
                 id: transaction_description
                 field_inclusion_requirements:
                   - required
@@ -3588,7 +3588,7 @@ records:
                   start: 04
                   end: 10
               - order: 4
-                element_name: NETWORK IDENTIFICATION CODE
+                element_name: Network Identification Code
                 id: network_identification_code
                 field_inclusion_requirements:
                   - optional
@@ -3599,7 +3599,7 @@ records:
                   start: 11
                   end: 13
               - order: 5
-                element_name: TERMINAL IDENTIFICATION CODE
+                element_name: Terminal Identification Code
                 id: terminal_identification_code
                 field_inclusion_requirements:
                   - required
@@ -3610,7 +3610,7 @@ records:
                   start: 14
                   end: 19
               - order: 6
-                element_name: TRANSACTION SERIAL NUMBER
+                element_name: Transaction Serial Number
                 id: transaction_serial_number
                 field_inclusion_requirements:
                   - required
@@ -3621,7 +3621,7 @@ records:
                   start: 20
                   end: 25
               - order: 7
-                element_name: TRANSACTION DATE
+                element_name: Transaction Date
                 id: transaction_date
                 field_inclusion_requirements:
                   - required
@@ -3632,7 +3632,7 @@ records:
                   start: 26
                   end: 29
               - order: 8
-                element_name: TRANSACTION TIME
+                element_name: Transaction Time
                 id: transaction_time
                 field_inclusion_requirements:
                   - required
@@ -3643,7 +3643,7 @@ records:
                   start: 30
                   end: 35
               - order: 9
-                element_name: TERMINAL LOCATION
+                element_name: Terminal Location
                 id: terminal_location
                 field_inclusion_requirements:
                   - required
@@ -3654,7 +3654,7 @@ records:
                   start: 36
                   end: 62
               - order: 10
-                element_name: TERMINAL CITY
+                element_name: Terminal City
                 id: terminal_city
                 field_inclusion_requirements:
                   - required
@@ -3665,7 +3665,7 @@ records:
                   start: 63
                   end: 77
               - order: 11
-                element_name: TERMINAL STATE
+                element_name: Terminal State
                 id: terminal_state
                 field_inclusion_requirements:
                   - required
@@ -3676,7 +3676,7 @@ records:
                   start: 78
                   end: 79
               - order: 12
-                element_name: TRACE NUMBER
+                element_name: Trace Number
                 id: trace_number
                 field_inclusion_requirements:
                   - mandatory
@@ -3691,7 +3691,7 @@ records:
         id: pop_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3704,7 +3704,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -3715,7 +3715,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -3726,7 +3726,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -3737,7 +3737,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -3748,7 +3748,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -3759,7 +3759,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: CHECK SERIAL NUMBER
+            element_name: Check Serial Number
             id: check_serial_number
             field_inclusion_requirements:
               - mandatory
@@ -3770,7 +3770,7 @@ records:
               start: 40
               end: 48
           - order: 8
-            element_name: TERMINAL CITY
+            element_name: Terminal City
             id: terminal_city
             field_inclusion_requirements:
               - mandatory
@@ -3781,7 +3781,7 @@ records:
               start: 49
               end: 52
           - order: 9
-            element_name: TERMINAL STATE
+            element_name: Terminal State
             id: terminal_state
             field_inclusion_requirements:
               - mandatory
@@ -3792,7 +3792,7 @@ records:
               start: 53
               end: 54
           - order: 10
-            element_name: INDIVIDUAL NAME/RECEIVING COMPANY NAME
+            element_name: Individual Name/Receiving Company Name
             id: individual_name_or_receiving_company_name
             field_inclusion_requirements:
               - optional
@@ -3803,7 +3803,7 @@ records:
               start: 55
               end: 76
           - order: 11
-            element_name: DISCRETIONARY DATA
+            element_name: Discretionary Data
             id: discretionary_data
             field_inclusion_requirements:
               - optional
@@ -3814,7 +3814,7 @@ records:
               start: 77
               end: 78
           - order: 12
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -3825,7 +3825,7 @@ records:
               start: 79
               end: 79
           - order: 13
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -3840,7 +3840,7 @@ records:
         id: pos_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3853,7 +3853,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -3864,7 +3864,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -3875,7 +3875,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -3886,7 +3886,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -3897,7 +3897,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -3908,7 +3908,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            element_name: Individual Identification Number
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
@@ -3919,7 +3919,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: INDIVIDUAL NAME
+            element_name: Individual Name
             id: individual_name
             field_inclusion_requirements:
               - required
@@ -3930,7 +3930,7 @@ records:
               start: 55
               end: 76
           - order: 9
-            element_name: CARD TRANSACTION TYPE CODE
+            element_name: Card Transaction Type Code
             id: card_transaction_type_code
             field_inclusion_requirements:
               - mandatory
@@ -3941,7 +3941,7 @@ records:
               start: 77
               end: 78
           - order: 10
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -3952,7 +3952,7 @@ records:
               start: 79
               end: 79
           - order: 11
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -3967,7 +3967,7 @@ records:
             id: pos_addenda_record
             fields:
               - order: 1
-                element_name: RECORD TYPE CODE
+                element_name: Record Type Code
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -3980,7 +3980,7 @@ records:
                   start: 01
                   end: 01
               - order: 2
-                element_name: ADDENDA TYPE CODE
+                element_name: Addenda Type Code
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -3993,7 +3993,7 @@ records:
                   start: 02
                   end: 03
               - order: 3
-                element_name: REFERENCE INFORMATION
+                element_name: Reference Information
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
@@ -4004,7 +4004,7 @@ records:
                   start: 04
                   end: 10
               - order: 4
-                element_name: REFERENCE INFORMATION
+                element_name: Reference Information
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
@@ -4015,7 +4015,7 @@ records:
                   start: 11
                   end: 13
               - order: 5
-                element_name: TERMINAL IDENTIFICATION CODE
+                element_name: Terminal Identification Code
                 id: terminal_identification_code
                 field_inclusion_requirements:
                   - required
@@ -4026,7 +4026,7 @@ records:
                   start: 14
                   end: 19
               - order: 6
-                element_name: TRANSACTION SERIAL NUMBER
+                element_name: Transaction Serial Number
                 id: transaction_serial_number
                 field_inclusion_requirements:
                   - required
@@ -4037,7 +4037,7 @@ records:
                   start: 20
                   end: 25
               - order: 7
-                element_name: TRANSACTION DATE
+                element_name: Transaction Date
                 id: transaction_date
                 field_inclusion_requirements:
                   - required
@@ -4048,7 +4048,7 @@ records:
                   start: 26
                   end: 29
               - order: 8
-                element_name: AUTHORIZATION CODE OR CARD EXPIRATION DATE
+                element_name: Authorization Code Or Card Expiration Date
                 id: authorization_code_or_card_expiration_date
                 field_inclusion_requirements:
                   - optional
@@ -4059,7 +4059,7 @@ records:
                   start: 30
                   end: 35
               - order: 9
-                element_name: TERMINAL LOCATION
+                element_name: Terminal Location
                 id: terminal_location
                 field_inclusion_requirements:
                   - required
@@ -4070,7 +4070,7 @@ records:
                   start: 36
                   end: 62
               - order: 10
-                element_name: TERMINAL CITY
+                element_name: Terminal City
                 id: terminal_city
                 field_inclusion_requirements:
                   - required
@@ -4081,7 +4081,7 @@ records:
                   start: 63
                   end: 77
               - order: 11
-                element_name: TERMINAL STATE
+                element_name: Terminal State
                 id: terminal_state
                 field_inclusion_requirements:
                   - required
@@ -4092,7 +4092,7 @@ records:
                   start: 78
                   end: 79
               - order: 12
-                element_name: TRACE NUMBER
+                element_name: Trace Number
                 id: trace_number
                 field_inclusion_requirements:
                   - mandatory
@@ -4107,7 +4107,7 @@ records:
         id: ppd_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4120,7 +4120,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -4131,7 +4131,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -4142,7 +4142,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -4153,7 +4153,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -4164,7 +4164,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -4175,7 +4175,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            element_name: Individual Identification Number
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
@@ -4186,7 +4186,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: INDIVIDUAL NAME
+            element_name: Individual Name
             id: individual_name
             field_inclusion_requirements:
               - required
@@ -4197,7 +4197,7 @@ records:
               start: 55
               end: 76
           - order: 9
-            element_name: DISCRETIONARY DATA
+            element_name: Discretionary Data
             id: discretionary_data
             field_inclusion_requirements:
               - optional
@@ -4208,7 +4208,7 @@ records:
               start: 77
               end: 78
           - order: 10
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -4219,7 +4219,7 @@ records:
               start: 79
               end: 79
           - order: 11
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -4234,7 +4234,7 @@ records:
             id: ppd_addenda_record
             fields:
               - order: 1
-                element_name: RECORD TYPE CODE
+                element_name: Record Type Code
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -4247,7 +4247,7 @@ records:
                   start: 01
                   end: 01
               - order: 2
-                element_name: ADDENDA TYPE CODE
+                element_name: Addenda Type Code
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -4260,7 +4260,7 @@ records:
                   start: 02
                   end: 03
               - order: 3
-                element_name: PAYMENT RELATED INFORMATION
+                element_name: Payment Related Information
                 id: payment_related_information
                 field_inclusion_requirements:
                   - optional
@@ -4271,7 +4271,7 @@ records:
                   start: 04
                   end: 83
               - order: 4
-                element_name: ADDENDA SEQUENCE NUMBER
+                element_name: Addenda Sequence Number
                 id: addenda_sequence_number
                 field_inclusion_requirements:
                   - mandatory
@@ -4282,7 +4282,7 @@ records:
                   start: 84
                   end: 87
               - order: 5
-                element_name: ENTRY DETAIL SEQUENCE NUMBER
+                element_name: Entry Detail Sequence Number
                 id: entry_detail_sequence_number
                 field_inclusion_requirements:
                   - mandatory
@@ -4297,7 +4297,7 @@ records:
         id: rck_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4310,7 +4310,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -4321,7 +4321,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -4332,7 +4332,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -4343,7 +4343,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -4354,7 +4354,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -4365,7 +4365,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: CHECK SERIAL NUMBER
+            element_name: Check Serial Number
             id: check_serial_number
             field_inclusion_requirements:
               - mandatory
@@ -4376,7 +4376,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: INDIVIDUAL NAME
+            element_name: Individual Name
             id: individual_name
             field_inclusion_requirements:
               - required
@@ -4387,7 +4387,7 @@ records:
               start: 55
               end: 76
           - order: 9
-            element_name: DISCRETIONARY DATA
+            element_name: Discretionary Data
             id: discretionary_data
             field_inclusion_requirements:
               - optional
@@ -4398,7 +4398,7 @@ records:
               start: 77
               end: 78
           - order: 10
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -4409,7 +4409,7 @@ records:
               start: 79
               end: 79
           - order: 11
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -4424,7 +4424,7 @@ records:
         id: shr_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4437,7 +4437,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -4448,7 +4448,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -4459,7 +4459,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -4470,7 +4470,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -4481,7 +4481,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -4492,7 +4492,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: CARD EXPIRATION DATE
+            element_name: Card Expiration Date
             id: card_expiration_date
             field_inclusion_requirements:
               - required
@@ -4503,7 +4503,7 @@ records:
               start: 40
               end: 43
           - order: 8
-            element_name: DOCUMENT REFERENCE NUMBER
+            element_name: Document Reference Number
             id: document_reference_number
             field_inclusion_requirements:
               - required
@@ -4514,7 +4514,7 @@ records:
               start: 44
               end: 54
           - order: 9
-            element_name: INDIVIDUAL CARD ACCOUNT NUMBER
+            element_name: Individual Card Account Number
             id: individual_card_account_number
             field_inclusion_requirements:
               - required
@@ -4525,7 +4525,7 @@ records:
               start: 55
               end: 76
           - order: 10
-            element_name: CARD TRANSACTION TYPE CODE
+            element_name: Card Transaction Type Code
             id: card_transaction_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4536,7 +4536,7 @@ records:
               start: 77
               end: 78
           - order: 11
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -4547,7 +4547,7 @@ records:
               start: 79
               end: 79
           - order: 12
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -4562,7 +4562,7 @@ records:
             id: shr_addenda_record
             fields:
               - order: 1
-                element_name: RECORD TYPE CODE
+                element_name: Record Type Code
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -4575,7 +4575,7 @@ records:
                   start: 01
                   end: 01
               - order: 2
-                element_name: ADDENDA TYPE CODE
+                element_name: Addenda Type Code
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -4588,7 +4588,7 @@ records:
                   start: 02
                   end: 03
               - order: 3
-                element_name: REFERENCE INFORMATION
+                element_name: Reference Information
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
@@ -4599,7 +4599,7 @@ records:
                   start: 04
                   end: 10
               - order: 4
-                element_name: REFERENCE INFORMATION
+                element_name: Reference Information
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
@@ -4610,7 +4610,7 @@ records:
                   start: 11
                   end: 13
               - order: 5
-                element_name: TERMINAL IDENTIFICATION CODE
+                element_name: Terminal Identification Code
                 id: terminal_identification_code
                 field_inclusion_requirements:
                   - required
@@ -4621,7 +4621,7 @@ records:
                   start: 14
                   end: 19
               - order: 6
-                element_name: TRANSACTION SERIAL NUMBER
+                element_name: Transaction Serial Number
                 id: transaction_serial_number
                 field_inclusion_requirements:
                   - required
@@ -4632,7 +4632,7 @@ records:
                   start: 20
                   end: 25
               - order: 7
-                element_name: TRANSACTION DATE
+                element_name: Transaction Date
                 id: transaction_date
                 field_inclusion_requirements:
                   - required
@@ -4643,7 +4643,7 @@ records:
                   start: 26
                   end: 29
               - order: 8
-                element_name: AUTHORIZATION CODE OR CARD EXPIRATION DATE
+                element_name: Authorization Code Or Card Expiration Date
                 id: authorization_code_or_card_expiration_date
                 field_inclusion_requirements:
                   - optional
@@ -4654,7 +4654,7 @@ records:
                   start: 30
                   end: 35
               - order: 9
-                element_name: TERMINAL LOCATION
+                element_name: Terminal Location
                 id: terminal_location
                 field_inclusion_requirements:
                   - required
@@ -4665,7 +4665,7 @@ records:
                   start: 36
                   end: 62
               - order: 10
-                element_name: TERMINAL CITY
+                element_name: Terminal City
                 id: terminal_city
                 field_inclusion_requirements:
                   - required
@@ -4676,7 +4676,7 @@ records:
                   start: 63
                   end: 77
               - order: 11
-                element_name: TERMINAL STATE
+                element_name: Terminal State
                 id: terminal_state
                 field_inclusion_requirements:
                   - required
@@ -4687,7 +4687,7 @@ records:
                   start: 78
                   end: 79
               - order: 12
-                element_name: TRACE NUMBER
+                element_name: Trace Number
                 id: trace_number
                 field_inclusion_requirements:
                   - mandatory
@@ -4702,7 +4702,7 @@ records:
         id: tel_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4715,7 +4715,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -4726,7 +4726,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -4737,7 +4737,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -4748,7 +4748,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -4759,7 +4759,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -4770,7 +4770,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            element_name: Individual Identification Number
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
@@ -4781,7 +4781,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: INDIVIDUAL NAME
+            element_name: Individual Name
             id: individual_name
             field_inclusion_requirements:
               - mandatory
@@ -4792,7 +4792,7 @@ records:
               start: 55
               end: 76
           - order: 9
-            element_name: PAYMENT TYPE CODE
+            element_name: Payment Type Code
             id: payment_type_code
             field_inclusion_requirements:
               - optional
@@ -4803,7 +4803,7 @@ records:
               start: 77
               end: 78
           - order: 10
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -4814,7 +4814,7 @@ records:
               start: 79
               end: 79
           - order: 11
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -4829,7 +4829,7 @@ records:
         id: trc_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4842,7 +4842,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -4853,7 +4853,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -4864,7 +4864,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -4875,7 +4875,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -4886,7 +4886,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -4897,7 +4897,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: CHECK SERIAL NUMBER
+            element_name: Check Serial Number
             id: check_serial_number
             field_inclusion_requirements:
               - optional
@@ -4908,7 +4908,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: PROCESS CONTROL FIELD
+            element_name: Process Control Field
             id: process_control_field
             field_inclusion_requirements:
               - required
@@ -4919,7 +4919,7 @@ records:
               start: 55
               end: 60
           - order: 9
-            element_name: ITEM RESEARCH NUMBER
+            element_name: Item Research Number
             id: item_research_number
             field_inclusion_requirements:
               - required
@@ -4930,7 +4930,7 @@ records:
               start: 61
               end: 76
           - order: 10
-            element_name: ITEM TYPE INDICATOR
+            element_name: Item Type Indicator
             id: item_type_indicator
             field_inclusion_requirements:
               - optional
@@ -4941,7 +4941,7 @@ records:
               start: 77
               end: 78
           - order: 11
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -4952,7 +4952,7 @@ records:
               start: 79
               end: 79
           - order: 12
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -4967,7 +4967,7 @@ records:
         id: trx_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -4980,7 +4980,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -4991,7 +4991,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -5002,7 +5002,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -5013,7 +5013,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -5024,7 +5024,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: TOTAL AMOUNT
+            element_name: Total Amount
             id: total_amount
             field_inclusion_requirements:
               - mandatory
@@ -5035,7 +5035,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: IDENTIFICATION NUMBER
+            element_name: Identification Number
             id: identification_number
             field_inclusion_requirements:
               - optional
@@ -5046,7 +5046,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: NUMBER OF ADDENDA RECORDS
+            element_name: Number Of Addenda Records
             id: addenda_records_count
             field_inclusion_requirements:
               - mandatory
@@ -5057,7 +5057,7 @@ records:
               start: 55
               end: 58
           - order: 9
-            element_name: RECEIVING COMPANY NAME/ID NUMBER
+            element_name: Receiving Company Name/Id Number
             id: receiving_company_name_or_id_number
             field_inclusion_requirements:
               - required
@@ -5068,7 +5068,7 @@ records:
               start: 59
               end: 74
           - order: 10
-            element_name: RESERVED
+            element_name: Reserved
             id: reserved
             field_inclusion_requirements:
               - N/A
@@ -5079,7 +5079,7 @@ records:
               start: 75
               end: 76
           - order: 11
-            element_name: ITEM TYPE INDICATOR
+            element_name: Item Type Indicator
             id: item_type_indicator
             field_inclusion_requirements:
               - optional
@@ -5090,7 +5090,7 @@ records:
               start: 77
               end: 78
           - order: 12
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -5101,7 +5101,7 @@ records:
               start: 79
               end: 79
           - order: 13
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -5116,7 +5116,7 @@ records:
             id: trx_addenda_record
             fields:
               - order: 1
-                element_name: RECORD TYPE CODE
+                element_name: Record Type Code
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -5129,7 +5129,7 @@ records:
                   start: 01
                   end: 01
               - order: 2
-                element_name: ADDENDA TYPE CODE
+                element_name: Addenda Type Code
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -5142,7 +5142,7 @@ records:
                   start: 02
                   end: 03
               - order: 3
-                element_name: PAYMENT RELATED INFORMATION
+                element_name: Payment Related Information
                 id: payment_related_information
                 field_inclusion_requirements:
                   - optional
@@ -5153,7 +5153,7 @@ records:
                   start: 04
                   end: 83
               - order: 4
-                element_name: ADDENDA SEQUENCE NUMBER
+                element_name: Addenda Sequence Number
                 id: addenda_sequence_number
                 field_inclusion_requirements:
                   - mandatory
@@ -5164,7 +5164,7 @@ records:
                   start: 84
                   end: 87
               - order: 5
-                element_name: ENTRY DETAIL SEQUENCE NUMBER
+                element_name: Entry Detail Sequence Number
                 id: entry_detail_sequence_number
                 field_inclusion_requirements:
                   - mandatory
@@ -5179,7 +5179,7 @@ records:
         id: web_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -5192,7 +5192,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -5203,7 +5203,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -5214,7 +5214,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -5225,7 +5225,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -5236,7 +5236,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -5247,7 +5247,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: INDIVIDUAL IDENTIFICATION NUMBER
+            element_name: Individual Identification Number
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
@@ -5259,7 +5259,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: INDIVIDUAL NAME
+            element_name: Individual Name
             id: individual_name
             field_inclusion_requirements:
               - mandatory
@@ -5270,7 +5270,7 @@ records:
               start: 55
               end: 76
           - order: 9
-            element_name: PAYMENT TYPE CODE
+            element_name: Payment Type Code
             id: payment_type_code
             field_inclusion_requirements:
               - optional
@@ -5281,7 +5281,7 @@ records:
               start: 77
               end: 78
           - order: 10
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -5292,7 +5292,7 @@ records:
               start: 79
               end: 79
           - order: 11
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
@@ -5307,7 +5307,7 @@ records:
             id: web_addenda_record
             fields:
               - order: 1
-                element_name: RECORD TYPE CODE
+                element_name: Record Type Code
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -5320,7 +5320,7 @@ records:
                   start: 01
                   end: 01
               - order: 2
-                element_name: ADDENDA TYPE CODE
+                element_name: Addenda Type Code
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
@@ -5333,7 +5333,7 @@ records:
                   start: 02
                   end: 03
               - order: 3
-                element_name: PAYMENT RELATED INFORMATION
+                element_name: Payment Related Information
                 id: payment_related_information
                 field_inclusion_requirements:
                   - optional
@@ -5344,7 +5344,7 @@ records:
                   start: 04
                   end: 83
               - order: 4
-                element_name: ADDENDA SEQUENCE NUMBER
+                element_name: Addenda Sequence Number
                 id: addenda_sequence_number
                 field_inclusion_requirements:
                   - mandatory
@@ -5355,7 +5355,7 @@ records:
                   start: 84
                   end: 87
               - order: 5
-                element_name: ENTRY DETAIL SEQUENCE NUMBER
+                element_name: Entry Detail Sequence Number
                 id: entry_detail_sequence_number
                 field_inclusion_requirements:
                   - mandatory
@@ -5370,7 +5370,7 @@ records:
         id: xck_entry_detail_record
         fields:
           - order: 1
-            element_name: RECORD TYPE CODE
+            element_name: Record Type Code
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
@@ -5383,7 +5383,7 @@ records:
               start: 01
               end: 01
           - order: 2
-            element_name: TRANSACTION CODE
+            element_name: Transaction Code
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
@@ -5394,7 +5394,7 @@ records:
               start: 02
               end: 03
           - order: 3
-            element_name: RECEIVING DFI IDENTIFICATION
+            element_name: Receiving DFI Identification
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
@@ -5405,7 +5405,7 @@ records:
               start: 04
               end: 11
           - order: 4
-            element_name: CHECK DIGIT
+            element_name: Check Digit
             id: check_digit
             field_inclusion_requirements:
               - mandatory
@@ -5416,7 +5416,7 @@ records:
               start: 12
               end: 12
           - order: 5
-            element_name: DFI ACCOUNT NUMBER
+            element_name: DFI Account Number
             id: dfi_account_number
             field_inclusion_requirements:
               - required
@@ -5427,7 +5427,7 @@ records:
               start: 13
               end: 29
           - order: 6
-            element_name: AMOUNT
+            element_name: Amount
             id: amount
             field_inclusion_requirements:
               - mandatory
@@ -5438,7 +5438,7 @@ records:
               start: 30
               end: 39
           - order: 7
-            element_name: CHECK SERIAL NUMBER
+            element_name: Check Serial Number
             id: check_serial_number
             field_inclusion_requirements:
               - mandatory
@@ -5449,7 +5449,7 @@ records:
               start: 40
               end: 54
           - order: 8
-            element_name: PROCESS CONTROL FIELD
+            element_name: Process Control Field
             id: process_control_field
             field_inclusion_requirements:
               - required
@@ -5460,7 +5460,7 @@ records:
               start: 55
               end: 60
           - order: 9
-            element_name: ITEM RESEARCH NUMBER
+            element_name: Item Research Number
             id: item_research_number
             field_inclusion_requirements:
               - required
@@ -5471,7 +5471,7 @@ records:
               start: 61
               end: 76
           - order: 10
-            element_name: DISCRETIONARY DATA
+            element_name: Discretionary Data
             id: discretionary_data
             field_inclusion_requirements:
               - optional
@@ -5482,7 +5482,7 @@ records:
               start: 77
               end: 78
           - order: 11
-            element_name: ADDENDA RECORD INDICATOR
+            element_name: Addenda Record Indicator
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
@@ -5493,7 +5493,7 @@ records:
               start: 79
               end: 79
           - order: 12
-            element_name: TRACE NUMBER
+            element_name: Trace Number
             id: trace_number
             field_inclusion_requirements:
               - mandatory
