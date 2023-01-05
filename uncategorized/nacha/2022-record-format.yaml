@@ -23,7 +23,7 @@ content_types:
   - id: mmyy
 
 records:
-  - name: FILE HEADER RECORD
+  - name: File Header Record
     id: file_header_record
     fields:
       - order: 1
@@ -180,7 +180,7 @@ records:
           start: 87
           end: 94
 
-  - name: FILE CONTROL RECORD
+  - name: File Control Record
     id: file_control_record
     fields:
       - order: 1
@@ -274,7 +274,7 @@ records:
           start: 56
           end: 94
 
-  - name: COMPANY/BATCH HEADER RECORD
+  - name: Company/Batch Header Record
     id: company_or_batch_header_record
     fields:
       - order: 1
@@ -423,7 +423,7 @@ records:
           start: 88
           end: 94
 
-  - name: COMPANY/BATCH CONTROL RECORD
+  - name: Company/Batch Control Record
     id: company_or_batch_control_record
     fields:
       - order: 1
@@ -550,7 +550,7 @@ records:
           start: 88
           end: 94
 
-  - name: IAT COMPANY/BATCH HEADER RECORD
+  - name: IAT Company/Batch Header Record
     id: iat_company_or_batch_header_record
     fields:
       - order: 1
@@ -743,7 +743,7 @@ records:
           start: 88
           end: 94
 
-  - name: ADV FILE HEADER RECORD
+  - name: ADV File Header Record
     fields:
       - order: 1
         element_name: RECORD TYPE CODE
@@ -899,7 +899,7 @@ records:
           start: 87
           end: 94
 
-  - name: ADV FILE CONTROL RECORD
+  - name: ADV File Control Record
     id: adv_file_control_record
     fields:
       - order: 1
@@ -993,7 +993,7 @@ records:
           start: 72
           end: 94
 
-  - name: ADV COMPANY/BATCH CONTROL RECORD
+  - name: ADV Company/Batch Control Record
     id: adv_company_or_batch_control_record
     fields:
       - order: 1
@@ -1098,7 +1098,7 @@ records:
           start: 88
           end: 94
 
-  - name: ADV ENTRY DETAIL RECORD
+  - name: ADV Entry Detail Record
     id: adv_entry_detail_record
     fields:
       - order: 1
@@ -1269,7 +1269,7 @@ records:
           start: 91
           end: 94
 
-  - name: ARC ENTRY DETAIL RECORD
+  - name: ARC Entry Detail Record
     id: arc_entry_detail_record
     fields:
       - order: 1
@@ -1396,7 +1396,7 @@ records:
           start: 80
           end: 94
 
-  - name: BOC ENTRY DETAIL RECORD
+  - name: BOC Entry Detail Record
     id: boc_entry_detail_record
     fields:
       - order: 1
@@ -1523,7 +1523,7 @@ records:
           start: 80
           end: 94
 
-  - name: CCD ENTRY DETAIL RECORD
+  - name: CCD Entry Detail Record
     id: ccd_entry_detail_record
     fields:
       - order: 1
@@ -1650,7 +1650,7 @@ records:
           start: 80
           end: 94
     addenda_records:
-      - name: CCD ADDENDA RECORD
+      - name: CCD Addenda Record
         id: ccd_addenda_record
         fields:
           - order: 1
@@ -1713,7 +1713,7 @@ records:
               start: 88
               end: 94
 
-  - name: CIE ENTRY DETAIL RECORD
+  - name: CIE Entry Detail Record
     id: cie_entry_detail_record
     fields:
       - order: 1
@@ -1840,7 +1840,7 @@ records:
           start: 80
           end: 94
     addenda_records:
-      - name: CIE ADDENDA RECORD
+      - name: CIE Addenda Record
         id: cie_addenda_record
         fields:
           - order: 1
@@ -1903,7 +1903,7 @@ records:
               start: 88
               end: 94
 
-  - name: CTX CORPORATE ENTRY DETAIL RECORD
+  - name: CTX Corporate Entry Detail Record
     id: ctx_corporate_entry_detail_record
     fields:
       - order: 1
@@ -2052,7 +2052,7 @@ records:
           start: 80
           end: 94
     addenda_records:
-      - name: CTX ADDENDA RECORD
+      - name: CTX Addenda Record
         id: ctx_addenda_record
         fields:
           - order: 1
@@ -2115,7 +2115,7 @@ records:
               start: 88
               end: 94
 
-  - name: DNE ENTRY DETAIL RECORD
+  - name: DNE Entry Detail Record
     id: dne_entry_detail_record
     fields:
       - order: 1
@@ -2242,7 +2242,7 @@ records:
           start: 80
           end: 94
     addenda_records:
-      - name: DNE ADDENDA RECORD
+      - name: DNE Addenda Record
         id: dne_addenda_record
         fields:
           - order: 1
@@ -2305,7 +2305,7 @@ records:
               start: 88
               end: 94
 
-  - name: ENR ENTRY DETAIL RECORD
+  - name: ENR Entry Detail Record
     id: enr_entry_detail_record
     fields:
       - order: 1
@@ -2454,7 +2454,7 @@ records:
           start: 80
           end: 94
     addenda_records:
-      - name: ENR ADDENDA RECORD
+      - name: ENR Addenda Record
         id: enr_addenda_record
         fields:
           - order: 1
@@ -2517,7 +2517,7 @@ records:
               start: 88
               end: 94
 
-  - name: IAT ENTRY DETAIL RECORD
+  - name: IAT Entry Detail Record
     id: iat_entry_detail_record
     fields:
       - order: 1
@@ -2666,7 +2666,7 @@ records:
           start: 80
           end: 94
     addenda_records:
-      - name: FIRST IAT ADDENDA RECORD
+      - name: First IAT Addenda Record
         id: first_iat_addenda_record
         fields:
           - order: 1
@@ -2762,7 +2762,7 @@ records:
               start: 88
               end: 94
 
-      - name: SECOND IAT ADDENDA RECORD
+      - name: Second IAT Addenda Record
         id: second_iat_addenda_record
         fields:
           - order: 1
@@ -2836,7 +2836,7 @@ records:
               start: 88
               end: 94
 
-      - name: THIRD IAT ADDENDA RECORD
+      - name: Third IAT Addenda Record
         id: third_iat_addenda_record
         fields:
           - order: 1
@@ -2910,7 +2910,7 @@ records:
               start: 88
               end: 94
 
-      - name: FOURTH IAT ADDENDA RECORD
+      - name: Fourth IAT Addenda Record
         id: fourth_iat_addenda_record
         fields:
           - order: 1
@@ -3006,7 +3006,7 @@ records:
               start: 88
               end: 94
 
-      - name: FIFTH IAT ADDENDA RECORD
+      - name: Fifth IAT Addenda Record
         id: fifth_iat_addenda_record
         fields:
           - order: 1
@@ -3102,7 +3102,7 @@ records:
               start: 88
               end: 94
 
-      - name: SIXTH IAT ADDENDA RECORD
+      - name: Sixth IAT Addenda Record
         id: sixth_iat_addenda_record
         fields:
           - order: 1
@@ -3176,7 +3176,7 @@ records:
               start: 88
               end: 94
 
-      - name: SEVENTH IAT ADDENDA RECORD
+      - name: Seventh IAT Addenda Record
         id: seventh_iat_addenda_record
         fields:
           - order: 1
@@ -3250,7 +3250,7 @@ records:
               start: 88
               end: 94
 
-      - name: IAT ADDENDA RECORD FOR REMITTANCE INFORMATION
+      - name: IAT Addenda Record For Remittance Information
         id: iat_addenda_record_for_remittance_information
         fields:
           - order: 1
@@ -3313,7 +3313,7 @@ records:
               start: 88
               end: 94
 
-      - name: IAT ADDENDA RECORD FOR FOREIGN CORRESPONDENT BANK INFORMATION
+      - name: IAT Addenda Record For Foreign Correspondent Bank Information
         id: iat_addenda_record_for_foreign_correspondent_bank_information
         fields:
           - order: 1
@@ -3420,7 +3420,7 @@ records:
               start: 88
               end: 94
 
-      - name: MTE ENTRY DETAIL RECORD
+      - name: MTE Entry Detail Record
         id: mte_entry_detail_record
         fields:
           - order: 1
@@ -3547,7 +3547,7 @@ records:
               start: 80
               end: 94
         addenda_records:
-          - name: MTE ADDENDA RECORD
+          - name: MTE Addenda Record
             id: mte_addenda_record
             fields:
               - order: 1
@@ -3687,7 +3687,7 @@ records:
                   start: 80
                   end: 94
 
-      - name: POP ENTRY DETAIL RECORD
+      - name: POP Entry Detail Record
         id: pop_entry_detail_record
         fields:
           - order: 1
@@ -3836,7 +3836,7 @@ records:
               start: 80
               end: 94
 
-      - name: POS ENTRY DETAIL RECORD
+      - name: POS Entry Detail Record
         id: pos_entry_detail_record
         fields:
           - order: 1
@@ -3963,7 +3963,7 @@ records:
               start: 80
               end: 94
         addenda_records:
-          - name: POS ADDENDA RECORD
+          - name: POS Addenda Record
             id: pos_addenda_record
             fields:
               - order: 1
@@ -4103,7 +4103,7 @@ records:
                   start: 80
                   end: 94
 
-      - name: PPD ENTRY DETAIL RECORD
+      - name: PPD Entry Detail Record
         id: ppd_entry_detail_record
         fields:
           - order: 1
@@ -4230,7 +4230,7 @@ records:
               start: 80
               end: 94
         addenda_records:
-          - name: PPD ADDENDA RECORD
+          - name: PPD Addenda Record
             id: ppd_addenda_record
             fields:
               - order: 1
@@ -4293,7 +4293,7 @@ records:
                   start: 88
                   end: 94
 
-      - name: RCK ENTRY DETAIL RECORD
+      - name: RCK Entry Detail Record
         id: rck_entry_detail_record
         fields:
           - order: 1
@@ -4420,7 +4420,7 @@ records:
               start: 80
               end: 94
 
-      - name: SHR ENTRY DETAIL RECORD
+      - name: SHR Entry Detail Record
         id: shr_entry_detail_record
         fields:
           - order: 1
@@ -4558,7 +4558,7 @@ records:
               start: 80
               end: 94
         addenda_records:
-          - name: SHR ADDENDA RECORD
+          - name: SHR Addenda Record
             id: shr_addenda_record
             fields:
               - order: 1
@@ -4698,7 +4698,7 @@ records:
                   start: 80
                   end: 94
 
-      - name: TEL ENTRY DETAIL RECORD
+      - name: TEL Entry Detail Record
         id: tel_entry_detail_record
         fields:
           - order: 1
@@ -4825,7 +4825,7 @@ records:
               start: 80
               end: 94
 
-      - name: TRC ENTRY DETAIL RECORD
+      - name: TRC Entry Detail Record
         id: trc_entry_detail_record
         fields:
           - order: 1
@@ -4963,7 +4963,7 @@ records:
               start: 80
               end: 94
 
-      - name: TRX ENTRY DETAIL RECORD
+      - name: TRX Entry Detail Record
         id: trx_entry_detail_record
         fields:
           - order: 1
@@ -5112,7 +5112,7 @@ records:
               start: 80
               end: 94
         addenda_records:
-          - name: TRX ADDENDA RECORD
+          - name: TRX Addenda Record
             id: trx_addenda_record
             fields:
               - order: 1
@@ -5175,7 +5175,7 @@ records:
                   start: 88
                   end: 94
 
-      - name: WEB ENTRY DETAIL RECORD
+      - name: WEB Entry Detail Record
         id: web_entry_detail_record
         fields:
           - order: 1
@@ -5303,7 +5303,7 @@ records:
               start: 80
               end: 94
         addenda_records:
-          - name: WEB ADDENDA RECORD
+          - name: WEB Addenda Record
             id: web_addenda_record
             fields:
               - order: 1
@@ -5366,7 +5366,7 @@ records:
                   start: 88
                   end: 94
 
-      - name: XCK ENTRY DETAIL RECORD
+      - name: XCK Entry Detail Record
         id: xck_entry_detail_record
         fields:
           - order: 1
