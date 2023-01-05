@@ -18,6 +18,9 @@ content_types:
   - id: dollar_amount
   - id: ttttaaaa
   - id: constant
+  - id: hhmmss
+  - id: mmdd
+  - id: mmyy
 
 records:
   - name: FILE HEADER RECORD
@@ -28,7 +31,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘1’
+        content_type:
+          type: constant
+          options:
+            value: 1
         length: 1
         position:
           start: 01
@@ -38,7 +44,8 @@ records:
         id: priority_code
         field_inclusion_requirements:
           - required
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -48,7 +55,8 @@ records:
         id: immediate_destination
         field_inclusion_requirements:
           - mandatory
-        content_type: bttttaaaac
+        content_type:
+          type: bttttaaaac
         length: 10
         position:
           start: 04
@@ -58,7 +66,8 @@ records:
         id: immediate_origin
         field_inclusion_requirements:
           - mandatory
-        content_type: bttttaaaac
+        content_type:
+          type: bttttaaaac
         length: 10
         position:
           start: 14
@@ -68,7 +77,8 @@ records:
         id: file_creation_date
         field_inclusion_requirements:
           - mandatory
-        content_type: yymmdd
+        content_type:
+          type: yymmdd
         length: 6
         position:
           start: 24
@@ -78,7 +88,10 @@ records:
         id: file_creation_time
         field_inclusion_requirements:
           - optional
-        content_type: hhmm
+        content_type:
+          type: constant
+          options:
+            value: hhmm
         length: 4
         position:
           start: 30
@@ -88,7 +101,8 @@ records:
         id: file_id_modifier
         field_inclusion_requirements:
           - mandatory
-        content_type: uppercase_alphameric
+        content_type:
+          type: uppercase_alphameric
         length: 1
         position:
           start: 34
@@ -98,7 +112,10 @@ records:
         id: record_size
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘094’
+        content_type:
+          type: constant
+          options:
+            value: 094
         length: 3
         position:
           start: 35
@@ -108,7 +125,10 @@ records:
         id: blocking_factor
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘10’
+        content_type:
+          type: constant
+          options:
+            value: 10
         length: 2
         position:
           start: 38
@@ -118,7 +138,10 @@ records:
         id: format_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘1’
+        content_type:
+          type: constant
+          options:
+            value: 1
         length: 1
         position:
           start: 40
@@ -128,7 +151,8 @@ records:
         id: immediate_destination_name
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 23
         position:
           start: 41
@@ -138,7 +162,8 @@ records:
         id: immediate_origin_name
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 23
         position:
           start: 64
@@ -148,7 +173,8 @@ records:
         id: reference_code
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 8
         position:
           start: 87
@@ -162,7 +188,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘9’
+        content_type:
+          type: constant
+          options:
+            value: 9
         length: 1
         position:
           start: 01
@@ -172,7 +201,8 @@ records:
         id: batch_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 6
         position:
           start: 02
@@ -182,7 +212,8 @@ records:
         id: block_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 6
         position:
           start: 08
@@ -192,7 +223,8 @@ records:
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 8
         position:
           start: 14
@@ -202,7 +234,8 @@ records:
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 10
         position:
           start: 22
@@ -212,7 +245,8 @@ records:
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 12
         position:
           start: 32
@@ -222,7 +256,8 @@ records:
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 12
         position:
           start: 44
@@ -232,7 +267,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 39
         position:
           start: 56
@@ -246,7 +282,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘5’
+        content_type:
+          type: constant
+          options:
+            value: 5
         length: 1
         position:
           start: 01
@@ -256,7 +295,8 @@ records:
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 02
@@ -266,7 +306,8 @@ records:
         id: company_name
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 16
         position:
           start: 05
@@ -276,7 +317,8 @@ records:
         id: company_discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 20
         position:
           start: 21
@@ -286,7 +328,8 @@ records:
         id: company_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 10
         position:
           start: 41
@@ -296,7 +339,8 @@ records:
         id: standard_entry_class_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 3
         position:
           start: 51
@@ -306,7 +350,8 @@ records:
         id: company_entry_description
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 10
         position:
           start: 54
@@ -316,7 +361,8 @@ records:
         id: company_descriptive_date
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 6
         position:
           start: 64
@@ -326,7 +372,8 @@ records:
         id: effective_entry_date
         field_inclusion_requirements:
           - required
-        content_type: yymmdd
+        content_type:
+          type: yymmdd
         length: 6
         position:
           start: 70
@@ -336,7 +383,8 @@ records:
         id: settlement_date
         field_inclusion_requirements:
           - ach_operator_dependent
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 76
@@ -346,7 +394,8 @@ records:
         id: originator_status_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 1
         position:
           start: 79
@@ -356,7 +405,8 @@ records:
         id: originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 80
@@ -366,7 +416,8 @@ records:
         id: batch_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 7
         position:
           start: 88
@@ -380,7 +431,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘8’
+        content_type:
+          type: constant
+          options:
+            value: 8
         length: 1
         position:
           start: 01
@@ -390,7 +444,8 @@ records:
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 02
@@ -400,7 +455,8 @@ records:
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 6
         position:
           start: 05
@@ -410,7 +466,8 @@ records:
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 10
         position:
           start: 11
@@ -420,7 +477,8 @@ records:
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 12
         position:
           start: 21
@@ -430,7 +488,8 @@ records:
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 12
         position:
           start: 33
@@ -440,7 +499,8 @@ records:
         id: company_identification
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 10
         position:
           start: 45
@@ -450,7 +510,8 @@ records:
         id: message_authentication_code
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 19
         position:
           start: 55
@@ -460,7 +521,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 6
         position:
           start: 74
@@ -470,7 +532,8 @@ records:
         id: originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 80
@@ -480,7 +543,8 @@ records:
         id: batch_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 7
         position:
           start: 88
@@ -494,7 +558,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘5’
+        content_type:
+          type: constant
+          options:
+            value: 5
         length: 1
         position:
           start: 01
@@ -504,7 +571,8 @@ records:
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 02
@@ -514,7 +582,8 @@ records:
         id: iat_indicator
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 16
         position:
           start: 05
@@ -524,7 +593,8 @@ records:
         id: foreign_exchange_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 21
@@ -534,7 +604,8 @@ records:
         id: foreign_exchange_reference_indicator
         field_inclusion_requirements:
           - required
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 23
@@ -544,7 +615,8 @@ records:
         id: foreign_exchange_reference
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 24
@@ -554,7 +626,8 @@ records:
         id: iso_destination_country_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 39
@@ -564,7 +637,8 @@ records:
         id: originator_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 10
         position:
           start: 41
@@ -574,7 +648,8 @@ records:
         id: standard_entry_class_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 3
         position:
           start: 51
@@ -584,7 +659,8 @@ records:
         id: company_entry_description
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 10
         position:
           start: 54
@@ -594,7 +670,8 @@ records:
         id: iso_originating_currency_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 3
         position:
           start: 64
@@ -604,7 +681,8 @@ records:
         id: iso_destination_currency_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 3
         position:
           start: 67
@@ -614,7 +692,8 @@ records:
         id: effective_entry_date
         field_inclusion_requirements:
           - required
-        content_type: yymmdd
+        content_type:
+          type: yymmdd
         length: 6
         position:
           start: 70
@@ -624,7 +703,8 @@ records:
         id: settlement_date
         field_inclusion_requirements:
           - ach_operator_dependent
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 76
@@ -634,7 +714,8 @@ records:
         id: originator_status_code
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 1
         position:
           start: 79
@@ -644,7 +725,8 @@ records:
         id: go_identification_or_originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 80
@@ -654,7 +736,8 @@ records:
         id: batch_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 7
         position:
           start: 88
@@ -667,7 +750,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘1’
+        content_type:
+          type: constant
+          options:
+            value: 1
         length: 1
         position:
           start: 01
@@ -677,7 +763,8 @@ records:
         id: priority_code
         field_inclusion_requirements:
           - required
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -687,7 +774,8 @@ records:
         id: immediate_destination
         field_inclusion_requirements:
           - mandatory
-        content_type: bttttaaaac
+        content_type:
+          type: bttttaaaac
         length: 10
         position:
           start: 04
@@ -697,7 +785,8 @@ records:
         id: immediate_origin
         field_inclusion_requirements:
           - mandatory
-        content_type: bttttaaaac
+        content_type:
+          type: bttttaaaac
         length: 10
         position:
           start: 14
@@ -707,7 +796,8 @@ records:
         id: file_creation_date
         field_inclusion_requirements:
           - mandatory
-        content_type: yymmdd
+        content_type:
+          type: yymmdd
         length: 6
         position:
           start: 24
@@ -717,7 +807,10 @@ records:
         id: file_creation_time
         field_inclusion_requirements:
           - optional
-        content_type: hhmm
+        content_type:
+          type: constant
+          options:
+            value: hhmm
         length: 4
         position:
           start: 30
@@ -727,7 +820,8 @@ records:
         id: file_id_modifier
         field_inclusion_requirements:
           - mandatory
-        content_type: uppercase_alphameric
+        content_type:
+          type: uppercase_alphameric
         length: 1
         position:
           start: 34
@@ -737,7 +831,10 @@ records:
         id: record_size
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘094’
+        content_type:
+          type: constant
+          options:
+            value: 094
         length: 3
         position:
           start: 35
@@ -747,7 +844,10 @@ records:
         id: blocking_factor
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘10’
+        content_type:
+          type: constant
+          options:
+            value: 10
         length: 2
         position:
           start: 38
@@ -757,7 +857,10 @@ records:
         id: format_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘1’
+        content_type:
+          type: constant
+          options:
+            value: 1
         length: 1
         position:
           start: 40
@@ -767,7 +870,8 @@ records:
         id: immediate_destination_name
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 23
         position:
           start: 41
@@ -777,7 +881,8 @@ records:
         id: immediate_origin_name
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 23
         position:
           start: 64
@@ -787,7 +892,8 @@ records:
         id: reference_code
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 8
         position:
           start: 87
@@ -801,7 +907,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘9’
+        content_type:
+          type: constant
+          options:
+            value: 9
         length: 1
         position:
           start: 01
@@ -811,7 +920,8 @@ records:
         id: batch_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 6
         position:
           start: 02
@@ -821,7 +931,8 @@ records:
         id: block_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 6
         position:
           start: 08
@@ -831,7 +942,8 @@ records:
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 8
         position:
           start: 14
@@ -841,7 +953,8 @@ records:
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 10
         position:
           start: 22
@@ -851,7 +964,8 @@ records:
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 20
         position:
           start: 32
@@ -861,7 +975,8 @@ records:
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 20
         position:
           start: 52
@@ -871,7 +986,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 23
         position:
           start: 72
@@ -885,7 +1001,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘8’
+        content_type:
+          type: constant
+          options:
+            value: 8
         length: 1
         position:
           start: 01
@@ -895,7 +1014,8 @@ records:
         id: service_class_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 02
@@ -905,7 +1025,8 @@ records:
         id: entry_and_addenda_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 6
         position:
           start: 05
@@ -915,7 +1036,8 @@ records:
         id: entry_hash
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 10
         position:
           start: 11
@@ -925,7 +1047,8 @@ records:
         id: total_debits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 20
         position:
           start: 21
@@ -935,7 +1058,8 @@ records:
         id: total_credits_dollar_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 20
         position:
           start: 41
@@ -945,7 +1069,8 @@ records:
         id: ach_operator_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 19
         position:
           start: 61
@@ -955,7 +1080,8 @@ records:
         id: originating_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 80
@@ -965,7 +1091,8 @@ records:
         id: batch_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 7
         position:
           start: 88
@@ -979,7 +1106,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -989,7 +1119,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -999,7 +1130,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1009,7 +1141,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1019,7 +1152,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 13
@@ -1029,7 +1163,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 12
         position:
           start: 28
@@ -1039,7 +1174,8 @@ records:
         id: advice_routing_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 9
         position:
           start: 40
@@ -1049,7 +1185,8 @@ records:
         id: file_identification
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 5
         position:
           start: 49
@@ -1059,7 +1196,8 @@ records:
         id: ach_operator_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 1
         position:
           start: 54
@@ -1069,7 +1207,8 @@ records:
         id: individual_name
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 22
         position:
           start: 55
@@ -1079,7 +1218,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1089,7 +1229,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1099,7 +1240,8 @@ records:
         id: ach_operator_routing_number
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 80
@@ -1109,7 +1251,8 @@ records:
         id: created_julian_date
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 3
         position:
           start: 88
@@ -1119,7 +1262,8 @@ records:
         id: sequence_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 4
         position:
           start: 91
@@ -1133,7 +1277,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -1143,7 +1290,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -1153,7 +1301,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1163,7 +1312,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1173,7 +1323,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -1183,7 +1334,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -1193,7 +1345,8 @@ records:
         id: check_serial_number
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -1203,7 +1356,8 @@ records:
         id: individual_name_or_receiving_company_name
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 22
         position:
           start: 55
@@ -1213,7 +1367,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1223,7 +1378,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1233,7 +1389,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -1247,7 +1404,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -1257,7 +1417,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -1267,7 +1428,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1277,7 +1439,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1287,7 +1450,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -1297,7 +1461,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -1307,7 +1472,8 @@ records:
         id: check_serial_number
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -1317,7 +1483,8 @@ records:
         id: individual_name_or_receiving_company_name
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 22
         position:
           start: 55
@@ -1327,7 +1494,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1337,7 +1505,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1347,7 +1516,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -1361,7 +1531,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -1371,7 +1544,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -1381,7 +1555,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1391,7 +1566,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1401,7 +1577,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -1411,7 +1588,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -1421,7 +1599,8 @@ records:
         id: identification_number
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -1431,7 +1610,8 @@ records:
         id: receiving_company_name
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 22
         position:
           start: 55
@@ -1441,7 +1621,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1451,7 +1632,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1461,7 +1643,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -1475,7 +1658,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -1485,7 +1671,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘05’
+            content_type:
+              type: constant
+              options:
+                value: 05
             length: 2
             position:
               start: 02
@@ -1495,7 +1684,8 @@ records:
             id: payment_related_information
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 80
             position:
               start: 04
@@ -1505,7 +1695,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -1515,7 +1706,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -1529,7 +1721,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -1539,7 +1734,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -1549,7 +1745,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1559,7 +1756,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1569,7 +1767,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -1579,7 +1778,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -1589,7 +1789,8 @@ records:
         id: individual_name
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -1599,7 +1800,8 @@ records:
         id: individual_identification_number
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 22
         position:
           start: 55
@@ -1609,7 +1811,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1619,7 +1822,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1629,7 +1833,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -1643,7 +1848,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -1653,7 +1861,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘05’
+            content_type:
+              type: constant
+              options:
+                value: 05
             length: 2
             position:
               start: 02
@@ -1663,7 +1874,8 @@ records:
             id: payment_related_information
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 80
             position:
               start: 04
@@ -1673,7 +1885,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -1683,7 +1896,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -1697,7 +1911,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -1707,7 +1924,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -1717,7 +1935,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1727,7 +1946,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1737,7 +1957,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -1747,7 +1968,8 @@ records:
         id: total_amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -1757,7 +1979,8 @@ records:
         id: identification_number
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -1767,7 +1990,8 @@ records:
         id: addenda_records_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 4
         position:
           start: 55
@@ -1777,7 +2001,8 @@ records:
         id: receiving_company_name_or_id_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 16
         position:
           start: 59
@@ -1787,7 +2012,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 2
         position:
           start: 75
@@ -1797,7 +2023,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1807,7 +2034,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1817,7 +2045,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -1831,7 +2060,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -1841,7 +2073,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘05’
+            content_type:
+              type: constant
+              options:
+                value: 05
             length: 2
             position:
               start: 02
@@ -1851,7 +2086,8 @@ records:
             id: payment_related_information
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 80
             position:
               start: 04
@@ -1861,7 +2097,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -1871,7 +2108,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -1885,7 +2123,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -1895,7 +2136,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -1905,7 +2147,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -1915,7 +2158,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -1925,7 +2169,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -1935,7 +2180,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -1945,7 +2191,8 @@ records:
         id: individual_identification_number
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -1955,7 +2202,8 @@ records:
         id: individual_name
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 22
         position:
           start: 55
@@ -1965,7 +2213,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -1975,7 +2224,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -1985,7 +2235,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -1999,7 +2250,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2009,7 +2263,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘05’
+            content_type:
+              type: constant
+              options:
+                value: 05
             length: 2
             position:
               start: 02
@@ -2019,7 +2276,8 @@ records:
             id: payment_related_information
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 80
             position:
               start: 04
@@ -2029,7 +2287,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -2039,7 +2298,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2053,7 +2313,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -2063,7 +2326,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -2073,7 +2337,8 @@ records:
         id: receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -2083,7 +2348,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -2093,7 +2359,8 @@ records:
         id: dfi_account_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 17
         position:
           start: 13
@@ -2103,7 +2370,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: 0000000000
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -2113,7 +2381,8 @@ records:
         id: identification_number
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 15
         position:
           start: 40
@@ -2123,7 +2392,8 @@ records:
         id: number_of_addenda_records
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 4
         position:
           start: 55
@@ -2133,7 +2403,8 @@ records:
         id: receiving_company_name_or_id_number
         field_inclusion_requirements:
           - required
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 16
         position:
           start: 59
@@ -2143,7 +2414,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 2
         position:
           start: 75
@@ -2153,7 +2425,8 @@ records:
         id: discretionary_data
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 2
         position:
           start: 77
@@ -2163,7 +2436,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -2173,7 +2447,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -2187,7 +2462,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2197,7 +2475,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘05’
+            content_type:
+              type: constant
+              options:
+                value: 05
             length: 2
             position:
               start: 02
@@ -2207,7 +2488,8 @@ records:
             id: payment_related_information
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 80
             position:
               start: 04
@@ -2217,7 +2499,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -2227,7 +2510,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2241,7 +2525,10 @@ records:
         id: record_type_code
         field_inclusion_requirements:
           - mandatory
-        content_type: ‘6’
+        content_type:
+          type: constant
+          options:
+            value: 6
         length: 1
         position:
           start: 01
@@ -2251,7 +2538,8 @@ records:
         id: transaction_code
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 2
         position:
           start: 02
@@ -2261,7 +2549,8 @@ records:
         id: go_identification_or_receiving_dfi_identification
         field_inclusion_requirements:
           - mandatory
-        content_type: ttttaaaa
+        content_type:
+          type: ttttaaaa
         length: 8
         position:
           start: 04
@@ -2271,7 +2560,8 @@ records:
         id: check_digit
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 12
@@ -2281,7 +2571,8 @@ records:
         id: addenda_records_count
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 4
         position:
           start: 13
@@ -2291,7 +2582,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 13
         position:
           start: 17
@@ -2301,7 +2593,8 @@ records:
         id: amount
         field_inclusion_requirements:
           - mandatory
-        content_type: dollar_amount
+        content_type:
+          type: dollar_amount
         length: 10
         position:
           start: 30
@@ -2311,7 +2604,8 @@ records:
         id: foreign_receivers_account_number_or_dfi_account_number
         field_inclusion_requirements:
           - mandatory
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 35
         position:
           start: 40
@@ -2321,7 +2615,8 @@ records:
         id: reserved
         field_inclusion_requirements:
           - N/A
-        content_type: blank
+        content_type:
+          type: blank
         length: 2
         position:
           start: 75
@@ -2331,7 +2626,8 @@ records:
         id: gateway_operator_ofac_screening_indicator
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 1
         position:
           start: 77
@@ -2341,7 +2637,8 @@ records:
         id: secondary_ofac_screening_indicator
         field_inclusion_requirements:
           - optional
-        content_type: alphameric
+        content_type:
+          type: alphameric
         length: 1
         position:
           start: 78
@@ -2351,7 +2648,8 @@ records:
         id: addenda_record_indicator
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 1
         position:
           start: 79
@@ -2361,7 +2659,8 @@ records:
         id: trace_number
         field_inclusion_requirements:
           - mandatory
-        content_type: numeric
+        content_type:
+          type: numeric
         length: 15
         position:
           start: 80
@@ -2375,7 +2674,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2385,7 +2687,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘10’
+            content_type:
+              type: constant
+              options:
+                value: 10
             length: 2
             position:
               start: 02
@@ -2395,7 +2700,8 @@ records:
             id: transaction_type_code
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 3
             position:
               start: 04
@@ -2405,7 +2711,8 @@ records:
             id: foreign_payment_amount
             field_inclusion_requirements:
               - required
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 18
             position:
               start: 07
@@ -2415,7 +2722,8 @@ records:
             id: foreign_trace_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 25
@@ -2425,7 +2733,8 @@ records:
             id: receiving_company_name_or_individual_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 47
@@ -2435,7 +2744,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 6
             position:
               start: 82
@@ -2445,7 +2755,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2459,7 +2770,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2469,7 +2783,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘11’
+            content_type:
+              type: constant
+              options:
+                value: 11
             length: 2
             position:
               start: 02
@@ -2479,7 +2796,8 @@ records:
             id: originator_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 04
@@ -2489,7 +2807,8 @@ records:
             id: originator_street_address
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 39
@@ -2499,7 +2818,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 14
             position:
               start: 74
@@ -2509,7 +2829,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2523,7 +2844,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2533,7 +2857,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘12’
+            content_type:
+              type: constant
+              options:
+                value: 12
             length: 2
             position:
               start: 02
@@ -2543,7 +2870,8 @@ records:
             id: originator_city_and_state_or_province
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 04
@@ -2553,7 +2881,8 @@ records:
             id: originator_country_and_postal_code
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 39
@@ -2563,7 +2892,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 14
             position:
               start: 74
@@ -2573,7 +2903,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2587,7 +2918,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2597,7 +2931,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘13’
+            content_type:
+              type: constant
+              options:
+                value: 13
             length: 2
             position:
               start: 02
@@ -2607,7 +2944,8 @@ records:
             id: originating_dfi_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 04
@@ -2617,7 +2955,8 @@ records:
             id: originating_dfi_identification_number_qualifier
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 39
@@ -2627,7 +2966,8 @@ records:
             id: originating_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 34
             position:
               start: 41
@@ -2637,7 +2977,8 @@ records:
             id: originating_dfi_branch_country_code
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 3
             position:
               start: 75
@@ -2647,7 +2988,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 10
             position:
               start: 78
@@ -2657,7 +2999,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2671,7 +3014,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2681,7 +3027,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘14’
+            content_type:
+              type: constant
+              options:
+                value: 14
             length: 2
             position:
               start: 02
@@ -2691,7 +3040,8 @@ records:
             id: receiving_dfi_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 04
@@ -2701,7 +3051,8 @@ records:
             id: receiving_dfi_identification_number_qualifier
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 39
@@ -2711,7 +3062,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 34
             position:
               start: 41
@@ -2721,7 +3073,8 @@ records:
             id: receiving_dfi_branch_country_code
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 3
             position:
               start: 75
@@ -2731,7 +3084,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 10
             position:
               start: 78
@@ -2741,7 +3095,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2755,7 +3110,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2765,7 +3123,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘15’
+            content_type:
+              type: constant
+              options:
+                value: 15
             length: 2
             position:
               start: 02
@@ -2775,7 +3136,8 @@ records:
             id: receiver_identification_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 04
@@ -2785,7 +3147,8 @@ records:
             id: receiver_street_address
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 19
@@ -2795,7 +3158,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 34
             position:
               start: 54
@@ -2805,7 +3169,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2819,7 +3184,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2829,7 +3197,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘16’
+            content_type:
+              type: constant
+              options:
+                value: 16
             length: 2
             position:
               start: 02
@@ -2839,7 +3210,8 @@ records:
             id: receiver_city_and_state_province
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 04
@@ -2849,7 +3221,8 @@ records:
             id: receiver_country_and_postal_code
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 39
@@ -2859,7 +3232,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 14
             position:
               start: 74
@@ -2869,7 +3243,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2883,7 +3258,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2893,7 +3271,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘17’
+            content_type:
+              type: constant
+              options:
+                value: 17
             length: 2
             position:
               start: 02
@@ -2903,7 +3284,8 @@ records:
             id: payment_related_information
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 80
             position:
               start: 04
@@ -2913,7 +3295,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -2923,7 +3306,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -2937,7 +3321,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘7’
+            content_type:
+              type: constant
+              options:
+                value: 7
             length: 1
             position:
               start: 01
@@ -2947,7 +3334,10 @@ records:
             id: addenda_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘18’
+            content_type:
+              type: constant
+              options:
+                value: 18
             length: 2
             position:
               start: 02
@@ -2957,7 +3347,8 @@ records:
             id: foreign_correspondent_bank_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 35
             position:
               start: 04
@@ -2967,7 +3358,8 @@ records:
             id: foreign_correspondent_bank_identification_number_qualifier
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 39
@@ -2977,7 +3369,8 @@ records:
             id: foreign_correspondent_bank_identification_number
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 34
             position:
               start: 41
@@ -2987,7 +3380,8 @@ records:
             id: foreign_correspondent_bank_branch_country_code
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 3
             position:
               start: 75
@@ -2997,7 +3391,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 6
             position:
               start: 78
@@ -3007,7 +3402,8 @@ records:
             id: addenda_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 84
@@ -3017,7 +3413,8 @@ records:
             id: entry_detail_sequence_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 7
             position:
               start: 88
@@ -3031,7 +3428,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -3041,7 +3441,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -3051,7 +3452,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -3061,7 +3463,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -3071,7 +3474,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -3081,7 +3485,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -3091,7 +3496,8 @@ records:
             id: individual_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -3101,7 +3507,8 @@ records:
             id: individual_identification_number
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -3111,7 +3518,8 @@ records:
             id: discretionary_data
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -3121,7 +3529,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -3131,7 +3540,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -3145,7 +3555,10 @@ records:
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘7’
+                content_type:
+                  type: constant
+                  options:
+                    value: 7
                 length: 1
                 position:
                   start: 01
@@ -3155,7 +3568,10 @@ records:
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘02’
+                content_type:
+                  type: constant
+                  options:
+                    value: 02
                 length: 2
                 position:
                   start: 02
@@ -3165,7 +3581,8 @@ records:
                 id: transaction_description
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 7
                 position:
                   start: 04
@@ -3175,7 +3592,8 @@ records:
                 id: network_identification_code
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 3
                 position:
                   start: 11
@@ -3185,7 +3603,8 @@ records:
                 id: terminal_identification_code
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 14
@@ -3195,7 +3614,8 @@ records:
                 id: transaction_serial_number
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 20
@@ -3205,7 +3625,8 @@ records:
                 id: transaction_date
                 field_inclusion_requirements:
                   - required
-                content_type: MMDD
+                content_type:
+                  type: mmdd
                 length: 4
                 position:
                   start: 26
@@ -3215,7 +3636,8 @@ records:
                 id: transaction_time
                 field_inclusion_requirements:
                   - required
-                content_type: hhmmSS
+                content_type:
+                  type: hhmmss
                 length: 6
                 position:
                   start: 30
@@ -3225,7 +3647,8 @@ records:
                 id: terminal_location
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 27
                 position:
                   start: 36
@@ -3235,7 +3658,8 @@ records:
                 id: terminal_city
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 15
                 position:
                   start: 63
@@ -3245,7 +3669,8 @@ records:
                 id: terminal_state
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 2
                 position:
                   start: 78
@@ -3255,7 +3680,8 @@ records:
                 id: trace_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 15
                 position:
                   start: 80
@@ -3269,7 +3695,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -3279,7 +3708,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -3289,7 +3719,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -3299,7 +3730,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -3309,7 +3741,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -3319,7 +3752,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -3329,7 +3763,8 @@ records:
             id: check_serial_number
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 9
             position:
               start: 40
@@ -3339,7 +3774,8 @@ records:
             id: terminal_city
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 4
             position:
               start: 49
@@ -3349,7 +3785,8 @@ records:
             id: terminal_state
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 53
@@ -3359,7 +3796,8 @@ records:
             id: individual_name_or_receiving_company_name
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -3369,7 +3807,8 @@ records:
             id: discretionary_data
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -3379,7 +3818,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -3389,7 +3829,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -3403,7 +3844,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -3413,7 +3857,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -3423,7 +3868,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -3433,7 +3879,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -3443,7 +3890,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -3453,7 +3901,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -3463,7 +3912,8 @@ records:
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -3473,7 +3923,8 @@ records:
             id: individual_name
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -3483,7 +3934,8 @@ records:
             id: card_transaction_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -3493,7 +3945,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -3503,7 +3956,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -3517,7 +3971,10 @@ records:
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘7’
+                content_type:
+                  type: constant
+                  options:
+                    value: 7
                 length: 1
                 position:
                   start: 01
@@ -3527,7 +3984,10 @@ records:
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘02’
+                content_type:
+                  type: constant
+                  options:
+                    value: 02
                 length: 2
                 position:
                   start: 02
@@ -3537,7 +3997,8 @@ records:
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 7
                 position:
                   start: 04
@@ -3547,7 +4008,8 @@ records:
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 3
                 position:
                   start: 11
@@ -3557,7 +4019,8 @@ records:
                 id: terminal_identification_code
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 14
@@ -3567,7 +4030,8 @@ records:
                 id: transaction_serial_number
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 20
@@ -3577,7 +4041,8 @@ records:
                 id: transaction_date
                 field_inclusion_requirements:
                   - required
-                content_type: MMDD
+                content_type:
+                  type: mmdd
                 length: 4
                 position:
                   start: 26
@@ -3587,7 +4052,8 @@ records:
                 id: authorization_code_or_card_expiration_date
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 30
@@ -3597,7 +4063,8 @@ records:
                 id: terminal_location
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 27
                 position:
                   start: 36
@@ -3607,7 +4074,8 @@ records:
                 id: terminal_city
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 15
                 position:
                   start: 63
@@ -3617,7 +4085,8 @@ records:
                 id: terminal_state
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 2
                 position:
                   start: 78
@@ -3627,7 +4096,8 @@ records:
                 id: trace_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 15
                 position:
                   start: 80
@@ -3641,7 +4111,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -3651,7 +4124,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -3661,7 +4135,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -3671,7 +4146,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -3681,7 +4157,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -3691,7 +4168,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -3701,7 +4179,8 @@ records:
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -3711,7 +4190,8 @@ records:
             id: individual_name
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -3721,7 +4201,8 @@ records:
             id: discretionary_data
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -3731,7 +4212,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -3741,7 +4223,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -3755,7 +4238,10 @@ records:
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘7’
+                content_type:
+                  type: constant
+                  options:
+                    value: 7
                 length: 1
                 position:
                   start: 01
@@ -3765,7 +4251,10 @@ records:
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘05’
+                content_type:
+                  type: constant
+                  options:
+                    value: 05
                 length: 2
                 position:
                   start: 02
@@ -3775,7 +4264,8 @@ records:
                 id: payment_related_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 80
                 position:
                   start: 04
@@ -3785,7 +4275,8 @@ records:
                 id: addenda_sequence_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 4
                 position:
                   start: 84
@@ -3795,7 +4286,8 @@ records:
                 id: entry_detail_sequence_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 7
                 position:
                   start: 88
@@ -3809,7 +4301,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -3819,7 +4314,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -3829,7 +4325,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -3839,7 +4336,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -3849,7 +4347,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -3859,7 +4358,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -3869,7 +4369,8 @@ records:
             id: check_serial_number
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -3879,7 +4380,8 @@ records:
             id: individual_name
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -3889,7 +4391,8 @@ records:
             id: discretionary_data
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -3899,7 +4402,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -3909,7 +4413,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -3923,7 +4428,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -3933,7 +4441,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -3943,7 +4452,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -3953,7 +4463,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -3963,7 +4474,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -3973,7 +4485,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -3983,7 +4496,8 @@ records:
             id: card_expiration_date
             field_inclusion_requirements:
               - required
-            content_type: MMYY
+            content_type:
+              type: mmyy
             length: 4
             position:
               start: 40
@@ -3993,7 +4507,8 @@ records:
             id: document_reference_number
             field_inclusion_requirements:
               - required
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 11
             position:
               start: 44
@@ -4003,7 +4518,8 @@ records:
             id: individual_card_account_number
             field_inclusion_requirements:
               - required
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 22
             position:
               start: 55
@@ -4013,7 +4529,8 @@ records:
             id: card_transaction_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 77
@@ -4023,7 +4540,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -4033,7 +4551,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -4047,7 +4566,10 @@ records:
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘7’
+                content_type:
+                  type: constant
+                  options:
+                    value: 7
                 length: 1
                 position:
                   start: 01
@@ -4057,7 +4579,10 @@ records:
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘02’
+                content_type:
+                  type: constant
+                  options:
+                    value: 02
                 length: 2
                 position:
                   start: 02
@@ -4067,7 +4592,8 @@ records:
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 7
                 position:
                   start: 04
@@ -4077,7 +4603,8 @@ records:
                 id: reference_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 3
                 position:
                   start: 11
@@ -4087,7 +4614,8 @@ records:
                 id: terminal_identification_code
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 14
@@ -4097,7 +4625,8 @@ records:
                 id: transaction_serial_number
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 20
@@ -4107,7 +4636,8 @@ records:
                 id: transaction_date
                 field_inclusion_requirements:
                   - required
-                content_type: MMDD
+                content_type:
+                  type: mmdd
                 length: 4
                 position:
                   start: 26
@@ -4117,7 +4647,8 @@ records:
                 id: authorization_code_or_card_expiration_date
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 6
                 position:
                   start: 30
@@ -4127,7 +4658,8 @@ records:
                 id: terminal_location
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 27
                 position:
                   start: 36
@@ -4137,7 +4669,8 @@ records:
                 id: terminal_city
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 15
                 position:
                   start: 63
@@ -4147,7 +4680,8 @@ records:
                 id: terminal_state
                 field_inclusion_requirements:
                   - required
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 2
                 position:
                   start: 78
@@ -4157,7 +4691,8 @@ records:
                 id: trace_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 15
                 position:
                   start: 80
@@ -4171,7 +4706,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -4181,7 +4719,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -4191,7 +4730,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -4201,7 +4741,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -4211,7 +4752,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -4221,7 +4763,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -4231,7 +4774,8 @@ records:
             id: individual_identification_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -4241,7 +4785,8 @@ records:
             id: individual_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -4251,7 +4796,8 @@ records:
             id: payment_type_code
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -4261,7 +4807,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -4271,7 +4818,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -4285,7 +4833,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -4295,7 +4846,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -4305,7 +4857,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -4315,7 +4868,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -4325,7 +4879,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -4335,7 +4890,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -4345,7 +4901,8 @@ records:
             id: check_serial_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -4355,7 +4912,8 @@ records:
             id: process_control_field
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 6
             position:
               start: 55
@@ -4365,7 +4923,8 @@ records:
             id: item_research_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 16
             position:
               start: 61
@@ -4375,7 +4934,8 @@ records:
             id: item_type_indicator
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -4385,7 +4945,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -4395,7 +4956,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -4409,7 +4971,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -4419,7 +4984,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -4429,7 +4995,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -4439,7 +5006,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -4449,7 +5017,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -4459,7 +5028,8 @@ records:
             id: total_amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -4469,7 +5039,8 @@ records:
             id: identification_number
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -4479,7 +5050,8 @@ records:
             id: addenda_records_count
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 4
             position:
               start: 55
@@ -4489,7 +5061,8 @@ records:
             id: receiving_company_name_or_id_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 16
             position:
               start: 59
@@ -4499,7 +5072,8 @@ records:
             id: reserved
             field_inclusion_requirements:
               - N/A
-            content_type: blank
+            content_type:
+              type: blank
             length: 2
             position:
               start: 75
@@ -4509,7 +5083,8 @@ records:
             id: item_type_indicator
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -4519,7 +5094,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -4529,7 +5105,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -4543,7 +5120,10 @@ records:
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘7’
+                content_type:
+                  type: constant
+                  options:
+                    value: 7
                 length: 1
                 position:
                   start: 01
@@ -4553,7 +5133,10 @@ records:
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘05’
+                content_type:
+                  type: constant
+                  options:
+                    value: 05
                 length: 2
                 position:
                   start: 02
@@ -4563,7 +5146,8 @@ records:
                 id: payment_related_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 80
                 position:
                   start: 04
@@ -4573,7 +5157,8 @@ records:
                 id: addenda_sequence_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 4
                 position:
                   start: 84
@@ -4583,7 +5168,8 @@ records:
                 id: entry_detail_sequence_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 7
                 position:
                   start: 88
@@ -4597,7 +5183,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -4607,7 +5196,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -4617,7 +5207,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -4627,7 +5218,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -4637,7 +5229,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -4647,7 +5240,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -4658,7 +5252,8 @@ records:
             field_inclusion_requirements:
               - optional
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -4668,7 +5263,8 @@ records:
             id: individual_name
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 22
             position:
               start: 55
@@ -4678,7 +5274,8 @@ records:
             id: payment_type_code
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -4688,7 +5285,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -4698,7 +5296,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
@@ -4712,7 +5311,10 @@ records:
                 id: record_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘7’
+                content_type:
+                  type: constant
+                  options:
+                    value: 7
                 length: 1
                 position:
                   start: 01
@@ -4722,7 +5324,10 @@ records:
                 id: addenda_type_code
                 field_inclusion_requirements:
                   - mandatory
-                content_type: ‘05’
+                content_type:
+                  type: constant
+                  options:
+                    value: 05
                 length: 2
                 position:
                   start: 02
@@ -4732,7 +5337,8 @@ records:
                 id: payment_related_information
                 field_inclusion_requirements:
                   - optional
-                content_type: alphameric
+                content_type:
+                  type: alphameric
                 length: 80
                 position:
                   start: 04
@@ -4742,7 +5348,8 @@ records:
                 id: addenda_sequence_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 4
                 position:
                   start: 84
@@ -4752,7 +5359,8 @@ records:
                 id: entry_detail_sequence_number
                 field_inclusion_requirements:
                   - mandatory
-                content_type: numeric
+                content_type:
+                  type: numeric
                 length: 7
                 position:
                   start: 88
@@ -4766,7 +5374,10 @@ records:
             id: record_type_code
             field_inclusion_requirements:
               - mandatory
-            content_type: ‘6’
+            content_type:
+              type: constant
+              options:
+                value: 6
             length: 1
             position:
               start: 01
@@ -4776,7 +5387,8 @@ records:
             id: transaction_code
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 2
             position:
               start: 02
@@ -4786,7 +5398,8 @@ records:
             id: receiving_dfi_identification
             field_inclusion_requirements:
               - mandatory
-            content_type: ttttaaaa
+            content_type:
+              type: ttttaaaa
             length: 8
             position:
               start: 04
@@ -4796,7 +5409,8 @@ records:
             id: check_digit
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 12
@@ -4806,7 +5420,8 @@ records:
             id: dfi_account_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 17
             position:
               start: 13
@@ -4816,7 +5431,8 @@ records:
             id: amount
             field_inclusion_requirements:
               - mandatory
-            content_type: dollar_amount
+            content_type:
+              type: dollar_amount
             length: 10
             position:
               start: 30
@@ -4826,7 +5442,8 @@ records:
             id: check_serial_number
             field_inclusion_requirements:
               - mandatory
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 15
             position:
               start: 40
@@ -4836,7 +5453,8 @@ records:
             id: process_control_field
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 6
             position:
               start: 55
@@ -4846,7 +5464,8 @@ records:
             id: item_research_number
             field_inclusion_requirements:
               - required
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 16
             position:
               start: 61
@@ -4856,7 +5475,8 @@ records:
             id: discretionary_data
             field_inclusion_requirements:
               - optional
-            content_type: alphameric
+            content_type:
+              type: alphameric
             length: 2
             position:
               start: 77
@@ -4866,7 +5486,8 @@ records:
             id: addenda_record_indicator
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 1
             position:
               start: 79
@@ -4876,7 +5497,8 @@ records:
             id: trace_number
             field_inclusion_requirements:
               - mandatory
-            content_type: numeric
+            content_type:
+              type: numeric
             length: 15
             position:
               start: 80
