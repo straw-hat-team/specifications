@@ -4,10 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "husky install",
-    "ci:install": "yarn install --frozen-lockfile",
-    "format": "prettier --write */**",
-    "lint:format": "yarn prettier --check */**",
+    "format:prettier": "prettier --write */**",
+    "lint:format:prettier": "yarn prettier --check */**",
     "lint:spectral:openapi": "yarn run-p lint:spectral:openapi:*"
   },
   "devDependencies": {
