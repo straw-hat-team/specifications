@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@4.4.0",
   "name": "@straw-hat/specifications",
   "private": true,
   "type": "module",
@@ -12,10 +12,8 @@
   },
   "devDependencies": {
     "@stoplight/spectral": "6.5.0",
-    "@straw-hat/prettier-config": "2.0.3",
-    "husky": "8.0.2",
-    "lint-staged": "13.1.0",
+    "@straw-hat/prettier-config": "3.1.5",
     "npm-run-all": "4.1.5",
-    "prettier": "2.8.1"
+    "prettier": "3.3.3"
   }
 }
