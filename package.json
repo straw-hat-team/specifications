@@ -6,12 +6,15 @@
   "scripts": {
     "format:prettier": "prettier --write */**",
     "lint:format:prettier": "yarn prettier --check */**",
-    "lint:spectral:openapi": "yarn run-p lint:spectral:openapi:*"
+    "lint:spectral:openapi": "yarn run-p lint:spectral:openapi:*",
+    "lint:spectral:openapi:petstore": "spectral lint ./openapi/petstore.openapi.json"
   },
   "devDependencies": {
     "@stoplight/spectral": "6.5.0",
+    "@stoplight/spectral-formats": "1.6.0",
+    "@stoplight/spectral-functions": "1.8.0",
     "@straw-hat/prettier-config": "3.1.5",
-    "npm-run-all": "4.1.5",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "tslib": "2.6.3"
   }
 }

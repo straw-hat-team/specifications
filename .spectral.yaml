@@ -1,0 +1,138 @@
+formats:
+  - oas3
+
+extends:
+  - 'spectral:oas'
+
+rules:
+  operation-tags: error
+  operation-tag-defined: off
+  openapi-tags: off
+  info-contact: off
+  info-description: off
+  operation-description: off
+
+  empty-summary:
+    description: The summary can not be an empty string
+    type: validation
+    recommended: true
+    severity: error
+    given: '$.paths[*][*].summary'
+    then:
+      function: truthy
+
+  empty-tags:
+    description: Tags can not be an empty string
+    type: validation
+    recommended: true
+    severity: error
+    given: '$.paths[*][*].tags[*]'
+    then:
+      function: truthy
+
+  upper-case-enums:
+    description: Enums must be written in uppercase separated by underscores.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$..enum.*'
+    then:
+      function: casing
+      functionOptions:
+        type: macro
+
+  snake-case-operation-id:
+    description: Operation ID must be snake_cased.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$.paths[*][*].operationId'
+    then:
+      function: casing
+      functionOptions:
+        type: snake
+
+  snake-case-x-schema-id:
+    description: x-schema-id must be snake_cased.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$..x-schema-id'
+    then:
+      function: casing
+      functionOptions:
+        type: snake
+
+  components-schemas-x-schema-id-required:
+    description: x-schema-id must be present for all components schemas.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$.components.schemas[*]'
+    then:
+      - field: 'x-schema-id'
+        function: truthy
+
+  snake-case-x-aliases-name:
+    description: x-enum-aliases must be snake_cased.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$..["x-enum-aliases"][*]'
+    then:
+      function: casing
+      functionOptions:
+        type: snake
+
+  snake-case-properties-names:
+    description: properties must be snake_case.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$..properties'
+    then:
+      field: '@key'
+      function: casing
+      functionOptions:
+        type: snake
+
+  schemas-x-schema-id-must-be-present:
+    description: x-schema-id must be defined in the schema.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$.components.schemas.*.x-schema-id'
+    then:
+      function: truthy
+
+  pascal-case-schema-name:
+    description: Schema name must be PascalCased.
+    type: validation
+    recommended: true
+    severity: error
+    given: '$.components.schemas'
+    then:
+      field: '@key'
+      function: casing
+      functionOptions:
+        type: pascal
+
+  snake-case-path-params:
+    description: Schema name must be snake_cased.
+    type: validation
+    recommended: true
+    severity: error
+    given: "$.paths..parameters[?(@.in == 'path')].name"
+    then:
+      function: casing
+      functionOptions:
+        type: snake
+
+  path-params-in-path-item:
+    description: The path parameters must not be in the operation. Please move it to the path level.
+    type: validation
+    recommended: true
+    severity: error
+    given: "$.paths[*][*].parameters[?(@.in == 'path')]"
+    then:
+      function: falsy

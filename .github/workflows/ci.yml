@@ -31,3 +31,5 @@ jobs:
           SHT_NPM_TOKEN: ${{ secrets.SHT_NPM_TOKEN }}
       - shell: sh
         run: yarn lint:format:prettier
+      - shell: sh
+        run: yarn lint:spectral:openapi:petstore
